@@ -6,6 +6,6 @@ export const config = {
 };
 
 export function middleware(req: NextRequest) {
-  // Desactivado completamente
+  // ✅ DESACTIVADO - Siempre permite el acceso
   return NextResponse.next();
 }
