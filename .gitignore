@@ -20,3 +20,5 @@ yarn-error.log*
 
 # Git old
 .git-old/
+.vercel
+.env*.local
