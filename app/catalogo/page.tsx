@@ -1,6 +1,6 @@
 // app/catalogo/page.tsx
 import { SearchIA } from '@/app/components/search/SearchIA'
-import { CategoriesGrid } from '@/app/components/categories/CategoriesGrid'
+import { CategoriesGrid } from '@/app/components/categories/CategoriesGrid'  // ← Este es el nuevo
 
 export default function CatalogoPage() {
   return (
@@ -19,13 +19,13 @@ export default function CatalogoPage() {
         </div>
       </section>
 
-      {/* Categorías */}
+      {/* Categorías con tarjetas visuales */}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold">Explora por línea</h2>
           <button className="text-blue-600 hover:underline">Ver todas →</button>
         </div>
-        <CategoriesGrid />
+        <CategoriesGrid />  {/* ← Aquí se muestran las tarjetas */}
       </section>
 
       {/* Asesoría rápida */}
