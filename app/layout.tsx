@@ -4,20 +4,6 @@ import './globals.css'
 const siteUrl = (SITE?.url || "https://example.com").replace(/\/$/, "");
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
-  title: 'All Comercial - Transformación Digital con IA',
-  description: 'Potenciamos tu negocio con soluciones de inteligencia artificial',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="es">
-      <body>{children}</body>
-=======
   metadataBase: new URL(siteUrl),
 
   title: {
@@ -273,7 +259,6 @@ export default function RootLayout({
           </div>
         </a>
       </body>
->>>>>>> 77a4c7b8980b4f279424ec52206facf4b9545c54
     </html>
   )
 }
