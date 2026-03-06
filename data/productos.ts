@@ -1445,7 +1445,7 @@ export const productos: Producto[] = [
     "nombre": "Background 1 2",
     "descripcion": "Producto de Cabinas de Pintura. Cotización y soporte técnico disponible.",
     "categoria": "cabinas-de-pintura",
-    "imagen": "/catalogo/cabinas-de-pintura/background-1-2.jpeg",
+    "imagen": "",
     "especificaciones": {
       "Tipo": "Cabinas de Pintura",
       "Material": "Consultar",
@@ -1836,7 +1836,7 @@ export const productos: Producto[] = [
     "nombre": "Background 1 2",
     "descripcion": "Producto de Lámparas IR. Cotización y soporte técnico disponible.",
     "categoria": "lamparas-de-secado-ir",
-    "imagen": "/catalogo/lamparas-de-secado-ir/background-1-2.jpeg",
+    "imagen": "",
     "especificaciones": {
       "Tipo": "Lámparas IR",
       "Material": "Consultar",
@@ -2074,7 +2074,7 @@ export const productos: Producto[] = [
     "nombre": "Background 1 2",
     "descripcion": "Producto de Pistolas de Gravedad. Cotización y soporte técnico disponible.",
     "categoria": "pistolas-de-gravedad",
-    "imagen": "/catalogo/pistolas-de-gravedad/background-1-2.jpeg",
+    "imagen": "",
     "especificaciones": {
       "Tipo": "Pistolas de Gravedad",
       "Material": "Consultar",
@@ -2389,3 +2389,8 @@ export const productos: Producto[] = [
     ]
   }
 ]
+
+// ✅ FUNCIÓN AGREGADA: busca un producto por su id
+export function getProductoById(id: string) {
+  return productos.find(p => p.id === id);
+}

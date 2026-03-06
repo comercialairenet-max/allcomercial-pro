@@ -1,9 +1,8 @@
-'use client'
-
 import Link from "next/link";
 import Image from "next/image";
 
 export function CategoriesGrid() {
+  // Importamos las categorías desde el archivo lib
   const { CATEGORIES } = require("@/lib/catalogo");
 
   return (
@@ -15,7 +14,7 @@ export function CategoriesGrid() {
           className="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
         >
           <div className="relative h-48 w-full bg-gray-100">
-            {cat.heroImage ? (
+            {cat.heroImage && cat.heroImage !== "/placeholder-categoria.jpg" ? (
               <Image
                 src={cat.heroImage}
                 alt={cat.title}
