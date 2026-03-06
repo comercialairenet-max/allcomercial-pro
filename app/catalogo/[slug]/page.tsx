@@ -226,7 +226,7 @@ export default async function CategoriaPage({ params }: { params: Promise<{ slug
                                     className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md"
                                     title={`${key}: ${value}`}
                                   >
-                                    {key}: {value}
+                                    {key}: {String(value)}
                                   </span>
                                 ))}
                               </div>

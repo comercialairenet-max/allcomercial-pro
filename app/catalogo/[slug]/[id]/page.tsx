@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { CATEGORIES } from "@/lib/catalogo";
+import { getCategoriaBySlug } from "@/lib/catalogo";
 import { SITE } from "@/lib/site";
+import { getProductoById } from "@/data/productos";
 
 const WA = SITE?.whatsapp?.phoneE164 || "573053644307";
 
@@ -12,35 +13,25 @@ function waLink(text: string) {
 
 function bestCategoryFallbackImage(cat: any) {
   if (cat?.heroImage) return cat.heroImage;
-  const first = (cat?.items || []).find((x: any) => x?.image)?.image;
+  const first = (cat?.items || []).find((x: any) => x?.imagen)?.imagen;
   return first || "";
 }
 
 export default async function ProductoPage(props: {
-  params: Promise<{ slug: string; id: string }> | { slug: string; id: string };
+  params: Promise<{ slug: string; id: string }>;
 }) {
-  const resolvedParams =
-    typeof (props.params as any)?.then === "function"
-      ? await (props.params as Promise<{ slug: string; id: string }>)
-      : (props.params as { slug: string; id: string });
+  const { slug, id } = await props.params;
 
-  const slug = (resolvedParams.slug || "").toLowerCase().trim();
-  const id = (resolvedParams.id || "").toLowerCase().trim();
-
-  const categoria = CATEGORIES.find((c) => c.slug.toLowerCase() === slug);
+  const categoria = getCategoriaBySlug(slug);
   if (!categoria) return notFound();
 
-  const item = (categoria.items || []).find(
-    (x) => (x.id || "").toLowerCase() === id
-  );
+  const item = getProductoById(id);
   if (!item) return notFound();
 
   const catFallback = bestCategoryFallbackImage(categoria);
-  const img = item.image || catFallback || "";
+  const img = item.imagen || catFallback || "";
 
-  const msg =
-    item.waMessage ||
-    `Hola, quiero cotizar: ${item.name} (${categoria.title}).`;
+  const msg = `Hola, quiero cotizar: ${item.nombre} (${categoria.title}).`;
 
   const relacionados = (categoria.items || [])
     .filter((x) => x.id !== item.id)
@@ -59,7 +50,7 @@ export default async function ProductoPage(props: {
             {categoria.title}
           </Link>{" "}
           <span className="mx-2">/</span>
-          <span className="text-zinc-200">{item.name}</span>
+          <span className="text-zinc-200">{item.nombre}</span>
         </div>
 
         {/* Hero producto */}
@@ -69,7 +60,7 @@ export default async function ProductoPage(props: {
               {img ? (
                 <Image
                   src={img}
-                  alt={item.name}
+                  alt={item.nombre}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -92,25 +83,22 @@ export default async function ProductoPage(props: {
             </div>
 
             <h1 className="text-3xl md:text-4xl font-semibold mt-3">
-              {item.name}
+              {item.nombre}
             </h1>
 
             <div className="mt-3 text-zinc-300">
-              {item.short || "Equipo industrial · Cotización y soporte técnico."}
+              {item.descripcion || "Equipo industrial · Cotización y soporte técnico."}
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2 text-xs">
               <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
                 Categoría: {categoria.title}
               </span>
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                Marca: {item.brand || "Industrial"}
-              </span>
-              {item.ref ? (
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
-                  Ref: {item.ref}
+              {item.especificaciones && Object.entries(item.especificaciones).slice(0, 3).map(([key, val]) => (
+                <span key={key} className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                  {key}: {val}
                 </span>
-              ) : null}
+              ))}
             </div>
 
             {/* CTA */}
@@ -127,7 +115,7 @@ export default async function ProductoPage(props: {
 
               <a
                 href={waLink(
-                  `Hola, quiero ficha técnica completa de: ${item.name} (${categoria.title}).`
+                  `Hola, quiero ficha técnica completa de: ${item.nombre} (${categoria.title}).`
                 )}
                 target="_blank"
                 rel="noreferrer"
@@ -150,7 +138,7 @@ export default async function ProductoPage(props: {
         </div>
 
         {/* Relacionados */}
-        {relacionados.length ? (
+        {relacionados.length > 0 && (
           <div className="mt-12">
             <div className="flex items-end justify-between gap-4 flex-wrap">
               <div>
@@ -170,7 +158,7 @@ export default async function ProductoPage(props: {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {relacionados.map((r) => {
-                const rimg = r.image || catFallback || "";
+                const rimg = r.imagen || catFallback || "";
                 return (
                   <Link
                     key={r.id}
@@ -181,7 +169,7 @@ export default async function ProductoPage(props: {
                       {rimg ? (
                         <Image
                           src={rimg}
-                          alt={r.name}
+                          alt={r.nombre}
                           fill
                           className="object-cover"
                           sizes="(max-width: 1024px) 100vw, 33vw"
@@ -193,9 +181,9 @@ export default async function ProductoPage(props: {
                       )}
                     </div>
                     <div className="p-5">
-                      <div className="font-semibold">{r.name}</div>
+                      <div className="font-semibold">{r.nombre}</div>
                       <div className="text-sm text-zinc-300 mt-2">
-                        {r.short || "Cotización y soporte técnico."}
+                        {r.descripcion || "Cotización y soporte técnico."}
                       </div>
                     </div>
                   </Link>
@@ -203,7 +191,7 @@ export default async function ProductoPage(props: {
               })}
             </div>
           </div>
-        ) : null}
+        )}
       </div>
     </main>
   );
