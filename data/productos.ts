@@ -2394,3 +2394,7 @@ export const productos: Producto[] = [
 export function getProductoById(id: string) {
   return productos.find(p => p.id === id);
 }
+
+export function getProductosPorCategoria(categoria: string) {
+  return productos.filter(p => p.categoria === categoria);
+}
