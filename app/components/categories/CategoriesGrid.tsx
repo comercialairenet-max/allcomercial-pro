@@ -11,15 +11,17 @@ export function CategoriesGrid() {
           href={`/catalogo/${cat.slug}`}
           className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:border-orange-200 hover:shadow-xl"
         >
-          <div className="relative h-48 w-full bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
             {cat.heroImage ? (
-              <Image
-                src={cat.heroImage}
-                alt={cat.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              />
+              <div className="relative h-full w-full">
+                <Image
+                  src={cat.heroImage}
+                  alt={cat.title}
+                  fill
+                  className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+              </div>
             ) : (
               <div className="flex h-full items-center justify-center text-gray-400">
                 <span>Imagen en proceso</span>
