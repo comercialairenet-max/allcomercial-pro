@@ -18,10 +18,13 @@ function waLink(text: string) {
   return `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
 }
 
-function bestCategoryFallbackImage(cat: any) {
+function bestCategoryFallbackImage(cat: {
+  heroImage?: string;
+  items?: Array<{ imagen?: string }>;
+}) {
   if (cat?.heroImage) return cat.heroImage;
-  const first = (cat?.items || []).find((x: any) => x?.imagen)?.imagen;
-  return first || "";
+  const first = (cat?.items || []).find((x) => x?.imagen)?.imagen;
+  return first || "/productos/placeholder.jpeg";
 }
 
 export default async function ProductoPage({ params }: ProductoPageProps) {
@@ -36,13 +39,13 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
   if (item.categoria !== slug) notFound();
 
   const catFallback = bestCategoryFallbackImage(categoria);
-  const principal = item.imagen || catFallback || "";
+  const principal = item.imagen || catFallback;
   const gallery =
     item.gallery && item.gallery.length > 0
       ? item.gallery
       : principal
-      ? [principal]
-      : [];
+        ? [principal]
+        : [];
 
   const msg = `Hola, quiero cotizar: ${item.nombre} (${categoria.title}).`;
 
@@ -53,7 +56,6 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        {/* breadcrumb */}
         <div className="text-sm text-neutral-500">
           <Link href="/catalogo" className="hover:text-neutral-900">
             Catálogo
@@ -69,26 +71,18 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
           <span className="text-neutral-800">{item.nombre}</span>
         </div>
 
-        {/* header producto */}
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* galería */}
           <div className="space-y-4">
             <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
               <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                {principal ? (
-                  <Image
-                    src={principal}
-                    alt={item.nombre}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
-                ) : (
-                  <div className="absolute inset-0 grid place-items-center text-sm text-neutral-400">
-                    Imagen en proceso
-                  </div>
-                )}
+                <Image
+                  src={principal}
+                  alt={item.nombre}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
               </div>
             </div>
 
@@ -101,7 +95,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {gallery.slice(0, 4).map((foto, index) => (
                     <div
-                      key={index}
+                      key={`${foto}-${index}`}
                       className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"
                     >
                       <div className="relative aspect-[4/3] w-full bg-neutral-100">
@@ -120,7 +114,6 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
             )}
           </div>
 
-          {/* info */}
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700">
               <span className="h-2 w-2 rounded-full bg-orange-500" />
@@ -188,7 +181,6 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
               </a>
             </div>
 
-            {/* tabla técnica */}
             {item.especificaciones && Object.keys(item.especificaciones).length > 0 && (
               <div className="mt-8 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
                 <div className="border-b border-neutral-200 bg-neutral-50 px-5 py-4">
@@ -215,7 +207,6 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
               </div>
             )}
 
-            {/* nota */}
             <div className="mt-8 rounded-3xl border border-orange-200 bg-orange-50 p-5">
               <div className="text-sm font-semibold text-orange-700">
                 Nota comercial
@@ -229,7 +220,6 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
           </div>
         </div>
 
-        {/* relacionados */}
         {relacionados.length > 0 && (
           <section className="mt-14">
             <div className="flex items-end justify-between gap-4">
@@ -250,7 +240,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
 
             <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {relacionados.map((r) => {
-                const rimg = r.imagen || catFallback || "";
+                const rimg = r.imagen || catFallback;
                 return (
                   <Link
                     key={r.id}
@@ -258,19 +248,13 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                     className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
                   >
                     <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                      {rimg ? (
-                        <Image
-                          src={rimg}
-                          alt={r.nombre}
-                          fill
-                          className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 25vw"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 grid place-items-center text-sm text-neutral-400">
-                          Imagen en proceso
-                        </div>
-                      )}
+                      <Image
+                        src={rimg}
+                        alt={r.nombre}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 25vw"
+                      />
                     </div>
 
                     <div className="p-4">

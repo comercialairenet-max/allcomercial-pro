@@ -1,133 +1,106 @@
-export interface Product {
-  id: string
-  name: string
-  description: string
-  category: string
-  subcategory?: string
-  tags: string[]
-  price?: number
-  image?: string
-  features: string[]
-  applications: string[]
+import { productos, Producto } from '@/data/productos'
+
+export type CategoriaSlug =
+  | 'filtracion-industrial'
+  | 'ventilacion-industrial'
+  | 'sistemas-de-aire-comprimido'
+  | 'cabinas-de-pintura'
+  | 'equipos-para-lavaderos'
+  | 'equipos-para-reparacion-de-carrocerias'
+  | 'lamparas-de-secado-ir'
+  | 'pistolas-de-gravedad'
+
+export type Categoria = {
+  slug: CategoriaSlug
+  title: string
+  subtitle: string
+  heroImage: string
+  items: Producto[]
 }
 
-export const products: Product[] = [
-  // Filtración Industrial
+const productosPorCategoria = productos.reduce((acc, prod) => {
+  const categoria = prod.categoria as CategoriaSlug
+  if (!acc[categoria]) acc[categoria] = []
+  acc[categoria].push(prod)
+  return acc
+}, {} as Record<CategoriaSlug, Producto[]>)
+
+function getFirstImage(categoria: CategoriaSlug): string {
+  const prods = productosPorCategoria[categoria]
+  return prods?.find((p) => p.imagen)?.imagen || ''
+}
+
+export const CATEGORIES: Categoria[] = [
   {
-    id: "filtro-axial-16",
-    name: "Filtro Axial 16\"",
-    description: "Filtro de alta eficiencia para sistemas de ventilación industrial",
-    category: "Filtración Industrial",
-    tags: ["axial", "filtro", "16", "industrial", "ventilación"],
-    features: ["Alta eficiencia", "Fácil instalación", "Larga vida útil"],
-    applications: ["Industria química", "Farmacéutica", "Alimenticia"]
+    slug: 'filtracion-industrial',
+    title: 'Filtración Industrial',
+    subtitle: 'Filtros y soluciones para procesos industriales exigentes.',
+    heroImage: getFirstImage('filtracion-industrial'),
+    items: productosPorCategoria['filtracion-industrial'] || [],
   },
   {
-    id: "filtro-hepa-14",
-    name: "Filtro HEPA H14",
-    description: "Filtro de alta eficiencia para partículas submicrónicas",
-    category: "Filtración Industrial",
-    tags: ["hepa", "h14", "alta eficiencia", "partículas", "limpio"],
-    features: ["Eficiencia 99.99%", "Marco de acero", "Junta de sellado"],
-    applications: ["Salas limpias", "Hospitales", "Laboratorios"]
+    slug: 'ventilacion-industrial',
+    title: 'Ventilación Industrial',
+    subtitle: 'Extracción, inyección, turbinas y soluciones a medida.',
+    heroImage: getFirstImage('ventilacion-industrial'),
+    items: productosPorCategoria['ventilacion-industrial'] || [],
   },
   {
-    id: "filtro-carbon-activado",
-    name: "Filtro Carbón Activado",
-    description: "Eliminación de olores y compuestos orgánicos volátiles",
-    category: "Filtración Industrial",
-    tags: ["carbón", "activado", "olores", "cov", "químicos"],
-    features: ["Alta adsorción", "Larga duración", "Regenerable"],
-    applications: ["Tratamiento de aire", "Industria química", "Laboratorios"]
-  },
-  
-  // Sistemas de Aire Comprimido
-  {
-    id: "compresor-tornillo-15hp",
-    name: "Compresor Tornillo 15HP",
-    description: "Compresor industrial de tornillo con secador integrado",
-    category: "Sistemas de Aire Comprimido",
-    tags: ["compresor", "tornillo", "15hp", "industrial", "secador"],
-    features: ["Bajo ruido", "Eficiencia energética", "Mantenimiento sencillo"],
-    applications: ["Talleres", "Industria ligera", "Automotriz"]
+    slug: 'sistemas-de-aire-comprimido',
+    title: 'Sistemas de Aire Comprimido',
+    subtitle: 'Compresores, accesorios y soluciones integrales.',
+    heroImage: getFirstImage('sistemas-de-aire-comprimido'),
+    items: productosPorCategoria['sistemas-de-aire-comprimido'] || [],
   },
   {
-    id: "secador-frigorifico-50hp",
-    name: "Secador Frigorífico 50HP",
-    description: "Secador de aire comprimido por refrigeración",
-    category: "Sistemas de Aire Comprimido",
-    tags: ["secador", "frigorífico", "50hp", "refrigeración"],
-    features: ["Punto de rocío estable", "Bajo consumo", "Filtro incluido"],
-    applications: ["Industria pesada", "Textil", "Alimenticia"]
-  },
-  
-  // Ventilación Industrial
-  {
-    id: "extractor-axial-24",
-    name: "Extractor Axial 24\"",
-    description: "Extractor de aire industrial de alta capacidad",
-    category: "Ventilación Industrial",
-    tags: ["extractor", "axial", "24", "ventilación", "industrial"],
-    features: ["Alto caudal", "Motor eficiente", "Protección intemperie"],
-    applications: ["Naves industriales", "Almacenes", "Talleres"]
+    slug: 'cabinas-de-pintura',
+    title: 'Cabinas de Pintura',
+    subtitle: 'Control de ventilación y filtrado para acabados profesionales.',
+    heroImage: getFirstImage('cabinas-de-pintura'),
+    items: productosPorCategoria['cabinas-de-pintura'] || [],
   },
   {
-    id: "inyector-centrifugo-12",
-    name: "Inyector Centrífugo 12\"",
-    description: "Inyector de aire para sistemas de ventilación",
-    category: "Ventilación Industrial",
-    tags: ["inyector", "centrífugo", "12", "ventilación"],
-    features: ["Alta presión", "Bajo ruido", "Transmisión por poleas"],
-    applications: ["Ductos largos", "Extracción localizada", "Sistemas HV DS"]
-  },
-  
-  // Cabinas de Pintura
-  {
-    id: "cabina-pintura-automotriz",
-    name: "Cabina de Pintura Automotriz",
-    description: "Cabina completa para pintura de vehículos",
-    category: "Cabinas de Pintura",
-    tags: ["cabina", "pintura", "automotriz", "vehículos", "filtros"],
-    features: ["Iluminación LED", "Filtros de techo", "Extracción inferior"],
-    applications: ["Talleres automotrices", "Carrocería", "Restauración"]
+    slug: 'equipos-para-lavaderos',
+    title: 'Equipos para Lavaderos',
+    subtitle: 'Soluciones profesionales para lavaderos y túneles de lavado.',
+    heroImage: getFirstImage('equipos-para-lavaderos'),
+    items: productosPorCategoria['equipos-para-lavaderos'] || [],
   },
   {
-    id: "filtro-techo-cabina",
-    name: "Filtro Techo para Cabina",
-    description: "Filtro de techo para cabinas de pintura",
-    category: "Cabinas de Pintura",
-    tags: ["filtro", "techo", "cabina", "pintura", "plenum"],
-    features: ["Distribución uniforme", "Alta retención", "Fácil cambio"],
-    applications: ["Cabinas de pintura", "Salas limpias", "Laboratorios"]
-  }
+    slug: 'equipos-para-reparacion-de-carrocerias',
+    title: 'Equipos para Reparación de Carrocerías',
+    subtitle: 'Herramientas y equipos para talleres de carrocería y pintura.',
+    heroImage: getFirstImage('equipos-para-reparacion-de-carrocerias'),
+    items: productosPorCategoria['equipos-para-reparacion-de-carrocerias'] || [],
+  },
+  {
+    slug: 'lamparas-de-secado-ir',
+    title: 'Lámparas de Secado IR',
+    subtitle: 'Tecnología infrarroja para secado rápido en cabinas y talleres.',
+    heroImage: getFirstImage('lamparas-de-secado-ir'),
+    items: productosPorCategoria['lamparas-de-secado-ir'] || [],
+  },
+  {
+    slug: 'pistolas-de-gravedad',
+    title: 'Pistolas de Gravedad',
+    subtitle: 'Pistolas profesionales para acabados de alta calidad.',
+    heroImage: getFirstImage('pistolas-de-gravedad'),
+    items: productosPorCategoria['pistolas-de-gravedad'] || [],
+  },
 ]
 
-// Función para obtener todas las categorías
-export function getCategories() {
-  const categories = new Map()
-  
-  products.forEach(product => {
-    if (!categories.has(product.category)) {
-      categories.set(product.category, {
-        name: product.category,
-        count: 0,
-        subcategories: new Set()
-      })
-    }
-    const cat = categories.get(product.category)
-    cat.count++
-    if (product.subcategory) {
-      cat.subcategories.add(product.subcategory)
-    }
-  })
-  
-  return Array.from(categories.values()).map(cat => ({
-    ...cat,
-    subcategories: Array.from(cat.subcategories)
-  }))
+export function getCategoriaBySlug(slug: string): Categoria | undefined {
+  return CATEGORIES.find((c) => c.slug === slug)
 }
 
-// Función para obtener productos por categoría
-export function getProductsByCategory(category: string) {
-  return products.filter(p => p.category === category)
+export function getAllCategorias(): Categoria[] {
+  return CATEGORIES
+}
+
+export function getProductosDeCategoria(slug: string): Producto[] {
+  return getCategoriaBySlug(slug)?.items || []
+}
+
+export function categoriaExiste(slug: string): boolean {
+  return CATEGORIES.some((c) => c.slug === slug)
 }

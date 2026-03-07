@@ -23,7 +23,12 @@ export const productos: Producto[] = [
     descripcion:
       'Filtro de alta eficiencia para sistemas de ventilación y prefiltrado industrial.',
     imagen:
-      '/catalogo/filtracion-industrial/pl148425168-manta-filtrante-aire-fibra-sintetica-g4-pintura-hvac-bogota-colombia-jpeg.jpg',
+      '/productos/filtracion-industrial/manta-filtrante-g4-fibra-sintetica-hvac-bogota-colombia.jpeg',
+    gallery: [
+      '/productos/filtracion-industrial/manta-filtrante-g4-fibra-sintetica-hvac-bogota-colombia.jpeg',
+      '/productos/filtracion-industrial/manta-filtrante-lavable-g4-verde-hvac-bogota-colombia.jpeg',
+      '/productos/filtracion-industrial/media-filtrante-g1-fibra-sintetica-prefiltro-bogota-colombia.jpeg',
+    ],
     especificaciones: {
       Medida: '595x595 mm',
       Eficiencia: 'G4',
@@ -44,7 +49,13 @@ export const productos: Producto[] = [
     descripcion:
       'Filtro de bolsa para sistemas HVAC y aplicaciones de filtración industrial.',
     imagen:
-      '/catalogo/filtracion-industrial/pl148425182-filtro-pocket-bolsillo-f7-hvac-industria-bogota-colombia-jpeg.jpg',
+      '/productos/filtracion-industrial/filtro-pocket-f7-hvac-bogota-colombia.jpeg',
+    gallery: [
+      '/productos/filtracion-industrial/filtro-pocket-f6-hvac-bogota-colombia.jpeg',
+      '/productos/filtracion-industrial/filtro-pocket-f7-hvac-bogota-colombia.jpeg',
+      '/productos/filtracion-industrial/filtro-pocket-f8-hvac-bogota-colombia.jpeg',
+      '/productos/filtracion-industrial/filtro-v-bank-merv14-hvac-bogota-colombia.jpeg',
+    ],
     especificaciones: {
       Medida: '592x592 mm',
       Eficiencia: 'F7',
@@ -65,7 +76,12 @@ export const productos: Producto[] = [
     descripcion:
       'Equipo de ventilación para extracción de aire en procesos industriales.',
     imagen:
-      '/catalogo/ventilacion-industrial/pl148425200-extractor-axial-metalico-18-pulgadas-bogota-colombia-jpeg.jpg',
+      '/productos/ventilacion-industrial/extractor-axial-metalico-18-pulgadas-bogota-colombia.jpeg',
+    gallery: [
+      '/productos/ventilacion-industrial/extractor-axial-metalico-14-pulgadas-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/extractor-axial-metalico-16-pulgadas-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/extractor-axial-metalico-18-pulgadas-bogota-colombia.jpeg',
+    ],
     especificaciones: {
       Diametro: '18 pulgadas',
       Voltaje: '110/220V',
@@ -86,7 +102,13 @@ export const productos: Producto[] = [
     descripcion:
       'Turbina para inyección y extracción en sistemas de ventilación industrial.',
     imagen:
-      '/catalogo/ventilacion-industrial/pl148425237-turbina-tipo-siroco-1hp-alta-presion-bogota-colombia1-jpeg.jpg',
+      '/productos/ventilacion-industrial/turbina-tipo-siroco-1hp-alta-presion-bogota-colombia.jpeg',
+    gallery: [
+      '/productos/ventilacion-industrial/turbina-tipo-siroco-0-5hp-alta-presion-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/turbina-tipo-siroco-1hp-alta-presion-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/turbina-2hp-presion-transporte-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/turbina-3hp-presion-transporte-bogota-colombia.jpeg',
+    ],
     especificaciones: {
       Potencia: '1.5 HP',
       Material: 'Acero',
@@ -107,7 +129,13 @@ export const productos: Producto[] = [
     descripcion:
       'Solución eficiente para suministro continuo de aire comprimido.',
     imagen:
-      '/catalogo/sistemas-de-aire-comprimido/pl148425244-compresor-aire-bogota-colombia-jpeg.jpg',
+      '/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg',
+    gallery: [
+      '/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg',
+      '/productos/sistemas-de-aire-comprimido/tanque-pulmon-aire-comprimido.jpeg',
+      '/productos/sistemas-de-aire-comprimido/espumadora-industrial.jpeg',
+      '/productos/sistemas-de-aire-comprimido/tolva-sandblasting-movil.jpeg',
+    ],
     especificaciones: {
       Potencia: '10 HP',
       Presion: '145 PSI',
@@ -128,7 +156,12 @@ export const productos: Producto[] = [
     descripcion:
       'Equipo para tratamiento y secado de aire comprimido en procesos industriales.',
     imagen:
-      '/catalogo/sistemas-de-aire-comprimido/pl148425242-pulmon-aire-comprimido-bogota-colombia-jpeg.jpg',
+      '/productos/sistemas-de-aire-comprimido/tanque-pulmon-aire-comprimido.jpeg',
+    gallery: [
+      '/productos/sistemas-de-aire-comprimido/tanque-pulmon-aire-comprimido.jpeg',
+      '/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg',
+      '/productos/sistemas-de-aire-comprimido/espumadora-industrial.jpeg',
+    ],
     especificaciones: {
       Conexion: '1/2"',
       Presion: '150 PSI',
@@ -149,12 +182,12 @@ export const productos: Producto[] = [
     descripcion:
       'Cabina diseñada para acabados profesionales con control de flujo de aire.',
     imagen:
-      '/catalogo/cabinas-de-pintura/Cabina_Pintura_Automotriz_Sistema_Extraccion_Cortinas_Poliuretano_Bogota_Colombia.jpg',
+      '/productos/cabinas-de-pintura/cabina-pintura-automotriz-paneles-bogota-colombia.jpeg',
     gallery: [
-      '/catalogo/cabinas-de-pintura/Cabina_Pintura_Automotriz_Paneles_Instalacion_Montaje_Bogota_Colombia.jpg',
-      '/catalogo/cabinas-de-pintura/Cabina_Pintura_Automotriz_Sistema_Extraccion_Cortinas_Poliuretano_Bogota_Colombia.jpg',
-      '/catalogo/cabinas-de-pintura/Fabricacion_Instalacion_Montaje_Cabina_Pintura_Automotriz_Bogota_Colombia.jpg',
-      '/catalogo/cabinas-de-pintura/Fabricacion_Instalacion_Montaje_Cabinas_Poliur.jpg'
+      '/productos/cabinas-de-pintura/cabina-pintura-automotriz-paneles-bogota-colombia.jpeg',
+      '/productos/cabinas-de-pintura/cabina-pintura-cortinas-poliuretano-bogota-colombia.jpeg',
+      '/productos/cabinas-de-pintura/interior-cabina-pintura-iluminacion-extraccion-bogota-colombia.jpeg',
+      '/productos/cabinas-de-pintura/cabina-pintura-automotriz-vehiculo-bogota-colombia.jpeg',
     ],
     especificaciones: {
       Tipo: 'Semiindustrial',
@@ -176,7 +209,15 @@ export const productos: Producto[] = [
     descripcion:
       'Equipo profesional para lavaderos, detailing y aplicaciones de limpieza intensiva.',
     imagen:
-      '/catalogo/equipos-para-lavaderos/equipos-para-lavaderos-1-1-jpeg.jpg',
+      '/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-carro-bogota-colombia.jpeg',
+    gallery: [
+      '/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-carro-bogota-colombia.jpeg',
+      '/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-vehiculo-elevado-bogota-colombia.jpeg',
+      '/productos/equipos-para-lavaderos/plataforma-elevadora-para-moto-bogota-colombia.jpeg',
+      '/productos/equipos-para-lavaderos/plataforma-elevadora-moto-en-uso-bogota-colombia.jpeg',
+      '/productos/equipos-para-lavaderos/bomba-hidraulica-elevador-automotriz-naranja-bogota-colombia.jpeg',
+      '/productos/equipos-para-lavaderos/bomba-hidraulica-elevador-automotriz-verde-bogota-colombia.jpeg',
+    ],
     especificaciones: {
       Presion: '2200 PSI',
       Caudal: '8 L/min',
@@ -197,7 +238,11 @@ export const productos: Producto[] = [
     descripcion:
       'Equipo de soporte para reparación estructural de carrocerías.',
     imagen:
-      '/catalogo/equipos-para-reparacion-de-carrocerias/pl148425272-maquina-desabolladora-multifuncional-fy-6000-bogota-colombia-jpg.jpg',
+      '/productos/equipos-para-reparacion-de-carrocerias/maquina-desabolladora-spotter-fy-6000-bogota-colombia.jpg',
+    gallery: [
+      '/productos/equipos-para-reparacion-de-carrocerias/maquina-desabolladora-spotter-fy-6000-bogota-colombia.jpg',
+      '/productos/equipos-para-reparacion-de-carrocerias/soldadora-por-puntos-automotriz-220v-bogota-colombia.jpg',
+    ],
     especificaciones: {
       Capacidad: '3 Ton',
       Uso: 'Carrocería',
@@ -218,7 +263,18 @@ export const productos: Producto[] = [
     descripcion:
       'Lámpara infrarroja para secado rápido de pintura automotriz.',
     imagen:
-      '/catalogo/lamparas-de-secado-ir/tk-2a.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-bogota-colombia.jpg',
+    gallery: [
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-ir-1w-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-1-panel-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-onda-corta-2-paneles-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-telescopica-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-3-paneles-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-6-paneles-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-3wh-bogota-colombia.jpg',
+      '/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-6dh-bogota-colombia.jpg',
+    ],
     especificaciones: {
       Paneles: 2,
       Tecnologia: 'Infrarroja',
@@ -239,7 +295,20 @@ export const productos: Producto[] = [
     descripcion:
       'Pistola profesional para aplicación uniforme de pintura y acabados finos.',
     imagen:
-      '/catalogo/pistolas-de-gravedad/PL148425261_Pistola_de_Gravedad_Universal_R-21X_Prona_Bogota_Colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-21x-prona-bogota-colombia.jpg',
+    gallery: [
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-21x-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-71-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-77-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-310-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-400-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-410-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-presurizada-r-410-ip-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-413-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-agitadora-r-413-b-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-gravedad-r-715-prona-bogota-colombia.jpg',
+      '/productos/pistolas-de-gravedad/pistola-baja-presion-r-4303-prona-bogota-colombia.jpg',
+    ],
     especificaciones: {
       Sistema: 'HVLP',
       Boquilla: '1.4 mm',

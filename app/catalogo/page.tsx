@@ -1,47 +1,56 @@
-import { SearchIA } from '@/app/components/search/SearchIA'
-import { CategoriesGrid } from '@/app/components/categories/CategoriesGrid'
+import Link from "next/link";
+import Image from "next/image";
+import { CATEGORIES } from "@/lib/catalogo";
 
 export default function CatalogoPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      {/* Hero con buscador */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Catálogo Profesional
+    <main className="min-h-screen bg-black text-white">
+      <section className="mx-auto max-w-7xl px-6 py-12 md:px-8 lg:px-10">
+        <div className="mb-10">
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+            Catálogo
           </h1>
-          <p className="text-xl mb-8 text-blue-100">
-            Filtración, ventilación, aire comprimido, cabinas de pintura y equipos para operación.
-            Cotiza por WhatsApp en 1 clic.
+          <p className="mt-3 max-w-2xl text-white/70">
+            Explora nuestras líneas de producto y accede a cada ficha por categoría.
           </p>
-          <SearchIA />
         </div>
-      </section>
 
-      {/* Categorías con imágenes */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          Explorar por línea
-        </h2>
-        <CategoriesGrid />
-      </section>
+        {CATEGORIES.length === 0 ? (
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/70">
+            No hay categorías disponibles.
+          </div>
+        ) : (
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            {CATEGORIES.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/catalogo/${cat.slug}`}
+                className="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-white/5">
+                  <Image
+                    src={cat.heroImage || "/productos/placeholder.jpeg"}
+                    alt={cat.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
 
-      {/* Asesoría rápida */}
-      <section className="bg-white border-t border-gray-200 py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">Asesoría inmediata</h3>
-          <p className="text-gray-600 mb-6">
-            Cotiza en minutos. Envíanos el producto o referencia. Te ayudamos con ficha técnica y disponibilidad.
-          </p>
-          <a
-            href="https://wa.me/573053644307"
-            className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-xl hover:bg-green-600 transition"
-          >
-            <span>📱</span>
-            Asesoría por WhatsApp
-          </a>
-        </div>
+                <div className="p-6">
+                  <h2 className="text-xl font-semibold">{cat.title}</h2>
+                  <p className="mt-2 text-sm leading-6 text-white/70">
+                    {cat.subtitle}
+                  </p>
+                  <div className="mt-4 text-sm font-medium text-orange-400">
+                    Ver categoría →
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
-    </div>
-  )
+    </main>
+  );
 }

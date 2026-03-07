@@ -1,17 +1,40 @@
 import { productos, Producto } from "@/data/productos";
 
-const productosPorCategoria = productos.reduce((acc, prod) => {
-  if (!acc[prod.categoria]) acc[prod.categoria] = [];
-  acc[prod.categoria].push(prod);
-  return acc;
-}, {} as Record<string, Producto[]>);
+export type CategoriaSlug =
+  | "filtracion-industrial"
+  | "ventilacion-industrial"
+  | "sistemas-de-aire-comprimido"
+  | "cabinas-de-pintura"
+  | "equipos-para-lavaderos"
+  | "equipos-para-reparacion-de-carrocerias"
+  | "lamparas-de-secado-ir"
+  | "pistolas-de-gravedad";
 
-function getFirstImage(categoria: string): string {
-  const prods = productosPorCategoria[categoria];
-  return (prods && prods.length > 0 && prods[0].imagen) ? prods[0].imagen : "";
+export type Categoria = {
+  slug: CategoriaSlug;
+  title: string;
+  subtitle: string;
+  heroImage: string;
+  items: Producto[];
+};
+
+const productosPorCategoria = productos.reduce((acc, prod) => {
+  const categoria = prod.categoria as CategoriaSlug;
+  if (!acc[categoria]) acc[categoria] = [];
+  acc[categoria].push(prod);
+  return acc;
+}, {} as Record<CategoriaSlug, Producto[]>);
+
+function getFirstImage(categoria: CategoriaSlug): string {
+  const prods = productosPorCategoria[categoria] || [];
+  const imagenValida = prods.find(
+    (p) => typeof p.imagen === "string" && p.imagen.trim() !== ""
+  )?.imagen;
+
+  return imagenValida || "/productos/placeholder.jpeg";
 }
 
-export const CATEGORIES = [
+export const CATEGORIES: Categoria[] = [
   {
     slug: "filtracion-industrial",
     title: "Filtración Industrial",
@@ -70,6 +93,6 @@ export const CATEGORIES = [
   },
 ];
 
-export function getCategoriaBySlug(slug: string) {
-  return CATEGORIES.find(c => c.slug === slug);
+export function getCategoriaBySlug(slug: string): Categoria | undefined {
+  return CATEGORIES.find((c) => c.slug === slug);
 }

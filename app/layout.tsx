@@ -1,32 +1,30 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import Link from "next/link";
+import "./globals.css";
 
-// Definir SITE aquí mismo
 const SITE = {
   name: "AllComercial Online",
   url: "https://allcomercial-pro.vercel.app",
   whatsapp: {
     phoneE164: "573053644307",
-    defaultMessage: "Hola, quiero una cotización. ¿Me apoyas por favor?"
-  }
-}
+    defaultMessage: "Hola, quiero una cotización. ¿Me apoyas por favor?",
+  },
+};
 
-const siteUrl = (SITE?.url || "https://example.com").replace(/\/$/, "");
-
-// ... resto del archivo igual
+const siteUrl = (SITE.url || "https://example.com").replace(/\/$/, "");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
     default: "AllComercial Online | Soluciones Industriales",
-    template: `%s | AllComercial Online`,
+    template: "%s | AllComercial Online",
   },
 
   description:
     "Catálogo industrial profesional: ventilación, filtración, aire comprimido, cabinas de pintura y equipos especializados. Cotiza directo por WhatsApp.",
 
-  applicationName: SITE?.name || "AllComercial Online",
+  applicationName: SITE.name,
 
   keywords: [
     "ventilación industrial",
@@ -50,7 +48,7 @@ export const metadata: Metadata = {
     title: "AllComercial Online | Soluciones Industriales",
     description:
       "Catálogo industrial profesional. Cotiza por WhatsApp. Atención técnica y soporte comercial.",
-    siteName: SITE?.name || "AllComercial Online",
+    siteName: SITE.name,
     locale: "es_CO",
   },
 
@@ -83,29 +81,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const WA = SITE?.whatsapp?.phoneE164 || "573053644307";
-  const waText = encodeURIComponent(
-    SITE?.whatsapp?.defaultMessage ||
-      "Hola, quiero una cotización. ¿Me apoyas por favor?"
-  );
+  const WA = SITE.whatsapp.phoneE164;
+  const waText = encodeURIComponent(SITE.whatsapp.defaultMessage);
 
   return (
     <html lang="es">
       <body className="min-h-screen bg-zinc-950 text-white">
-        {/* Brand tokens */}
         <style>{`
           :root {
             --brand: #FF7A00;
           }
         `}</style>
 
-        {/* TOP BAR */}
         <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
-          <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
-            {/* Brand */}
-            <a href="/" className="flex items-center gap-3">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+            <Link href="/" className="flex items-center gap-3">
               <span
-                className="h-10 w-10 rounded-xl grid place-items-center font-black text-black"
+                className="grid h-10 w-10 place-items-center rounded-xl font-black text-black"
                 style={{ background: "var(--brand)" }}
                 aria-label="AllComercial"
               >
@@ -117,16 +109,15 @@ export default function RootLayout({
                   Soluciones Industriales · Bogotá
                 </div>
               </div>
-            </a>
+            </Link>
 
-            {/* Nav */}
-            <nav className="hidden md:flex items-center gap-2 text-sm">
-              <a
+            <nav className="hidden items-center gap-2 text-sm md:flex">
+              <Link
                 href="/catalogo"
                 className="rounded-xl px-3 py-2 text-zinc-200 hover:bg-white/10"
               >
                 Catálogo
-              </a>
+              </Link>
               <a
                 href={`https://wa.me/${WA}?text=${encodeURIComponent(
                   "Hola, quiero asesoría comercial. ¿Me ayudas por favor?"
@@ -139,20 +130,19 @@ export default function RootLayout({
               </a>
             </nav>
 
-            {/* CTA */}
             <div className="flex items-center gap-2">
-              <a
+              <Link
                 href="/catalogo"
                 className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10"
               >
                 Ver catálogo
-              </a>
+              </Link>
 
               <a
                 href={`https://wa.me/${WA}?text=${waText}`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl text-black font-semibold px-4 py-2 text-sm"
+                className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-black"
                 style={{ background: "var(--brand)" }}
               >
                 WhatsApp
@@ -161,15 +151,13 @@ export default function RootLayout({
           </div>
         </header>
 
-        {/* CONTENT */}
         <main>{children}</main>
 
-        {/* FOOTER */}
         <footer className="border-t border-white/10 bg-black/40">
-          <div className="mx-auto max-w-6xl px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-10 md:grid-cols-3">
             <div>
               <div className="text-lg font-semibold">AllComercial Online</div>
-              <p className="text-sm text-zinc-300 mt-2">
+              <p className="mt-2 text-sm text-zinc-300">
                 Catálogo industrial profesional. Cotizaciones rápidas y asesoría
                 técnica para proyectos exigentes.
               </p>
@@ -187,9 +175,9 @@ export default function RootLayout({
               <div className="text-sm font-semibold text-zinc-200">Secciones</div>
               <ul className="mt-3 space-y-2 text-sm">
                 <li>
-                  <a className="text-zinc-300 hover:text-white" href="/catalogo">
+                  <Link className="text-zinc-300 hover:text-white" href="/catalogo">
                     Catálogo
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -208,7 +196,7 @@ export default function RootLayout({
 
             <div>
               <div className="text-sm font-semibold text-zinc-200">Contacto</div>
-              <div className="mt-3 text-sm text-zinc-300 space-y-2">
+              <div className="mt-3 space-y-2 text-sm text-zinc-300">
                 <div>
                   WhatsApp:{" "}
                   <a
@@ -224,7 +212,7 @@ export default function RootLayout({
 
                 <div className="pt-2">
                   <a
-                    className="inline-flex items-center justify-center rounded-xl text-black font-semibold px-4 py-2 text-sm"
+                    className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-black"
                     style={{ background: "var(--brand)" }}
                     href={`https://wa.me/${WA}?text=${encodeURIComponent(
                       "Hola, quiero una cotización formal (empresa/industria)."
@@ -240,7 +228,7 @@ export default function RootLayout({
           </div>
 
           <div className="border-t border-white/10">
-            <div className="mx-auto max-w-6xl px-6 py-4 text-xs text-zinc-400 flex flex-wrap items-center justify-between gap-2">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4 text-xs text-zinc-400">
               <div>
                 © {new Date().getFullYear()} AllComercial Online. Todos los
                 derechos reservados.
@@ -252,15 +240,14 @@ export default function RootLayout({
           </div>
         </footer>
 
-        {/* FLOATING WHATSAPP BUTTON */}
         <a
           href={`https://wa.me/${WA}?text=${waText}`}
           target="_blank"
           rel="noreferrer"
-          className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full px-4 py-3 shadow-lg border border-white/10 bg-black/60 backdrop-blur hover:bg-black/80"
+          className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-3 shadow-lg backdrop-blur hover:bg-black/80"
         >
           <span
-            className="h-10 w-10 rounded-full grid place-items-center text-black font-black"
+            className="grid h-10 w-10 place-items-center rounded-full font-black text-black"
             style={{ background: "var(--brand)" }}
           >
             WA
@@ -272,5 +259,5 @@ export default function RootLayout({
         </a>
       </body>
     </html>
-  )
+  );
 }

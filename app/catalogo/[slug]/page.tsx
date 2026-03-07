@@ -15,16 +15,15 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
   const categoria = getCategoriaBySlug(slug)
   if (!categoria) notFound()
 
-  const productosCategoria = categoria.items
+  const productosCategoria = categoria.items || []
   if (!productosCategoria.length) notFound()
 
   const nombreCategoria = categoria.title
-  const heroFallback = categoria.heroImage || ''
+  const heroFallback = categoria.heroImage || '/productos/placeholder.jpeg'
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <main className="min-h-screen bg-gray-50 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb */}
         <div className="mb-8 text-sm text-gray-500">
           <Link href="/catalogo" className="transition-colors hover:text-orange-600">
             Catálogo
@@ -36,12 +35,13 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
         <h1 className="mb-4 text-4xl font-bold text-gray-900">{nombreCategoria}</h1>
 
         <p className="mb-8 text-gray-600">
-          {productosCategoria.length} producto{productosCategoria.length !== 1 ? 's' : ''} disponible{productosCategoria.length !== 1 ? 's' : ''}
+          {productosCategoria.length} producto{productosCategoria.length !== 1 ? 's' : ''} disponible
+          {productosCategoria.length !== 1 ? 's' : ''}
         </p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {productosCategoria.map((producto) => {
-            const imagen = producto.imagen || heroFallback || ''
+            const imagen = producto.imagen || heroFallback
 
             return (
               <Link
@@ -50,20 +50,14 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
                 className="group h-full"
               >
                 <article className="flex h-full flex-col rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:border-orange-200 hover:shadow-xl">
-                  <div className="relative h-56 bg-gradient-to-br from-gray-50 to-gray-100 p-4">
-                    {imagen ? (
-                      <Image
-                        src={imagen}
-                        alt={producto.nombre}
-                        fill
-                        className="object-contain transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full items-center justify-center text-gray-400">
-                        Sin imagen
-                      </div>
-                    )}
+                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                    <Image
+                      src={imagen}
+                      alt={producto.nombre}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">
@@ -102,6 +96,7 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
+                          aria-hidden="true"
                         >
                           <path
                             strokeLinecap="round"
@@ -119,6 +114,6 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
           })}
         </div>
       </div>
-    </div>
+    </main>
   )
 }

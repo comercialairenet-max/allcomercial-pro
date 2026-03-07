@@ -1,51 +1,64 @@
 import { NextResponse } from 'next/server'
-import { products, Product } from '@/data/catalog'
+import { productos, Producto } from '@/data/productos'
 
 export async function POST(req: Request) {
   try {
     const { query } = await req.json()
-    
-    if (!query || query.length < 2) {
+
+    if (!query || typeof query !== 'string' || query.trim().length < 2) {
       return NextResponse.json({ results: [] })
     }
 
-    const searchTerms = query.toLowerCase()
-      .split(' ')
-      .filter(term => term.length > 1)
+    const searchTerms = query
+      .toLowerCase()
+      .trim()
+      .split(/\s+/)
+      .filter((term) => term.length > 1)
 
-    // Búsqueda inteligente: puntúa productos según relevancia
-    const scoredResults = products.map(product => {
+    const scoredResults = productos.map((producto: Producto) => {
       let score = 0
-      const searchableText = `
-        ${product.name} 
-        ${product.description} 
-        ${product.category} 
-        ${product.tags.join(' ')} 
-        ${product.applications.join(' ')}
-      `.toLowerCase()
 
-      // Palabras exactas tienen más peso
-      searchTerms.forEach(term => {
-        // En nombre
-        if (product.name.toLowerCase().includes(term)) score += 10
-        // En tags
-        if (product.tags.some(t => t.includes(term))) score += 8
-        // En descripción
-        if (product.description.toLowerCase().includes(term)) score += 5
-        // En aplicaciones
-        if (product.applications.some(a => a.toLowerCase().includes(term))) score += 3
-        // Coincidencia parcial en texto completo
+      const nombre = producto.nombre?.toLowerCase() || ''
+      const descripcion = producto.descripcion?.toLowerCase() || ''
+      const categoria = producto.categoria?.toLowerCase() || ''
+      const codigo = producto.codigo?.toLowerCase() || ''
+      const marca = producto.marca?.toLowerCase() || ''
+      const tags = producto.tags?.map((t) => t.toLowerCase()) || []
+      const especificacionesTexto = producto.especificaciones
+        ? Object.entries(producto.especificaciones)
+            .map(([k, v]) => `${k} ${String(v)}`)
+            .join(' ')
+            .toLowerCase()
+        : ''
+
+      const searchableText = `
+        ${nombre}
+        ${descripcion}
+        ${categoria}
+        ${codigo}
+        ${marca}
+        ${tags.join(' ')}
+        ${especificacionesTexto}
+      `
+
+      searchTerms.forEach((term) => {
+        if (nombre.includes(term)) score += 10
+        if (codigo.includes(term)) score += 9
+        if (tags.some((t) => t.includes(term))) score += 8
+        if (marca.includes(term)) score += 6
+        if (descripcion.includes(term)) score += 5
+        if (categoria.includes(term)) score += 4
+        if (especificacionesTexto.includes(term)) score += 3
         if (searchableText.includes(term)) score += 1
       })
 
-      return { ...product, score }
+      return { ...producto, score }
     })
 
-    // Filtrar y ordenar resultados
     const results = scoredResults
-      .filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 20) // Top 20 resultados
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score || a.nombre.localeCompare(b.nombre))
+      .slice(0, 20)
 
     return NextResponse.json({ results })
   } catch (error) {
