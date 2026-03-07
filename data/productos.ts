@@ -470,6 +470,237 @@ export const productos: Producto[] = [
   },
 
   {
+    id: 'extractor-axial-plastico-6p',
+    codigo: 'EAP-6',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Plástico 6"',
+    descripcion:
+      'Extractor axial plástico compacto para renovación de aire en áreas pequeñas y aplicaciones comerciales.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-plastico-6-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '6 pulgadas',
+      Material: 'Plástico',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación general',
+    },
+    stock: 8,
+    precio: 165000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'plastico', '6 pulgadas', 'ventilacion'],
+  },
+  {
+    id: 'extractor-axial-economico-8p',
+    codigo: 'EAE-8',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Económico 8"',
+    descripcion:
+      'Extractor axial económico para aplicaciones de ventilación básica con instalación sencilla.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-economico-8-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '8 pulgadas',
+      Linea: 'Económica',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación general',
+    },
+    stock: 7,
+    precio: 185000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'economico', '8 pulgadas', 'ventilacion'],
+  },
+  {
+    id: 'extractor-axial-economico-10p',
+    codigo: 'EAE-10',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Económico 10"',
+    descripcion:
+      'Extractor axial económico de mayor caudal para espacios comerciales e industriales ligeros.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-economico-10-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '10 pulgadas',
+      Linea: 'Económica',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación general',
+    },
+    stock: 7,
+    precio: 225000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'economico', '10 pulgadas', 'ventilacion'],
+  },
+  {
+    id: 'extractor-axial-plastico-10p',
+    codigo: 'EAP-10',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Plástico 10"',
+    descripcion:
+      'Extractor axial plástico de alto desempeño para ventilación y extracción de aire.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-plastico-10-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '10 pulgadas',
+      Material: 'Plástico',
+      Tipo: 'Axial',
+      Aplicacion: 'Extracción y ventilación',
+    },
+    stock: 6,
+    precio: 245000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'plastico', '10 pulgadas', 'extraccion'],
+  },
+  {
+    id: 'extractor-axial-plastico-12p',
+    codigo: 'EAP-12',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Plástico 12"',
+    descripcion:
+      'Extractor axial plástico para ventilación industrial con buen caudal y estructura liviana.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-plastico-12-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '12 pulgadas',
+      Material: 'Plástico',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación industrial',
+    },
+    stock: 6,
+    precio: 295000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'plastico', '12 pulgadas', 'industrial'],
+  },
+  {
+    id: 'extractor-axial-plastico-14p',
+    codigo: 'EAP-14',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Plástico 14"',
+    descripcion:
+      'Extractor axial plástico de mayor diámetro para procesos de ventilación y extracción continua.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-plastico-14-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '14 pulgadas',
+      Material: 'Plástico',
+      Tipo: 'Axial',
+      Aplicacion: 'Extracción continua',
+    },
+    stock: 5,
+    precio: 345000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'plastico', '14 pulgadas', 'extraccion'],
+  },
+  {
+    id: 'extractor-axial-plastico-16p',
+    codigo: 'EAP-16',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Plástico 16"',
+    descripcion:
+      'Extractor axial plástico de gran formato para movimiento de aire en ambientes industriales.',
+    imagen:
+      '/productos/ventilacion-industrial/pl148425195-extractor-axial-plastico-16-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '16 pulgadas',
+      Material: 'Plástico',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación industrial',
+    },
+    stock: 5,
+    precio: 395000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'plastico', '16 pulgadas', 'industrial'],
+  },
+  {
+    id: 'extractor-axial-metalico-10p',
+    codigo: 'EAM-10',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Metálico 10"',
+    descripcion:
+      'Extractor axial metálico para uso industrial con estructura robusta y mayor resistencia.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-metalico-10-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '10 pulgadas',
+      Material: 'Metálico',
+      Tipo: 'Axial',
+      Aplicacion: 'Industrial',
+    },
+    stock: 5,
+    precio: 285000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'metalico', '10 pulgadas', 'industrial'],
+  },
+  {
+    id: 'extractor-axial-metalico-12p',
+    codigo: 'EAM-12',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Metálico 12"',
+    descripcion:
+      'Extractor axial metálico para aplicaciones industriales y comerciales exigentes.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-metalico-12-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '12 pulgadas',
+      Material: 'Metálico',
+      Tipo: 'Axial',
+      Aplicacion: 'Industrial',
+    },
+    stock: 5,
+    precio: 340000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'metalico', '12 pulgadas', 'industrial'],
+  },
+  {
+    id: 'extractor-axial-metalico-14p',
+    codigo: 'EAM-14',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Metálico 14"',
+    descripcion:
+      'Extractor axial metálico con mayor capacidad de caudal para ventilación industrial.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-metalico-14-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '14 pulgadas',
+      Material: 'Metálico',
+      Tipo: 'Axial',
+      Aplicacion: 'Extracción industrial',
+    },
+    stock: 5,
+    precio: 420000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'metalico', '14 pulgadas', 'extraccion'],
+  },
+  {
+    id: 'extractor-axial-metalico-16p',
+    codigo: 'EAM-16',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Metálico 16"',
+    descripcion:
+      'Extractor axial metálico de alto rendimiento para renovación de aire en espacios industriales.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-metalico-16-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '16 pulgadas',
+      Material: 'Metálico',
+      Tipo: 'Axial',
+      Aplicacion: 'Ventilación industrial',
+    },
+    stock: 5,
+    precio: 520000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor axial', 'metalico', '16 pulgadas', 'ventilacion'],
+  },
+  {
     id: 'extractor-axial-18p',
     codigo: 'EXTA-18',
     categoria: 'ventilacion-industrial',
@@ -496,6 +727,151 @@ export const productos: Producto[] = [
     tags: ['extractor', 'axial', '18 pulgadas', 'ventilacion', 'industrial'],
   },
   {
+    id: 'extractor-axial-aspa-plastica-20p-1hp',
+    codigo: 'EAP-20-1HP',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Axial Aspa Plástica 20" Trifásico 1 HP',
+    descripcion:
+      'Extractor axial de aspa plástica para mayor caudal de aire en aplicaciones industriales.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-axial-aspa-plastica-20-pulgadas-trifasico-1hp-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '20 pulgadas',
+      Potencia: '1 HP',
+      Voltaje: 'Trifásico',
+      Tipo: 'Axial',
+    },
+    stock: 3,
+    precio: 980000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['extractor axial', '20 pulgadas', 'trifasico', '1 hp', 'aspa plastica'],
+  },
+  {
+    id: 'extractor-centrifugo-tipo-hongo',
+    codigo: 'ECH-1234',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Centrífugo Tipo Hongo',
+    descripcion:
+      'Extractor centrífugo tipo hongo para evacuación de aire en cubiertas y sistemas de techo.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-centrifugo-tipo-hongo-12-a-34-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Rango: '12 a 34 pulgadas',
+      Tipo: 'Centrífugo',
+      Instalacion: 'Cubierta',
+      Aplicacion: 'Extracción de aire',
+    },
+    stock: 4,
+    precio: 1250000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['extractor centrifugo', 'tipo hongo', 'cubierta', 'techo'],
+  },
+  {
+    id: 'extractor-bano-oficina-6p',
+    codigo: 'EBO-6',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor para Baño u Oficina 6"',
+    descripcion:
+      'Extractor compacto para ventilación de baños, oficinas y espacios cerrados pequeños.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-bano-oficina-6-pulgadas-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '6 pulgadas',
+      Uso: 'Baño u oficina',
+      Tipo: 'Axial compacto',
+      Aplicacion: 'Ventilación local',
+    },
+    stock: 10,
+    precio: 98000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['extractor baño', 'extractor oficina', '6 pulgadas', 'ventilacion'],
+  },
+  {
+    id: 'extractor-eolico',
+    codigo: 'EEO-IND',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Eólico Industrial',
+    descripcion:
+      'Extractor eólico para ventilación natural en cubiertas sin consumo eléctrico.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-eolico-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Eólico',
+      Consumo: 'Sin energía eléctrica',
+      Aplicacion: 'Cubiertas y bodegas',
+    },
+    stock: 4,
+    precio: 650000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['extractor eolico', 'ventilacion natural', 'cubierta', 'bodega'],
+  },
+  {
+    id: 'extractor-tubo-axial-28p',
+    codigo: 'ETA-28',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Tubo Axial 28"',
+    descripcion:
+      'Extractor tubo axial de gran diámetro para transporte de aire en sistemas industriales.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-tubo-axial-28-pulgadas-costado-rejilla-bogota-colombia.jpeg',
+    especificaciones: {
+      Diametro: '28 pulgadas',
+      Tipo: 'Tubo axial',
+      Aplicacion: 'Transporte de aire',
+      Detalle: 'Costado con rejilla',
+    },
+    stock: 2,
+    precio: 1850000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['tubo axial', '28 pulgadas', 'extractor industrial', 'aire'],
+  },
+  {
+    id: 'extractor-tubo-axial-pequeno',
+    codigo: 'ETA-PQ',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Extractor Tubo Axial Pequeño',
+    descripcion:
+      'Extractor tubo axial compacto para aplicaciones específicas de ventilación y movimiento de aire.',
+    imagen:
+      '/productos/ventilacion-industrial/extractor-tubo-axial-pequeno-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Tubo axial',
+      Formato: 'Pequeño',
+      Aplicacion: 'Ventilación puntual',
+    },
+    stock: 3,
+    precio: 480000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['tubo axial', 'extractor pequeño', 'ventilacion'],
+  },
+  {
+    id: 'turbina-siroco-05hp',
+    codigo: 'TS-05HP',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Turbina Tipo Siroco 0.5 HP Alta Presión',
+    descripcion:
+      'Turbina tipo siroco para transporte de aire y presión en aplicaciones industriales.',
+    imagen:
+      '/productos/ventilacion-industrial/turbina-tipo-siroco-0-5hp-alta-presion-bogota-colombia.jpeg',
+    especificaciones: {
+      Potencia: '0.5 HP',
+      Tipo: 'Siroco',
+      Presion: 'Alta',
+      Aplicacion: 'Transporte de aire',
+    },
+    stock: 3,
+    precio: 980000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['turbina siroco', '0.5 hp', 'alta presion', 'industrial'],
+  },
+  {
     id: 'turbina-centrifuga-15hp',
     codigo: 'TURC-15HP',
     categoria: 'ventilacion-industrial',
@@ -507,7 +883,7 @@ export const productos: Producto[] = [
     gallery: [
       '/productos/ventilacion-industrial/turbina-tipo-siroco-0-5hp-alta-presion-bogota-colombia.jpeg',
       '/productos/ventilacion-industrial/turbina-tipo-siroco-1hp-alta-presion-bogota-colombia.jpeg',
-      '/productos/ventilacion-industrial/turbina-2hp-presion-transporte-bogota-colombia.jpeg',
+      '/productos/ventilacion-industrial/urbina-2hp-presion-transporte-bogota-colombia.jpeg',
       '/productos/ventilacion-industrial/turbina-3hp-presion-transporte-bogota-colombia.jpeg',
     ],
     especificaciones: {
@@ -521,6 +897,46 @@ export const productos: Producto[] = [
     marca: 'RPM Industrial',
     destacado: true,
     tags: ['turbina', 'centrifuga', '1.5 hp', 'inyeccion', 'extraccion'],
+  },
+  {
+    id: 'turbina-2hp-presion-transporte',
+    codigo: 'TUR-2HP',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Turbina 2 HP Presión y Transporte',
+    descripcion:
+      'Turbina industrial de 2 HP para presión y transporte de aire en ductos y procesos.',
+    imagen:
+      '/productos/ventilacion-industrial/urbina-2hp-presion-transporte-bogota-colombia.jpeg',
+    especificaciones: {
+      Potencia: '2 HP',
+      Uso: 'Presión y transporte',
+      Aplicacion: 'Industrial',
+    },
+    stock: 3,
+    precio: 1980000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['turbina', '2 hp', 'presion', 'transporte de aire'],
+  },
+  {
+    id: 'turbina-3hp-presion-transporte',
+    codigo: 'TUR-3HP',
+    categoria: 'ventilacion-industrial',
+    nombre: 'Turbina 3 HP Presión y Transporte',
+    descripcion:
+      'Turbina industrial de 3 HP para sistemas de presión y transporte de aire.',
+    imagen:
+      '/productos/ventilacion-industrial/turbina-3hp-presion-transporte-bogota-colombia.jpeg',
+    especificaciones: {
+      Potencia: '3 HP',
+      Uso: 'Presión y transporte',
+      Aplicacion: 'Industrial',
+    },
+    stock: 2,
+    precio: 2450000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['turbina', '3 hp', 'presion', 'transporte', 'industrial'],
   },
 
   {
