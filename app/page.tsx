@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { CATEGORIES } from '@/lib/catalogo'
 import { getProductosDestacados } from '@/data/productos'
 
+const WA_LINK =
+  'https://wa.me/573053644307?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos.'
+
 export default function Home() {
   const destacadas = CATEGORIES.slice(0, 3)
   const productosDestacados = getProductosDestacados().slice(0, 6)
@@ -38,7 +41,7 @@ export default function Home() {
               </Link>
 
               <a
-                href="https://wa.me/573053644307?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos."
+                href={WA_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-neutral-700 bg-neutral-900 px-6 py-3 font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
@@ -231,6 +234,75 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-10">
+        <div className="overflow-hidden rounded-3xl border border-orange-400/20 bg-gradient-to-br from-orange-500/10 via-neutral-900 to-neutral-950 p-8 shadow-2xl md:p-12">
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] lg:items-center">
+            <div>
+              <span className="inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-orange-400">
+                Atención comercial
+              </span>
+
+              <h2 className="mt-5 text-3xl font-bold tracking-tight text-white md:text-4xl">
+                ¿Necesitas cotización, ficha técnica o asesoría para tu proyecto?
+              </h2>
+
+              <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-300">
+                Te ayudamos a elegir la referencia adecuada según caudal, presión,
+                medida, potencia, tipo de aplicación o necesidad del proceso.
+                Escríbenos y recibe atención comercial rápida.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
+                >
+                  Hablar por WhatsApp
+                </a>
+
+                <Link
+                  href="/catalogo"
+                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-700 bg-neutral-900 px-6 py-3 font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
+                >
+                  Ver catálogo completo
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="text-sm font-semibold text-orange-400">
+                  Respuesta rápida
+                </div>
+                <p className="mt-2 text-sm leading-7 text-neutral-300">
+                  Atención por WhatsApp para cotizaciones y orientación comercial.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="text-sm font-semibold text-orange-400">
+                  Soporte técnico
+                </div>
+                <p className="mt-2 text-sm leading-7 text-neutral-300">
+                  Te orientamos según tu aplicación, espacio, caudal o necesidad industrial.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="text-sm font-semibold text-orange-400">
+                  Portafolio especializado
+                </div>
+                <p className="mt-2 text-sm leading-7 text-neutral-300">
+                  Ventilación, filtración, pintura, lavaderos, aire comprimido y más.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
