@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,6 +27,49 @@ function bestCategoryFallbackImage(cat: {
   if (cat?.heroImage) return cat.heroImage;
   const first = (cat?.items || []).find((x) => x?.imagen)?.imagen;
   return first || "/productos/placeholder.jpeg";
+}
+
+export async function generateMetadata({
+  params,
+}: ProductoPageProps): Promise<Metadata> {
+  const { slug, id } = await params
+
+  const categoria = getCategoriaBySlug(slug)
+  const item = getProductoById(id)
+
+  if (!categoria || !item || item.categoria !== slug) {
+    return {
+      title: 'Producto no encontrado',
+    }
+  }
+
+  const title = `${item.nombre} | ${categoria.title}`
+  const description =
+    item.descripcion ||
+    `Consulta ${item.nombre} en la categoría ${categoria.title}. Ficha técnica, imágenes y cotización.`
+
+  const image = item.imagen || categoria.heroImage || '/productos/placeholder.jpeg'
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/catalogo/${slug}/${id}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/catalogo/${slug}/${id}`,
+      images: image
+        ? [
+            {
+              url: image,
+              alt: item.nombre,
+            },
+          ]
+        : [],
+    },
+  }
 }
 
 export default async function ProductoPage({ params }: ProductoPageProps) {

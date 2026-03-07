@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -7,6 +8,45 @@ type CategoriaPageProps = {
   params: Promise<{
     slug: string
   }>
+}
+
+export async function generateMetadata({
+  params,
+}: CategoriaPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const categoria = getCategoriaBySlug(slug)
+
+  if (!categoria) {
+    return {
+      title: 'Categoría no encontrada',
+    }
+  }
+
+  const title = `${categoria.title} | Catálogo Industrial`
+  const description =
+    categoria.subtitle ||
+    `Explora ${categoria.title} en nuestro catálogo industrial. Fichas, imágenes y cotización directa.`
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/catalogo/${categoria.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/catalogo/${categoria.slug}`,
+      images: categoria.heroImage
+        ? [
+            {
+              url: categoria.heroImage,
+              alt: categoria.title,
+            },
+          ]
+        : [],
+    },
+  }
 }
 
 export default async function CategoriaPage({ params }: CategoriaPageProps) {
