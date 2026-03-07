@@ -9,19 +9,17 @@ export function CategoriesGrid() {
         <Link
           key={cat.slug}
           href={`/catalogo/${cat.slug}`}
-          className="group block overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:border-orange-200 hover:shadow-xl"
+          className="group block overflow-hidden rounded-2xl border border-gray-800 bg-[#111111] shadow-sm transition-all duration-300 hover:border-orange-400 hover:shadow-xl"
         >
-          <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+          <div className="relative h-48 w-full bg-gray-100">
             {cat.heroImage ? (
-              <div className="relative h-full w-full">
-                <Image
-                  src={cat.heroImage}
-                  alt={cat.title}
-                  fill
-                  className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                />
-              </div>
+              <Image
+                src={cat.heroImage}
+                alt={cat.title}
+                fill
+                className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              />
             ) : (
               <div className="flex h-full items-center justify-center text-gray-400">
                 <span>Imagen en proceso</span>
@@ -30,16 +28,16 @@ export function CategoriesGrid() {
           </div>
 
           <div className="p-5">
-            <h3 className="text-xl font-semibold text-gray-800 transition-colors group-hover:text-orange-600">
+            <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-orange-400">
               {cat.title}
             </h3>
 
-            <p className="mt-2 line-clamp-2 text-sm text-gray-600">
+            <p className="mt-2 min-h-[48px] text-sm text-gray-300">
               {cat.subtitle}
             </p>
 
-            <p className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-orange-600 transition-all group-hover:gap-2">
-              {cat.items.length} productos
+            <p className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-orange-400 transition-all group-hover:gap-2">
+              Ver categoría
               <svg
                 className="h-4 w-4"
                 fill="none"

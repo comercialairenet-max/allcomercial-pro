@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { getCategoriaBySlug } from "@/lib/catalogo";
 import { SITE } from "@/lib/site";
@@ -217,10 +218,12 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                     className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
                   >
                     <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                      <img
+                      <Image
                         src={rimg}
                         alt={r.nombre}
-                        className="h-full w-full object-contain p-3"
+                        fill
+                        className="object-contain p-3"
+                        sizes="(max-width: 1024px) 100vw, 25vw"
                       />
                     </div>
 
