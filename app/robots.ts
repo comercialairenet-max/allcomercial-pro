@@ -1,17 +1,16 @@
-import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
+import type { MetadataRoute } from 'next'
+
+const SITE_URL = 'https://allcomercial-pro.vercel.app'
 
 export default function robots(): MetadataRoute.Robots {
-  const base = (SITE?.url || "https://www.allcomercialonline.com").replace(/\/$/, "");
-
   return {
     rules: [
       {
-        userAgent: "*",
-        allow: "/",
+        userAgent: '*',
+        allow: '/',
       },
     ],
-    sitemap: `${base}/sitemap.xml`,
-    host: base,
-  };
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
+  }
 }

@@ -1,32 +1,40 @@
-import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/site";
-import { CATEGORIES } from "@/lib/catalogo";
+import type { MetadataRoute } from 'next'
+import { CATEGORIES } from '@/lib/catalogo'
+import { productos } from '@/data/productos'
+
+const SITE_URL = 'https://allcomercial-pro.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = (SITE?.url || "https://example.com").replace(/\/$/, "");
-  const now = new Date();
+  const now = new Date()
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: `${base}/`,
+      url: `${SITE_URL}/`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${base}/catalogo`,
+      url: `${SITE_URL}/catalogo`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
-  ];
+  ]
 
-  const categoryRoutes: MetadataRoute.Sitemap = (CATEGORIES || []).map((c) => ({
-    url: `${base}/catalogo/${c.slug}`,
+  const categoryRoutes: MetadataRoute.Sitemap = CATEGORIES.map((category) => ({
+    url: `${SITE_URL}/catalogo/${category.slug}`,
     lastModified: now,
-    changeFrequency: "weekly",
+    changeFrequency: 'weekly',
     priority: 0.8,
-  }));
+  }))
 
-  return [...staticRoutes, ...categoryRoutes];
+  const productRoutes: MetadataRoute.Sitemap = productos.map((producto) => ({
+    url: `${SITE_URL}/catalogo/${producto.categoria}/${producto.id}`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [...staticRoutes, ...categoryRoutes, ...productRoutes]
 }
