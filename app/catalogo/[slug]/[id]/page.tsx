@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { getCategoriaBySlug } from "@/lib/catalogo";
 import { SITE } from "@/lib/site";
 import { getProductoById } from "@/data/productos";
+import ProductGallery from "./ProductGallery";
 
 type ProductoPageProps = {
   params: Promise<{
@@ -40,12 +40,15 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
 
   const catFallback = bestCategoryFallbackImage(categoria);
   const principal = item.imagen || catFallback;
+
   const gallery =
     item.gallery && item.gallery.length > 0
       ? item.gallery
       : principal
         ? [principal]
-        : [];
+        : ["/productos/placeholder.jpeg"];
+
+  const uniqueGallery = Array.from(new Set(gallery.filter(Boolean)));
 
   const msg = `Hola, quiero cotizar: ${item.nombre} (${categoria.title}).`;
 
@@ -72,47 +75,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
         </div>
 
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div className="space-y-4">
-            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
-              <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                <Image
-                  src={principal}
-                  alt={item.nombre}
-                  fill
-                  className="object-contain p-4"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-            </div>
-
-            {gallery.length > 0 && (
-              <div>
-                <div className="mb-3 text-sm font-semibold text-neutral-700">
-                  Galería
-                </div>
-
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  {gallery.slice(0, 4).map((foto, index) => (
-                    <div
-                      key={`${foto}-${index}`}
-                      className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"
-                    >
-                      <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                        <Image
-                          src={foto}
-                          alt={`${item.nombre} ${index + 1}`}
-                          fill
-                          className="object-contain p-3"
-                          sizes="(max-width: 1024px) 50vw, 25vw"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+          <ProductGallery images={uniqueGallery} alt={item.nombre} />
 
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700">
@@ -254,12 +217,10 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                     className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
                   >
                     <div className="relative aspect-[4/3] w-full bg-neutral-100">
-                      <Image
+                      <img
                         src={rimg}
                         alt={r.nombre}
-                        fill
-                        className="object-contain p-3"
-                        sizes="(max-width: 1024px) 100vw, 25vw"
+                        className="h-full w-full object-contain p-3"
                       />
                     </div>
 
