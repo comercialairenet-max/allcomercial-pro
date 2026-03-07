@@ -1,107 +1,115 @@
-import { notFound } from 'next/navigation'
-import Image from 'next/image'
-import Link from 'next/link'
-import { getCategoriaBySlug } from '@/lib/catalogo'
-import { SITE } from '@/lib/site'
-import { getProductoById } from '@/data/productos'
+import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { getCategoriaBySlug } from "@/lib/catalogo";
+import { SITE } from "@/lib/site";
+import { getProductoById } from "@/data/productos";
 
 type ProductoPageProps = {
   params: Promise<{
-    slug: string
-    id: string
-  }>
-}
+    slug: string;
+    id: string;
+  }>;
+};
 
-const WA = SITE?.whatsapp?.phoneE164 || '573053644307'
+const WA = SITE?.whatsapp?.phoneE164 || "573053644307";
 
 function waLink(text: string) {
-  return `https://wa.me/${WA}?text=${encodeURIComponent(text)}`
+  return `https://wa.me/${WA}?text=${encodeURIComponent(text)}`;
 }
 
 function bestCategoryFallbackImage(cat: any) {
-  if (cat?.heroImage) return cat.heroImage
-  const first = (cat?.items || []).find((x: any) => x?.imagen)?.imagen
-  return first || ''
+  if (cat?.heroImage) return cat.heroImage;
+  const first = (cat?.items || []).find((x: any) => x?.imagen)?.imagen;
+  return first || "";
 }
 
 export default async function ProductoPage({ params }: ProductoPageProps) {
-  const { slug, id } = await params
+  const { slug, id } = await params;
 
-  const categoria = getCategoriaBySlug(slug)
-  if (!categoria) notFound()
+  const categoria = getCategoriaBySlug(slug);
+  if (!categoria) notFound();
 
-  const item = getProductoById(id)
-  if (!item) notFound()
+  const item = getProductoById(id);
+  if (!item) notFound();
 
-  if (item.categoria !== slug) notFound()
+  if (item.categoria !== slug) notFound();
 
-  const catFallback = bestCategoryFallbackImage(categoria)
-  const img = item.imagen || catFallback || ''
-  const gallery = item.gallery || []
+  const catFallback = bestCategoryFallbackImage(categoria);
+  const principal = item.imagen || catFallback || "";
+  const gallery =
+    item.gallery && item.gallery.length > 0
+      ? item.gallery
+      : principal
+      ? [principal]
+      : [];
 
-  const msg = `Hola, quiero cotizar: ${item.nombre} (${categoria.title}).`
+  const msg = `Hola, quiero cotizar: ${item.nombre} (${categoria.title}).`;
 
   const relacionados = (categoria.items || [])
     .filter((x) => x.id !== item.id)
-    .slice(0, 6)
+    .slice(0, 4);
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        {/* Breadcrumb */}
-        <div className="text-sm text-zinc-400">
-          <Link href="/catalogo" className="hover:text-white">
+    <main className="min-h-screen bg-neutral-100 text-neutral-900">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        {/* breadcrumb */}
+        <div className="text-sm text-neutral-500">
+          <Link href="/catalogo" className="hover:text-neutral-900">
             Catálogo
           </Link>
           <span className="mx-2">/</span>
-          <Link href={`/catalogo/${categoria.slug}`} className="hover:text-white">
+          <Link
+            href={`/catalogo/${categoria.slug}`}
+            className="hover:text-neutral-900"
+          >
             {categoria.title}
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-zinc-200">{item.nombre}</span>
+          <span className="text-neutral-800">{item.nombre}</span>
         </div>
 
-        {/* Hero producto */}
+        {/* header producto */}
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {/* galería */}
           <div className="space-y-4">
-            {/* Imagen principal */}
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-              <div className="relative aspect-[4/3] w-full bg-black/30">
-                {img ? (
+            <div className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
+              <div className="relative aspect-[4/3] w-full bg-neutral-100">
+                {principal ? (
                   <Image
-                    src={img}
+                    src={principal}
                     alt={item.nombre}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority
                   />
                 ) : (
-                  <div className="absolute inset-0 grid place-items-center text-sm text-zinc-400">
+                  <div className="absolute inset-0 grid place-items-center text-sm text-neutral-400">
                     Imagen en proceso
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Galería de 4 fotos */}
             {gallery.length > 0 && (
               <div>
-                <div className="mb-3 text-sm font-semibold text-zinc-300">
-                  Galería del producto
+                <div className="mb-3 text-sm font-semibold text-neutral-700">
+                  Galería
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {gallery.slice(0, 4).map((foto, index) => (
                     <div
                       key={index}
-                      className="overflow-hidden rounded-xl border border-white/10 bg-white/5"
+                      className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"
                     >
-                      <div className="relative aspect-[4/3] w-full bg-black/30">
+                      <div className="relative aspect-[4/3] w-full bg-neutral-100">
                         <Image
                           src={foto}
                           alt={`${item.nombre} ${index + 1}`}
                           fill
-                          className="object-cover transition duration-300 hover:scale-105"
+                          className="object-cover"
                           sizes="(max-width: 1024px) 50vw, 25vw"
                         />
                       </div>
@@ -112,74 +120,58 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
             )}
           </div>
 
+          {/* info */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300">
-              <span
-                className="h-2 w-2 rounded-full"
-                style={{ background: 'var(--brand)' }}
-              />
+            <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700">
+              <span className="h-2 w-2 rounded-full bg-orange-500" />
               Ficha técnica
             </div>
 
-            <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
+            <h1 className="mt-4 text-3xl font-bold tracking-tight text-neutral-900 md:text-4xl">
               {item.nombre}
             </h1>
 
-            <div className="mt-3 text-zinc-300">
-              {item.descripcion || 'Equipo industrial · Cotización y soporte técnico.'}
-            </div>
+            <p className="mt-4 text-base leading-7 text-neutral-600">
+              {item.descripcion || "Producto industrial con soporte técnico y cotización inmediata."}
+            </p>
 
-            <div className="mt-4 flex flex-wrap gap-2 text-xs">
-              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700">
                 Categoría: {categoria.title}
               </span>
 
               {item.codigo && (
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700">
                   Código: {item.codigo}
                 </span>
               )}
 
               {item.marca && (
-                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700">
                   Marca: {item.marca}
                 </span>
               )}
+
+              <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700">
+                Stock: {item.stock}
+              </span>
             </div>
 
-            {/* Especificaciones */}
-            {item.especificaciones && (
-              <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
-                <div className="text-sm font-semibold text-zinc-200">
-                  Especificaciones
-                </div>
-
-                <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {Object.entries(item.especificaciones).map(([key, value]) => (
-                    <div
-                      key={key}
-                      className="rounded-xl border border-white/10 bg-black/20 px-4 py-3"
-                    >
-                      <div className="text-xs uppercase tracking-wide text-zinc-400">
-                        {key}
-                      </div>
-                      <div className="mt-1 text-sm font-medium text-zinc-100">
-                        {String(value)}
-                      </div>
-                    </div>
-                  ))}
+            {typeof item.precio === "number" && (
+              <div className="mt-6">
+                <div className="text-sm text-neutral-500">Precio de referencia</div>
+                <div className="mt-1 text-3xl font-bold text-neutral-900">
+                  ${item.precio.toLocaleString("es-CO")}
                 </div>
               </div>
             )}
 
-            {/* CTA */}
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={waLink(msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-black"
-                style={{ background: 'var(--brand)' }}
+                className="inline-flex items-center justify-center rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
               >
                 Cotizar por WhatsApp
               </a>
@@ -190,81 +182,112 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                 )}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-6 py-3 font-medium text-neutral-800 transition hover:bg-neutral-50"
               >
-                Pedir ficha
+                Solicitar ficha
               </a>
             </div>
 
-            <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm text-zinc-300">
-              <div className="font-semibold" style={{ color: 'var(--brand)' }}>
-                Nota PRO
+            {/* tabla técnica */}
+            {item.especificaciones && Object.keys(item.especificaciones).length > 0 && (
+              <div className="mt-8 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
+                <div className="border-b border-neutral-200 bg-neutral-50 px-5 py-4">
+                  <h2 className="text-base font-semibold text-neutral-900">
+                    Especificaciones técnicas
+                  </h2>
+                </div>
+
+                <div className="divide-y divide-neutral-200">
+                  {Object.entries(item.especificaciones).map(([key, value]) => (
+                    <div
+                      key={key}
+                      className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-2"
+                    >
+                      <div className="text-sm font-medium text-neutral-500">
+                        {key}
+                      </div>
+                      <div className="text-sm text-neutral-900">
+                        {String(value)}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="mt-2">
-                Si necesitas medidas exactas, caudal, presión, potencia, material o
-                compatibilidad, escríbenos y te asesoramos con la mejor opción.
+            )}
+
+            {/* nota */}
+            <div className="mt-8 rounded-3xl border border-orange-200 bg-orange-50 p-5">
+              <div className="text-sm font-semibold text-orange-700">
+                Nota comercial
               </div>
+              <p className="mt-2 text-sm leading-6 text-orange-900">
+                Si necesitas medidas especiales, voltaje, caudal, presión,
+                material o compatibilidad con tu proceso, escríbenos y te
+                asesoramos con la mejor opción.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Relacionados */}
+        {/* relacionados */}
         {relacionados.length > 0 && (
-          <div className="mt-12">
-            <div className="flex flex-wrap items-end justify-between gap-4">
+          <section className="mt-14">
+            <div className="flex items-end justify-between gap-4">
               <div>
-                <div className="text-sm text-zinc-400">Relacionados</div>
-                <h2 className="mt-1 text-2xl font-semibold">
+                <div className="text-sm text-neutral-500">Relacionados</div>
+                <h2 className="mt-1 text-2xl font-bold text-neutral-900">
                   Más en {categoria.title}
                 </h2>
               </div>
 
               <Link
                 href={`/catalogo/${categoria.slug}`}
-                className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10"
+                className="rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50"
               >
                 Ver categoría →
               </Link>
             </div>
 
-            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {relacionados.map((r) => {
-                const rimg = r.imagen || catFallback || ''
+                const rimg = r.imagen || catFallback || "";
                 return (
                   <Link
                     key={r.id}
                     href={`/catalogo/${categoria.slug}/${r.id}`}
-                    className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition hover:bg-white/10"
+                    className="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition hover:shadow-md"
                   >
-                    <div className="relative aspect-[4/3] w-full bg-black/30">
+                    <div className="relative aspect-[4/3] w-full bg-neutral-100">
                       {rimg ? (
                         <Image
                           src={rimg}
                           alt={r.nombre}
                           fill
                           className="object-cover"
-                          sizes="(max-width: 1024px) 100vw, 33vw"
+                          sizes="(max-width: 1024px) 100vw, 25vw"
                         />
                       ) : (
-                        <div className="absolute inset-0 grid place-items-center text-sm text-zinc-400">
+                        <div className="absolute inset-0 grid place-items-center text-sm text-neutral-400">
                           Imagen en proceso
                         </div>
                       )}
                     </div>
 
-                    <div className="p-5">
-                      <div className="font-semibold">{r.nombre}</div>
-                      <div className="mt-2 text-sm text-zinc-300">
-                        {r.descripcion || 'Cotización y soporte técnico.'}
+                    <div className="p-4">
+                      <div className="font-semibold text-neutral-900">
+                        {r.nombre}
+                      </div>
+                      <div className="mt-2 line-clamp-2 text-sm text-neutral-600">
+                        {r.descripcion || "Cotización y soporte técnico."}
                       </div>
                     </div>
                   </Link>
-                )
+                );
               })}
             </div>
-          </div>
+          </section>
         )}
       </div>
     </main>
-  )
+  );
 }
