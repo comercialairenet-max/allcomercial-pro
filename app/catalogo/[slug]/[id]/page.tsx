@@ -32,23 +32,23 @@ function bestCategoryFallbackImage(cat: {
 export async function generateMetadata({
   params,
 }: ProductoPageProps): Promise<Metadata> {
-  const { slug, id } = await params
+  const { slug, id } = await params;
 
-  const categoria = getCategoriaBySlug(slug)
-  const item = getProductoById(id)
+  const categoria = getCategoriaBySlug(slug);
+  const item = getProductoById(id);
 
   if (!categoria || !item || item.categoria !== slug) {
     return {
-      title: 'Producto no encontrado',
-    }
+      title: "Producto no encontrado",
+    };
   }
 
-  const title = `${item.nombre} | ${categoria.title}`
+  const title = `${item.nombre} | ${categoria.title}`;
   const description =
     item.descripcion ||
-    `Consulta ${item.nombre} en la categoría ${categoria.title}. Ficha técnica, imágenes y cotización.`
+    `Consulta ${item.nombre} en la categoría ${categoria.title}. Ficha técnica, imágenes y cotización.`;
 
-  const image = item.imagen || categoria.heroImage || '/productos/placeholder.jpeg'
+  const image = item.imagen || categoria.heroImage || "/productos/placeholder.jpeg";
 
   return {
     title,
@@ -69,7 +69,7 @@ export async function generateMetadata({
           ]
         : [],
     },
-  }
+  };
 }
 
 export default async function ProductoPage({ params }: ProductoPageProps) {
@@ -101,8 +101,45 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
     .filter((x) => x.id !== item.id)
     .slice(0, 4);
 
+  const siteUrl = (SITE?.url || "https://allcomercial-pro.vercel.app").replace(/\/$/, "");
+
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: item.nombre,
+    image: uniqueGallery.map((img) =>
+      img.startsWith("http") ? img : `${siteUrl}${img}`
+    ),
+    description:
+      item.descripcion ||
+      `Producto industrial ${item.nombre} de la categoría ${categoria.title}.`,
+    sku: item.codigo || item.id,
+    brand: {
+      "@type": "Brand",
+      name: item.marca || "AllComercial Online",
+    },
+    category: categoria.title,
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "COP",
+      ...(typeof item.precio === "number" ? { price: item.precio } : {}),
+      availability:
+        item.stock > 0
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+      url: `${siteUrl}/catalogo/${slug}/${id}`,
+    },
+  };
+
   return (
     <main className="min-h-screen bg-neutral-100 text-neutral-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productJsonLd),
+        }}
+      />
+
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="text-sm text-neutral-500">
           <Link href="/catalogo" className="hover:text-neutral-900">
@@ -202,21 +239,19 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                   </div>
 
                   <div className="divide-y divide-neutral-200">
-                    {Object.entries(item.especificaciones).map(
-                      ([key, value]) => (
-                        <div
-                          key={key}
-                          className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-2"
-                        >
-                          <div className="text-sm font-medium text-neutral-500">
-                            {key}
-                          </div>
-                          <div className="text-sm text-neutral-900">
-                            {String(value)}
-                          </div>
+                    {Object.entries(item.especificaciones).map(([key, value]) => (
+                      <div
+                        key={key}
+                        className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-2"
+                      >
+                        <div className="text-sm font-medium text-neutral-500">
+                          {key}
                         </div>
-                      )
-                    )}
+                        <div className="text-sm text-neutral-900">
+                          {String(value)}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
