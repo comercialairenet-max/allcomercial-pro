@@ -16,6 +16,26 @@ export type Producto = {
 
 export const productos: Producto[] = [
   {
+    id: 'media-filtrante-g1',
+    codigo: 'FIL-G1-MF',
+    categoria: 'filtracion-industrial',
+    nombre: 'Media Filtrante G1 Fibra Sintética',
+    descripcion:
+      'Media filtrante para prefiltro en sistemas HVAC y procesos industriales con retención inicial de partículas.',
+    imagen:
+      '/productos/filtracion-industrial/media-filtrante-g1-fibra-sintetica-prefiltro-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'G1',
+      Material: 'Fibra sintética',
+      Aplicacion: 'Prefiltro industrial',
+    },
+    stock: 15,
+    precio: 65000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['media filtrante', 'g1', 'prefiltro', 'fibra sintetica', 'hvac'],
+  },
+  {
     id: 'filtro-panel-g4-595x595',
     codigo: 'FPG4-595',
     categoria: 'filtracion-industrial',
@@ -40,6 +60,266 @@ export const productos: Producto[] = [
     marca: 'RPM Industrial',
     destacado: true,
     tags: ['filtro', 'panel', 'g4', '595x595', 'prefiltro', 'hvac'],
+  },
+  {
+    id: 'filtro-paint-stop-fibra-vidrio',
+    codigo: 'FIL-PS-FV',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Paint Stop Fibra de Vidrio',
+    descripcion:
+      'Filtro para cabinas de pintura que captura neblina y partículas de pintura en procesos de extracción.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-paint-stop-fibra-vidrio-cabina-pintura-bogota-colombia.jpeg',
+    especificaciones: {
+      Material: 'Fibra de vidrio',
+      Uso: 'Cabina de pintura',
+      Aplicacion: 'Captura de overspray',
+    },
+    stock: 10,
+    precio: 120000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['paint stop', 'fibra de vidrio', 'cabina de pintura', 'overspray'],
+  },
+  {
+    id: 'filtro-techo-f5-cabina-pintura',
+    codigo: 'FIL-F5-TECHO',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Techo F5 para Cabina de Pintura',
+    descripcion:
+      'Filtro de suministro de aire para techo de cabinas de pintura con alta uniformidad de flujo.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-techo-f5-cabina-pintura-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'F5',
+      Uso: 'Suministro de aire',
+      Aplicacion: 'Cabinas de pintura',
+    },
+    stock: 8,
+    precio: 145000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['filtro techo', 'f5', 'cabina de pintura', 'suministro de aire'],
+  },
+  {
+    id: 'filtro-carbon-activado-industrial',
+    codigo: 'FIL-CA-IND',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Carbón Activado Industrial',
+    descripcion:
+      'Filtro para control de olores y compuestos volátiles en ambientes industriales y HVAC.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-carbon-activado-control-olores-industrial-bogota-colombia.jpeg',
+    especificaciones: {
+      Material: 'Carbón activado',
+      Uso: 'Control de olores',
+      Aplicacion: 'Industrial y HVAC',
+    },
+    stock: 6,
+    precio: 185000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['carbon activado', 'control de olores', 'hvac', 'industrial'],
+  },
+  {
+    id: 'filtro-carton-plegado-cabina-pintura',
+    codigo: 'FIL-CP-CP',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Cartón Plegado para Cabina de Pintura',
+    descripcion:
+      'Filtro de cartón plegado para extracción de aire y retención de partículas en cabinas de pintura.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-carton-plegado-cabina-pintura-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Cartón plegado',
+      Uso: 'Extracción',
+      Aplicacion: 'Cabina de pintura',
+    },
+    stock: 10,
+    precio: 98000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['carton plegado', 'cabina pintura', 'extraccion', 'filtro'],
+  },
+  {
+    id: 'manta-filtrante-lavable-g4-verde',
+    codigo: 'FIL-G4-LAV',
+    categoria: 'filtracion-industrial',
+    nombre: 'Manta Filtrante Lavable G4 Verde',
+    descripcion:
+      'Manta lavable G4 para prefiltrado y ventilación industrial con buena durabilidad.',
+    imagen:
+      '/productos/filtracion-industrial/manta-filtrante-lavable-g4-verde-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'G4',
+      Caracteristica: 'Lavable',
+      Color: 'Verde',
+    },
+    stock: 9,
+    precio: 110000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['manta lavable', 'g4', 'verde', 'hvac'],
+  },
+  {
+    id: 'manta-filtrante-lavable-g2-azul',
+    codigo: 'FIL-G2-LAV',
+    categoria: 'filtracion-industrial',
+    nombre: 'Manta Filtrante Lavable G2 Azul',
+    descripcion:
+      'Manta filtrante lavable G2 para prefiltro y aplicaciones HVAC de baja restricción.',
+    imagen:
+      '/productos/filtracion-industrial/manta-filtrante-lavable-g2-azul-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'G2',
+      Caracteristica: 'Lavable',
+      Color: 'Azul',
+    },
+    stock: 9,
+    precio: 89000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['manta lavable', 'g2', 'azul', 'prefiltro', 'hvac'],
+  },
+  {
+    id: 'filtro-plegado-carbon-activado',
+    codigo: 'FIL-PL-CA',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Plegado Carbón Activado HVAC',
+    descripcion:
+      'Filtro plegado con carbón activado para control de olores y recirculación de aire.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-plegado-carbon-activado-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Plegado',
+      Material: 'Carbón activado',
+      Aplicacion: 'HVAC',
+    },
+    stock: 6,
+    precio: 175000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['filtro plegado', 'carbon activado', 'hvac', 'olores'],
+  },
+  {
+    id: 'filtro-lavable-fibra-poliester',
+    codigo: 'FIL-LAV-POL',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Lavable Fibra Poliéster HVAC',
+    descripcion:
+      'Filtro lavable de fibra poliéster para sistemas de ventilación y aire acondicionado.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-lavable-fibra-poliester-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Material: 'Fibra poliéster',
+      Caracteristica: 'Lavable',
+      Aplicacion: 'HVAC',
+    },
+    stock: 7,
+    precio: 99000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['filtro lavable', 'poliester', 'hvac', 'ventilacion'],
+  },
+  {
+    id: 'filtro-plisado-merv8',
+    codigo: 'FIL-M8-PL',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Plisado MERV 8',
+    descripcion:
+      'Filtro plisado para sistemas de ventilación y manejo de aire con eficiencia MERV 8.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-plisado-merv8-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'MERV 8',
+      Tipo: 'Plisado',
+      Aplicacion: 'HVAC',
+    },
+    stock: 10,
+    precio: 105000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['plisado', 'merv8', 'hvac', 'filtro aire'],
+  },
+  {
+    id: 'mini-pleat-merv11',
+    codigo: 'FIL-MP-M11',
+    categoria: 'filtracion-industrial',
+    nombre: 'Mini Pleat MERV 11',
+    descripcion:
+      'Filtro mini pleat MERV 11 para mejor calidad de aire en aplicaciones HVAC e industriales.',
+    imagen:
+      '/productos/filtracion-industrial/mini-pleat-merv11-calidad-aire-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'MERV 11',
+      Tipo: 'Mini Pleat',
+      Aplicacion: 'Calidad de aire',
+    },
+    stock: 5,
+    precio: 210000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['mini pleat', 'merv11', 'calidad de aire', 'hvac'],
+  },
+  {
+    id: 'mini-pleat-merv14',
+    codigo: 'FIL-MP-M14',
+    categoria: 'filtracion-industrial',
+    nombre: 'Mini Pleat MERV 14',
+    descripcion:
+      'Filtro mini pleat de alta eficiencia para sistemas de aire de mayor exigencia.',
+    imagen:
+      '/productos/filtracion-industrial/mini-pleat-merv14-alta-eficiencia-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'MERV 14',
+      Tipo: 'Mini Pleat',
+      Aplicacion: 'Alta eficiencia',
+    },
+    stock: 5,
+    precio: 245000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['mini pleat', 'merv14', 'alta eficiencia', 'hvac'],
+  },
+  {
+    id: 'mini-pleat-merv15',
+    codigo: 'FIL-MP-M15',
+    categoria: 'filtracion-industrial',
+    nombre: 'Mini Pleat MERV 15',
+    descripcion:
+      'Filtro mini pleat MERV 15 para aplicaciones que exigen filtración de alta eficiencia.',
+    imagen:
+      '/productos/filtracion-industrial/mini-pleat-merv15-alta-eficiencia-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'MERV 15',
+      Tipo: 'Mini Pleat',
+      Aplicacion: 'Alta eficiencia',
+    },
+    stock: 4,
+    precio: 280000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['mini pleat', 'merv15', 'alta eficiencia', 'filtracion avanzada'],
+  },
+  {
+    id: 'filtro-pocket-f6',
+    codigo: 'FIL-PKT-F6',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Pocket F6',
+    descripcion:
+      'Filtro de bolsa tipo pocket F6 para sistemas HVAC y filtración de aire industrial.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-pocket-f6-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'F6',
+      Tipo: 'Pocket',
+      Aplicacion: 'HVAC',
+    },
+    stock: 8,
+    precio: 165000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['pocket', 'f6', 'filtro bolsa', 'hvac'],
   },
   {
     id: 'filtro-bolsa-f7-592x592',
@@ -68,6 +348,127 @@ export const productos: Producto[] = [
     destacado: true,
     tags: ['filtro', 'bolsa', 'f7', '592x592', 'hvac', 'filtracion'],
   },
+  {
+    id: 'filtro-pocket-f8',
+    codigo: 'FIL-PKT-F8',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Pocket F8',
+    descripcion:
+      'Filtro pocket F8 para aplicaciones de aire con exigencia superior de eficiencia.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-pocket-f8-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'F8',
+      Tipo: 'Pocket',
+      Aplicacion: 'HVAC',
+    },
+    stock: 6,
+    precio: 210000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['pocket', 'f8', 'hvac', 'filtro bolsa'],
+  },
+  {
+    id: 'filtro-v-bank-merv14',
+    codigo: 'FIL-VB-M14',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro V-Bank MERV 14',
+    descripcion:
+      'Filtro V-Bank de alta capacidad para calidad de aire y sistemas HVAC de alto caudal.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-v-bank-merv14-hvac-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'MERV 14',
+      Tipo: 'V-Bank',
+      Aplicacion: 'HVAC alto caudal',
+    },
+    stock: 4,
+    precio: 320000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['v-bank', 'merv14', 'alta capacidad', 'hvac'],
+  },
+  {
+    id: 'filtro-cartucho-colector-polvo',
+    codigo: 'FIL-CCP',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Cartucho Colector de Polvo',
+    descripcion:
+      'Cartucho para sistemas dust collector y control de material particulado en industria.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-cartucho-colector-polvo-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Cartucho',
+      Uso: 'Control de polvo',
+      Aplicacion: 'Dust collector',
+    },
+    stock: 5,
+    precio: 260000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['cartucho', 'colector de polvo', 'dust collector', 'industrial'],
+  },
+  {
+    id: 'mini-pleat-hepa-h13',
+    codigo: 'FIL-HEPA-H13-MP',
+    categoria: 'filtracion-industrial',
+    nombre: 'Mini Pleat HEPA H13',
+    descripcion:
+      'Filtro HEPA H13 tipo mini pleat para aplicaciones de alta pureza y control fino de partículas.',
+    imagen:
+      '/productos/filtracion-industrial/mini-pleat-hepa-h13-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'H13',
+      Tipo: 'Mini Pleat HEPA',
+      Aplicacion: 'Alta eficiencia',
+    },
+    stock: 4,
+    precio: 390000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['hepa', 'h13', 'mini pleat', 'alta eficiencia'],
+  },
+  {
+    id: 'filtro-hepa-box-header-h13',
+    codigo: 'FIL-HEPA-BH13',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro HEPA Box Header H13',
+    descripcion:
+      'Filtro HEPA box header para aplicaciones críticas de aire limpio y alta eficiencia.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-hepa-box-header-h13-bogota-colombia.jpeg',
+    especificaciones: {
+      Eficiencia: 'H13',
+      Tipo: 'Box Header',
+      Aplicacion: 'Aire limpio',
+    },
+    stock: 3,
+    precio: 450000,
+    marca: 'RPM Industrial',
+    destacado: true,
+    tags: ['hepa', 'box header', 'h13', 'aire limpio'],
+  },
+  {
+    id: 'filtro-andreae-azul',
+    codigo: 'FIL-AND-AZ',
+    categoria: 'filtracion-industrial',
+    nombre: 'Filtro Andreae Azul para Cabina de Pintura',
+    descripcion:
+      'Filtro Andreae azul de alta eficiencia para retención de partículas de pintura en cabinas.',
+    imagen:
+      '/productos/filtracion-industrial/filtro-andreae-azul-cabina-pintura-bogota-colombia.jpeg',
+    especificaciones: {
+      Tipo: 'Andreae',
+      Color: 'Azul',
+      Aplicacion: 'Cabina de pintura',
+    },
+    stock: 5,
+    precio: 135000,
+    marca: 'RPM Industrial',
+    destacado: false,
+    tags: ['andreae', 'cabina de pintura', 'filtro azul', 'pintura'],
+  },
+
   {
     id: 'extractor-axial-18p',
     codigo: 'EXTA-18',
@@ -121,6 +522,7 @@ export const productos: Producto[] = [
     destacado: true,
     tags: ['turbina', 'centrifuga', '1.5 hp', 'inyeccion', 'extraccion'],
   },
+
   {
     id: 'compresor-tornillo-10hp',
     codigo: 'COMP-T10',
@@ -174,6 +576,7 @@ export const productos: Producto[] = [
     destacado: false,
     tags: ['secador', 'aire', 'frigorifico', '150 psi', 'tratamiento'],
   },
+
   {
     id: 'cabina-pintura-semiindustrial',
     codigo: 'CAB-SEMIPRO',
@@ -201,6 +604,7 @@ export const productos: Producto[] = [
     destacado: true,
     tags: ['cabina', 'pintura', 'semiindustrial', 'automotriz', 'flujo horizontal'],
   },
+
   {
     id: 'lavadora-alta-presion-pro',
     codigo: 'LAV-2200PRO',
@@ -230,6 +634,7 @@ export const productos: Producto[] = [
     destacado: true,
     tags: ['lavadora', 'alta presion', '2200 psi', 'lavadero', 'detailing'],
   },
+
   {
     id: 'banco-estiraje-carroceria',
     codigo: 'BEC-3T',
@@ -255,6 +660,7 @@ export const productos: Producto[] = [
     destacado: false,
     tags: ['banco', 'estiraje', 'carroceria', '3 ton', 'reparacion'],
   },
+
   {
     id: 'lampara-infrarroja-2-paneles',
     codigo: 'LIR-2P',
@@ -287,6 +693,7 @@ export const productos: Producto[] = [
     destacado: true,
     tags: ['lampara', 'ir', 'infrarroja', '2 paneles', 'secado'],
   },
+
   {
     id: 'pistola-gravedad-hvlp-pro',
     codigo: 'PG-HVLP',
