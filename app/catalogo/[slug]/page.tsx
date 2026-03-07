@@ -50,14 +50,16 @@ export default async function CategoriaPage({ params }: CategoriaPageProps) {
                 className="group h-full"
               >
                 <article className="flex h-full flex-col rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:border-orange-200 hover:shadow-xl">
-                  <div className="relative h-56 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
-                    <Image
-                      src={imagen}
-                      alt={producto.nombre}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-                    />
+                  <div className="relative h-56 overflow-hidden rounded-t-2xl bg-gradient-to-br from-gray-50 to-gray-100">
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={imagen}
+                        alt={producto.nombre}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 25vw"
+                        className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
                   </div>
 
                   <div className="flex flex-1 flex-col p-5">

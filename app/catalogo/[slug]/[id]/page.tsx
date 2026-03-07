@@ -79,7 +79,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                   src={principal}
                   alt={item.nombre}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
@@ -103,7 +103,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                           src={foto}
                           alt={`${item.nombre} ${index + 1}`}
                           fill
-                          className="object-cover"
+                          className="object-contain p-3"
                           sizes="(max-width: 1024px) 50vw, 25vw"
                         />
                       </div>
@@ -125,7 +125,8 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
             </h1>
 
             <p className="mt-4 text-base leading-7 text-neutral-600">
-              {item.descripcion || "Producto industrial con soporte técnico y cotización inmediata."}
+              {item.descripcion ||
+                "Producto industrial con soporte técnico y cotización inmediata."}
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
@@ -152,7 +153,9 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
 
             {typeof item.precio === "number" && (
               <div className="mt-6">
-                <div className="text-sm text-neutral-500">Precio de referencia</div>
+                <div className="text-sm text-neutral-500">
+                  Precio de referencia
+                </div>
                 <div className="mt-1 text-3xl font-bold text-neutral-900">
                   ${item.precio.toLocaleString("es-CO")}
                 </div>
@@ -181,31 +184,34 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
               </a>
             </div>
 
-            {item.especificaciones && Object.keys(item.especificaciones).length > 0 && (
-              <div className="mt-8 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
-                <div className="border-b border-neutral-200 bg-neutral-50 px-5 py-4">
-                  <h2 className="text-base font-semibold text-neutral-900">
-                    Especificaciones técnicas
-                  </h2>
-                </div>
+            {item.especificaciones &&
+              Object.keys(item.especificaciones).length > 0 && (
+                <div className="mt-8 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm">
+                  <div className="border-b border-neutral-200 bg-neutral-50 px-5 py-4">
+                    <h2 className="text-base font-semibold text-neutral-900">
+                      Especificaciones técnicas
+                    </h2>
+                  </div>
 
-                <div className="divide-y divide-neutral-200">
-                  {Object.entries(item.especificaciones).map(([key, value]) => (
-                    <div
-                      key={key}
-                      className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-2"
-                    >
-                      <div className="text-sm font-medium text-neutral-500">
-                        {key}
-                      </div>
-                      <div className="text-sm text-neutral-900">
-                        {String(value)}
-                      </div>
-                    </div>
-                  ))}
+                  <div className="divide-y divide-neutral-200">
+                    {Object.entries(item.especificaciones).map(
+                      ([key, value]) => (
+                        <div
+                          key={key}
+                          className="grid grid-cols-1 gap-2 px-5 py-4 sm:grid-cols-2"
+                        >
+                          <div className="text-sm font-medium text-neutral-500">
+                            {key}
+                          </div>
+                          <div className="text-sm text-neutral-900">
+                            {String(value)}
+                          </div>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
             <div className="mt-8 rounded-3xl border border-orange-200 bg-orange-50 p-5">
               <div className="text-sm font-semibold text-orange-700">
@@ -252,7 +258,7 @@ export default async function ProductoPage({ params }: ProductoPageProps) {
                         src={rimg}
                         alt={r.nombre}
                         fill
-                        className="object-cover"
+                        className="object-contain p-3"
                         sizes="(max-width: 1024px) 100vw, 25vw"
                       />
                     </div>
