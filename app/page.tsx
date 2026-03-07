@@ -1,9 +1,11 @@
 import Link from 'next/link'
-import { CATEGORIES } from '@/lib/catalogo'
 import Image from 'next/image'
+import { CATEGORIES } from '@/lib/catalogo'
+import { getProductosDestacados } from '@/data/productos'
 
 export default function Home() {
   const destacadas = CATEGORIES.slice(0, 3)
+  const productosDestacados = getProductosDestacados().slice(0, 6)
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
@@ -152,6 +154,83 @@ export default function Home() {
           >
             Ver todo el catálogo
           </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-10">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-neutral-300">
+              Productos destacados
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-white">
+              Referencias destacadas del catálogo
+            </h2>
+            <p className="mt-3 max-w-2xl text-neutral-300">
+              Consulta algunos de los equipos y soluciones más representativos de nuestro portafolio.
+            </p>
+          </div>
+
+          <Link
+            href="/catalogo"
+            className="hidden rounded-2xl border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800 md:inline-flex"
+          >
+            Ver más productos
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {productosDestacados.map((producto) => (
+            <Link
+              key={producto.id}
+              href={`/catalogo/${producto.categoria}/${producto.id}`}
+              className="group overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:border-orange-400 hover:shadow-2xl"
+            >
+              <div className="relative flex h-72 items-center justify-center overflow-hidden bg-neutral-100">
+                <Image
+                  src={producto.imagen || '/productos/placeholder.jpeg'}
+                  alt={producto.nombre}
+                  fill
+                  className="object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
+              </div>
+
+              <div className="flex min-h-[220px] flex-col p-6">
+                <div className="text-xs font-semibold uppercase tracking-[0.16em] text-orange-400">
+                  {producto.categoria.replaceAll('-', ' ')}
+                </div>
+
+                <h3 className="mt-3 text-xl font-semibold text-white transition-colors group-hover:text-orange-400">
+                  {producto.nombre}
+                </h3>
+
+                <p className="mt-3 line-clamp-3 text-sm leading-7 text-neutral-300">
+                  {producto.descripcion || 'Producto industrial con cotización y soporte técnico.'}
+                </p>
+
+                <div className="mt-auto pt-5">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-all group-hover:gap-3">
+                    Ver ficha
+                    <svg
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </main>
