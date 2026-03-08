@@ -1,5 +1,6 @@
 ﻿'use client'
 
+import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { productos } from '@/data/productos'
@@ -31,6 +32,9 @@ export function SearchIA() {
         const categoriaNombre = normalizarTexto(
           getCategoriaBySlug(item.categoria)?.title || item.categoria || ''
         )
+        const codigo = normalizarTexto(item.codigo || '')
+        const marca = normalizarTexto(item.marca || '')
+        const tags = normalizarTexto((item.tags || []).join(' '))
         const specs = item.especificaciones
           ? normalizarTexto(
               Object.entries(item.especificaciones)
@@ -39,19 +43,25 @@ export function SearchIA() {
             )
           : ''
 
-        const searchable = `${nombre} ${descripcion} ${categoria} ${categoriaNombre} ${specs}`
+        const searchable = `${nombre} ${descripcion} ${categoria} ${categoriaNombre} ${codigo} ${marca} ${tags} ${specs}`
 
         let score = 0
 
-        if (nombre.includes(q)) score += 5
-        if (categoriaNombre.includes(q)) score += 4
-        if (categoria.includes(q)) score += 3
-        if (descripcion.includes(q)) score += 2
-        if (specs.includes(q)) score += 2
+        if (nombre.includes(q)) score += 12
+        if (codigo.includes(q)) score += 10
+        if (tags.includes(q)) score += 7
+        if (categoriaNombre.includes(q)) score += 6
+        if (categoria.includes(q)) score += 4
+        if (marca.includes(q)) score += 4
+        if (descripcion.includes(q)) score += 3
+        if (specs.includes(q)) score += 3
 
         const palabras = q.split(' ').filter(Boolean)
-        const todasCoinciden = palabras.every((palabra) => searchable.includes(palabra))
-        if (todasCoinciden) score += 3
+        const coincidencias = palabras.filter((palabra) => searchable.includes(palabra)).length
+        score += coincidencias * 2
+
+        const todasCoinciden = palabras.length > 0 && palabras.every((palabra) => searchable.includes(palabra))
+        if (todasCoinciden) score += 5
 
         return {
           ...item,
@@ -83,10 +93,12 @@ export function SearchIA() {
 
     if (resultados.length > 1) {
       router.push(`/catalogo/${resultados[0].categoria}`)
+      setFocused(false)
       return
     }
 
     router.push('/catalogo')
+    setFocused(false)
   }
 
   return (
@@ -100,7 +112,7 @@ export function SearchIA() {
           onBlur={() => {
             setTimeout(() => setFocused(false), 150)
           }}
-          placeholder="Busca por producto, referencia, categoría o especificación..."
+          placeholder="Busca por producto, referencia, código, categoría o especificación..."
           className="w-full rounded-2xl border border-white/20 bg-white px-5 py-4 pr-36 text-gray-900 shadow-lg outline-none transition placeholder:text-gray-400 focus:border-orange-300 focus:ring-4 focus:ring-orange-200"
         />
 
@@ -115,35 +127,57 @@ export function SearchIA() {
       {focused && query.trim().length > 0 && (
         <div className="absolute z-50 mt-3 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
           {resultados.length > 0 ? (
-            <div className="max-h-[420px] overflow-y-auto py-2">
-              {resultados.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onMouseDown={() => goToProduct(item.categoria, item.id)}
-                  className="flex w-full items-start gap-3 px-4 py-3 text-left transition hover:bg-gray-50"
-                >
-                  <div className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-500" />
+            <>
+              <div className="border-b border-gray-100 px-4 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
+                Resultados sugeridos
+              </div>
 
-                  <div className="min-w-0 flex-1">
-                    <div className="truncate font-semibold text-gray-900">
-                      {item.nombre}
+              <div className="max-h-[420px] overflow-y-auto py-2">
+                {resultados.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onMouseDown={() => goToProduct(item.categoria, item.id)}
+                    className="flex w-full items-start gap-3 px-4 py-3 text-left transition hover:bg-gray-50"
+                  >
+                    <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
+                      <Image
+                        src={item.imagen || '/productos/placeholder.jpeg'}
+                        alt={item.nombre}
+                        fill
+                        className="object-contain p-2"
+                        sizes="64px"
+                      />
                     </div>
 
-                    <div className="mt-1 text-sm text-gray-500">
-                      {item.descripcion || 'Producto industrial disponible para cotización'}
-                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate font-semibold text-gray-900">
+                        {item.nombre}
+                      </div>
 
-                    <div className="mt-2 text-xs font-medium text-orange-600">
-                      {item.categoriaNombre}
+                      <div className="mt-1 line-clamp-2 text-sm leading-6 text-gray-500">
+                        {item.descripcion || 'Producto industrial disponible para cotización'}
+                      </div>
+
+                      <div className="mt-2 flex flex-wrap items-center gap-2">
+                        <span className="inline-flex rounded-full bg-orange-50 px-2.5 py-1 text-xs font-medium text-orange-700">
+                          {item.categoriaNombre}
+                        </span>
+
+                        {item.codigo && (
+                          <span className="inline-flex rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600">
+                            Código: {item.codigo}
+                          </span>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </button>
-              ))}
-            </div>
+                  </button>
+                ))}
+              </div>
+            </>
           ) : (
             <div className="px-4 py-5 text-sm text-gray-500">
-              No encontré coincidencias. Intenta con otra referencia o categoría.
+              No encontré coincidencias. Intenta con otra referencia, código o categoría.
             </div>
           )}
         </div>

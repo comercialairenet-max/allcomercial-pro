@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { CATEGORIES } from '@/lib/catalogo'
 import { productos } from '@/data/productos'
+import { getSiteUrl } from '@/lib/site'
 
-const SITE_URL = 'https://allcomercial-pro.vercel.app'
+const SITE_URL = getSiteUrl()
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()

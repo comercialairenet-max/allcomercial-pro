@@ -1829,9 +1829,12 @@ function expandirBusqueda(texto: string): string {
     .replace(/\bhp\b/g, ' hp potencia ')
     .replace(/\bpsi\b/g, ' psi presion ')
     .replace(/\bir\b/g, ' infrarroja infrarrojo ir ')
-    .replace(/\bhvlp\b/g, ' hvlp gravedad pintura ')
     .replace(/\bg4\b/g, ' g4 filtro eficiencia ')
     .replace(/\bf7\b/g, ' f7 filtro eficiencia ')
+    .replace(/\bhvac\b/g, ' hvac ventilacion aire filtracion ')
+    .replace(/\bhepa\b/g, ' hepa alta eficiencia aire limpio ')
+    .replace(/\bmerv\b/g, ' merv eficiencia filtracion ')
+    .replace(/\bpocket\b/g, ' pocket bolsa filtro ')
     .replace(/\bmm\b/g, ' mm milimetros ')
     .replace(/\bton\b/g, ' ton tonelada toneladas ')
 }

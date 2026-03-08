@@ -1,42 +1,23 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import './globals.css'
+import { SITE, getSiteUrl, getWhatsappUrl } from '@/lib/site'
 
-const SITE = {
-  name: 'AllComercial Online',
-  url: 'https://allcomercial-pro.vercel.app',
-  description:
-    'Catálogo industrial profesional: ventilación, filtración, aire comprimido, cabinas de pintura y equipos especializados. Cotiza directo por WhatsApp.',
-  whatsapp: {
-    phoneE164: '573053644307',
-    defaultMessage: 'Hola, quiero una cotización. ¿Me apoyas por favor?',
-  },
-}
-
-const siteUrl = SITE.url.replace(/\/$/, '')
+const siteUrl = getSiteUrl()
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: 'AllComercial Online | Soluciones Industriales',
-    template: '%s | AllComercial Online',
+    default: SITE.titleDefault,
+    template: `%s | ${SITE.name}`,
   },
 
   description: SITE.description,
 
   applicationName: SITE.name,
 
-  keywords: [
-    'ventilación industrial',
-    'filtración industrial',
-    'aire comprimido',
-    'cabinas de pintura',
-    'lámparas infrarrojas',
-    'equipos industriales',
-    'Bogotá',
-    'cotización WhatsApp',
-    'AllComercial',
-  ],
+  keywords: [...SITE.keywords],
 
   alternates: {
     canonical: '/',
@@ -45,16 +26,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'AllComercial Online | Soluciones Industriales',
+    title: SITE.titleDefault,
     description: SITE.description,
     siteName: SITE.name,
     locale: 'es_CO',
+    images: SITE.branding.ogImage
+      ? [
+          {
+            url: SITE.branding.ogImage,
+            alt: SITE.name,
+          },
+        ]
+      : [],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'AllComercial Online | Soluciones Industriales',
+    title: SITE.titleDefault,
     description: SITE.description,
+    images: SITE.branding.ogImage ? [SITE.branding.ogImage] : [],
   },
 
   robots: {
@@ -70,7 +60,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: '/favicon.ico',
+    icon: SITE.branding.favicon,
   },
 }
 
@@ -80,16 +70,23 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const WA = SITE.whatsapp.phoneE164
-  const waText = encodeURIComponent(SITE.whatsapp.defaultMessage)
+  const waDefault = getWhatsappUrl(SITE.whatsapp.defaultMessage)
+  const waSales = getWhatsappUrl(SITE.whatsapp.salesMessage)
+  const waSupport = getWhatsappUrl(
+    'Hola, quiero información de productos y disponibilidad.'
+  )
+  const waFormal = getWhatsappUrl(
+    'Hola, quiero una cotización formal (empresa/industria).'
+  )
 
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE.name,
+    name: SITE.company.legalName,
     url: siteUrl,
     description: SITE.description,
-    logo: `${siteUrl}/catalogo/logo/comercializadoraindustrialairenet-2-png.png`,
-    sameAs: [`https://wa.me/${WA}`],
+    logo: `${siteUrl}${SITE.branding.logoPath}`,
+    sameAs: [SITE.social.whatsapp],
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -99,6 +96,11 @@ export default function RootLayout({
         availableLanguage: ['Spanish'],
       },
     ],
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: SITE.company.city,
+      addressCountry: SITE.company.country,
+    },
   }
 
   const websiteJsonLd = {
@@ -106,6 +108,7 @@ export default function RootLayout({
     '@type': 'WebSite',
     name: SITE.name,
     url: siteUrl,
+    description: SITE.description,
     potentialAction: {
       '@type': 'SearchAction',
       target: `${siteUrl}/catalogo?query={search_term_string}`,
@@ -131,25 +134,22 @@ export default function RootLayout({
 
         <style>{`
           :root {
-            --brand: #FF7A00;
+            --brand: ${SITE.branding.primaryColor};
           }
         `}</style>
 
         <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur">
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
             <a href="/" className="flex items-center gap-3">
-              <span
-                className="grid h-10 w-10 place-items-center rounded-xl font-black text-black"
-                style={{ background: 'var(--brand)' }}
-                aria-label="AllComercial"
-              >
-                AC
-              </span>
-              <div className="leading-tight">
-                <div className="text-base font-semibold">AllComercial Online</div>
-                <div className="text-xs text-zinc-300">
-                  Soluciones Industriales · Bogotá
-                </div>
+              <div className="relative h-12 w-[190px] sm:h-14 sm:w-[240px]">
+                <Image
+                  src={SITE.branding.logoPath}
+                  alt={SITE.name}
+                  fill
+                  priority
+                  className="object-contain object-left"
+                  sizes="240px"
+                />
               </div>
             </a>
 
@@ -160,10 +160,9 @@ export default function RootLayout({
               >
                 Catálogo
               </a>
+
               <a
-                href={`https://wa.me/${WA}?text=${encodeURIComponent(
-                  'Hola, quiero asesoría comercial. ¿Me ayudas por favor?'
-                )}`}
+                href={waSales}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl px-3 py-2 text-zinc-200 hover:bg-white/10"
@@ -175,13 +174,13 @@ export default function RootLayout({
             <div className="flex items-center gap-2">
               <a
                 href="/catalogo"
-                className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10"
+                className="hidden items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 sm:inline-flex"
               >
                 Ver catálogo
               </a>
 
               <a
-                href={`https://wa.me/${WA}?text=${waText}`}
+                href={waDefault}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-black"
@@ -198,8 +197,17 @@ export default function RootLayout({
         <footer className="border-t border-white/10 bg-black/40">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-10 md:grid-cols-3">
             <div>
-              <div className="text-lg font-semibold">AllComercial Online</div>
-              <p className="mt-2 text-sm text-zinc-300">
+              <div className="relative h-14 w-[220px]">
+                <Image
+                  src={SITE.branding.logoPath}
+                  alt={SITE.name}
+                  fill
+                  className="object-contain object-left"
+                  sizes="220px"
+                />
+              </div>
+
+              <p className="mt-3 text-sm text-zinc-300">
                 Catálogo industrial profesional. Cotizaciones rápidas y asesoría
                 técnica para proyectos exigentes.
               </p>
@@ -215,6 +223,7 @@ export default function RootLayout({
 
             <div>
               <div className="text-sm font-semibold text-zinc-200">Secciones</div>
+
               <ul className="mt-3 space-y-2 text-sm">
                 <li>
                   <a className="text-zinc-300 hover:text-white" href="/catalogo">
@@ -224,9 +233,7 @@ export default function RootLayout({
                 <li>
                   <a
                     className="text-zinc-300 hover:text-white"
-                    href={`https://wa.me/${WA}?text=${encodeURIComponent(
-                      'Hola, quiero información de productos y disponibilidad.'
-                    )}`}
+                    href={waSupport}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -238,27 +245,29 @@ export default function RootLayout({
 
             <div>
               <div className="text-sm font-semibold text-zinc-200">Contacto</div>
+
               <div className="mt-3 space-y-2 text-sm text-zinc-300">
                 <div>
                   WhatsApp:{' '}
                   <a
                     className="text-white hover:underline"
-                    href={`https://wa.me/${WA}?text=${waText}`}
+                    href={waDefault}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    +57 305 364 4307
+                    {SITE.whatsapp.phoneDisplay}
                   </a>
                 </div>
-                <div>Bogotá, Colombia</div>
+
+                <div>
+                  {SITE.company.city}, {SITE.company.country}
+                </div>
 
                 <div className="pt-2">
                   <a
                     className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-black"
                     style={{ background: 'var(--brand)' }}
-                    href={`https://wa.me/${WA}?text=${encodeURIComponent(
-                      'Hola, quiero una cotización formal (empresa/industria).'
-                    )}`}
+                    href={waFormal}
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -272,9 +281,10 @@ export default function RootLayout({
           <div className="border-t border-white/10">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-6 py-4 text-xs text-zinc-400">
               <div>
-                © {new Date().getFullYear()} AllComercial Online. Todos los
-                derechos reservados.
+                © {new Date().getFullYear()} {SITE.name}. Todos los derechos
+                reservados.
               </div>
+
               <div className="flex gap-3">
                 <span className="text-zinc-500">Industrial · Pro</span>
               </div>
@@ -283,7 +293,7 @@ export default function RootLayout({
         </footer>
 
         <a
-          href={`https://wa.me/${WA}?text=${waText}`}
+          href={waDefault}
           target="_blank"
           rel="noreferrer"
           className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-3 shadow-lg backdrop-blur hover:bg-black/80"
@@ -294,6 +304,7 @@ export default function RootLayout({
           >
             WA
           </span>
+
           <div className="leading-tight">
             <div className="text-sm font-semibold">WhatsApp</div>
             <div className="text-xs text-zinc-300">Cotiza en 1 minuto</div>

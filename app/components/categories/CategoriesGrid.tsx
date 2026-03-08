@@ -25,35 +25,58 @@ export function CategoriesGrid() {
                 Imagen en proceso
               </div>
             )}
+
+            <div className="absolute left-4 top-4">
+              <span className="inline-flex items-center rounded-full border border-orange-400/30 bg-orange-500/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-white shadow-lg">
+                {cat.items.length} producto{cat.items.length !== 1 ? 's' : ''}
+              </span>
+            </div>
           </div>
 
           <div className="flex flex-1 flex-col p-6">
-            <h3 className="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-orange-400">
-              {cat.title}
-            </h3>
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-2xl font-semibold text-white transition-colors duration-300 group-hover:text-orange-400">
+                {cat.title}
+              </h3>
+            </div>
 
-            <p className="mt-3 min-h-[56px] text-sm leading-7 text-neutral-300">
+            <p className="mt-3 min-h-[84px] text-sm leading-7 text-neutral-300">
               {cat.subtitle}
             </p>
 
-            <div className="mt-auto pt-5">
-              <span className="inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-all duration-300 group-hover:gap-3">
-                Ver categoría
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-neutral-300">
+                Catálogo técnico
               </span>
+              <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-neutral-300">
+                Fichas por producto
+              </span>
+            </div>
+
+            <div className="mt-auto pt-6">
+              <div className="flex items-center justify-between border-t border-neutral-800 pt-4">
+                <span className="text-sm text-neutral-400">
+                  Explorar categoría
+                </span>
+
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-orange-400 transition-all duration-300 group-hover:gap-3">
+                  Ver categoría
+                  <svg
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </Link>
