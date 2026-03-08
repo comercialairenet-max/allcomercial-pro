@@ -31,6 +31,7 @@ export default async function OpenGraphImage() {
           style={{
             position: 'absolute',
             inset: 0,
+            display: 'flex',
             background:
               'radial-gradient(circle at top left, rgba(249,115,22,0.18), transparent 32%), radial-gradient(circle at bottom right, rgba(59,130,246,0.12), transparent 30%)',
           }}
@@ -79,6 +80,7 @@ export default async function OpenGraphImage() {
             >
               <div
                 style={{
+                  display: 'flex',
                   fontSize: 28,
                   fontWeight: 700,
                   lineHeight: 1.1,
@@ -88,6 +90,7 @@ export default async function OpenGraphImage() {
               </div>
               <div
                 style={{
+                  display: 'flex',
                   fontSize: 18,
                   color: '#d4d4d8',
                   marginTop: 6,
@@ -100,6 +103,7 @@ export default async function OpenGraphImage() {
 
           <div
             style={{
+              display: 'flex',
               border: '1px solid rgba(255,255,255,0.14)',
               background: 'rgba(255,255,255,0.06)',
               borderRadius: 999,
@@ -195,8 +199,10 @@ export default async function OpenGraphImage() {
             fontSize: 18,
           }}
         >
-          <div>{SITE.whatsapp.phoneDisplay}</div>
-          <div>{SITE.url.replace(/^https?:\/\//, '')}</div>
+          <div style={{ display: 'flex' }}>{SITE.whatsapp.phoneDisplay}</div>
+          <div style={{ display: 'flex' }}>
+            {SITE.url.replace(/^https?:\/\//, '')}
+          </div>
         </div>
       </div>
     ),
