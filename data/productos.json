@@ -1066,20 +1066,17 @@
     "id": "compresor-tornillo-10hp",
     "codigo": "COMP-T10",
     "categoria": "sistemas-de-aire-comprimido",
-    "nombre": "Compresor de Tornillo 10 HP",
-    "descripcion": "Solución eficiente para suministro continuo de aire comprimido.",
+    "nombre": "Compresor con Tanque Vertical y Cabezote Italiano 10 HP",
+    "descripcion": "Compresor industrial con tanque vertical y cabezote italiano, diseñado para suministro confiable de aire comprimido en aplicaciones técnicas e industriales.",
     "imagen": "/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg",
     "gallery": [
-      "/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg",
-      "/productos/sistemas-de-aire-comprimido/tanque-pulmon-aire-comprimido.jpeg",
-      "/productos/sistemas-de-aire-comprimido/espumadora-industrial.jpeg",
-      "/productos/sistemas-de-aire-comprimido/tolva-sandblasting-movil.jpeg"
+      "/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg"
     ],
     "especificaciones": {
       "Potencia": "10 HP",
-      "Presion": "145 PSI",
-      "Tipo": "Tornillo",
-      "Aplicacion": "Aire comprimido continuo"
+      "Configuracion": "Tanque vertical",
+      "Cabezote": "Italiano",
+      "Aplicacion": "Aire comprimido industrial"
     },
     "stock": 2,
     "precio": 9850000,
@@ -1087,9 +1084,9 @@
     "destacado": true,
     "tags": [
       "compresor",
-      "tornillo",
+      "tanque vertical",
+      "cabezote italiano",
       "10 hp",
-      "145 psi",
       "aire comprimido"
     ]
   },
