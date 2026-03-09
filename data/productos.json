@@ -3,42 +3,43 @@
     "id": "media-filtrante-g1",
     "codigo": "FIL-G1-MF",
     "categoria": "filtracion-industrial",
-    "nombre": "Media Filtrante G1 Fibra Sintética",
-    "descripcion": "Media filtrante para prefiltro en sistemas HVAC y procesos industriales con retención inicial de partículas.",
+    "nombre": "Manta Filtrante G1 Sintética",
+    "descripcion": "Media filtrante sintética G1 para prefiltrado de aire en sistemas HVAC y procesos industriales. Disponible en rollo de 2 x 20 m y 2 x 10 m.",
     "imagen": "/productos/filtracion-industrial/media-filtrante-g1-fibra-sintetica-prefiltro-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Manta filtrante",
       "Eficiencia": "G1",
       "Material": "Fibra sintética",
-      "Aplicacion": "Prefiltro industrial"
+      "Espesor": "Aprox. 12 mm",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
+      "Aplicacion": "Prefiltrado industrial"
     },
     "stock": 15,
     "precio": 65000,
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "media filtrante",
+      "manta filtrante",
       "g1",
-      "prefiltro",
       "fibra sintetica",
-      "hvac"
+      "prefiltro",
+      "hvac",
+      "rollo filtrante"
     ]
   },
   {
     "id": "filtro-panel-g4-595x595",
     "codigo": "FPG4-595",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Panel G4 595x595",
-    "descripcion": "Filtro de alta eficiencia para sistemas de ventilación y prefiltrado industrial.",
+    "nombre": "Filtro Plegado G4 24x24x2\"",
+    "descripcion": "Filtro plegado clase G4 para prefiltrado de aire en sistemas de ventilación y aplicaciones industriales.",
     "imagen": "/productos/filtracion-industrial/manta-filtrante-g4-fibra-sintetica-hvac-bogota-colombia.jpeg",
-    "gallery": [
-      "/productos/filtracion-industrial/manta-filtrante-g4-fibra-sintetica-hvac-bogota-colombia.jpeg",
-      "/productos/filtracion-industrial/manta-filtrante-lavable-g4-verde-hvac-bogota-colombia.jpeg",
-      "/productos/filtracion-industrial/media-filtrante-g1-fibra-sintetica-prefiltro-bogota-colombia.jpeg"
-    ],
     "especificaciones": {
-      "Medida": "595x595 mm",
+      "Tipo": "Plegado",
       "Eficiencia": "G4",
-      "Material": "Fibra sintética",
+      "Ancho": "595 mm",
+      "Alto": "595 mm",
+      "Fondo": "46 mm",
       "Aplicacion": "Prefiltrado industrial"
     },
     "stock": 12,
@@ -46,10 +47,10 @@
     "marca": "RPM Industrial",
     "destacado": true,
     "tags": [
-      "filtro",
-      "panel",
+      "filtro plegado",
       "g4",
-      "595x595",
+      "24x24x2",
+      "595x595x46",
       "prefiltro",
       "hvac"
     ]
@@ -59,12 +60,14 @@
     "codigo": "FIL-PS-FV",
     "categoria": "filtracion-industrial",
     "nombre": "Filtro Paint Stop Fibra de Vidrio",
-    "descripcion": "Filtro para cabinas de pintura que captura neblina y partículas de pintura en procesos de extracción.",
+    "descripcion": "Filtro de fibra de vidrio tipo piso para cabinas de pintura, diseñado para retención de partículas de pintura y overspray.",
     "imagen": "/productos/filtracion-industrial/filtro-paint-stop-fibra-vidrio-cabina-pintura-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Filtro piso / Paint Stop",
       "Material": "Fibra de vidrio",
-      "Uso": "Cabina de pintura",
-      "Aplicacion": "Captura de overspray"
+      "Espesor": "50 mm",
+      "Presentaciones": "0,50 x 20 m / 0,65 x 20 m / 0,75 x 20 m / 1 x 20 m / 2 x 20 m",
+      "Aplicacion": "Cabina de pintura"
     },
     "stock": 10,
     "precio": 120000,
@@ -73,6 +76,7 @@
     "tags": [
       "paint stop",
       "fibra de vidrio",
+      "filtro piso",
       "cabina de pintura",
       "overspray"
     ]
@@ -81,12 +85,13 @@
     "id": "filtro-techo-f5-cabina-pintura",
     "codigo": "FIL-F5-TECHO",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Techo F5 para Cabina de Pintura",
-    "descripcion": "Filtro de suministro de aire para techo de cabinas de pintura con alta uniformidad de flujo.",
+    "nombre": "Manta Techo F5 para Cabina de Pintura",
+    "descripcion": "Manta filtrante F5 para suministro de aire en techos de cabinas de pintura y aplicaciones de aire limpio.",
     "imagen": "/productos/filtracion-industrial/filtro-techo-f5-cabina-pintura-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Manta techo",
       "Eficiencia": "F5",
-      "Uso": "Suministro de aire",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
       "Aplicacion": "Cabinas de pintura"
     },
     "stock": 8,
@@ -94,7 +99,7 @@
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "filtro techo",
+      "manta techo",
       "f5",
       "cabina de pintura",
       "suministro de aire"
@@ -104,13 +109,14 @@
     "id": "filtro-carbon-activado-industrial",
     "codigo": "FIL-CA-IND",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Carbón Activado Industrial",
-    "descripcion": "Filtro para control de olores y compuestos volátiles en ambientes industriales y HVAC.",
+    "nombre": "Media Filtrante de Carbón Activado",
+    "descripcion": "Media filtrante de carbón activado para control de olores y compuestos volátiles en aplicaciones industriales y HVAC.",
     "imagen": "/productos/filtracion-industrial/filtro-carbon-activado-control-olores-industrial-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Media filtrante",
       "Material": "Carbón activado",
-      "Uso": "Control de olores",
-      "Aplicacion": "Industrial y HVAC"
+      "Presentaciones": "1,20 x 30 m / 0,60 x 60 m / 1,20 x 60 m / 0,60 x 25 m / 1,20 x 12,5 m",
+      "Aplicacion": "Control de olores e industrial HVAC"
     },
     "stock": 6,
     "precio": 185000,
@@ -119,6 +125,7 @@
     "tags": [
       "carbon activado",
       "control de olores",
+      "media filtrante",
       "hvac",
       "industrial"
     ]
@@ -127,12 +134,13 @@
     "id": "filtro-carton-plegado-cabina-pintura",
     "codigo": "FIL-CP-CP",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Cartón Plegado para Cabina de Pintura",
-    "descripcion": "Filtro de cartón plegado para extracción de aire y retención de partículas en cabinas de pintura.",
+    "nombre": "Filtro Cardboard Tipo Andreae 1 x 10 m",
+    "descripcion": "Filtro cardboard tipo Andreae para cabina de pintura, diseñado para retención de pintura seca en procesos de extracción.",
     "imagen": "/productos/filtracion-industrial/filtro-carton-plegado-cabina-pintura-bogota-colombia.jpeg",
     "especificaciones": {
-      "Tipo": "Cartón plegado",
-      "Uso": "Extracción",
+      "Tipo": "Cardboard tipo Andreae",
+      "Presentacion": "1 x 10 m",
+      "Retencion": "18 kg/m2 pintura seca",
       "Aplicacion": "Cabina de pintura"
     },
     "stock": 10,
@@ -140,10 +148,11 @@
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "carton plegado",
+      "cardboard",
+      "andreae",
       "cabina pintura",
-      "extraccion",
-      "filtro"
+      "filtro pintura",
+      "extraccion"
     ]
   },
   {
@@ -151,12 +160,14 @@
     "codigo": "FIL-G4-LAV",
     "categoria": "filtracion-industrial",
     "nombre": "Manta Filtrante Lavable G4 Verde",
-    "descripcion": "Manta lavable G4 para prefiltrado y ventilación industrial con buena durabilidad.",
+    "descripcion": "Manta lavable G4 para prefiltrado de aire en ventilación industrial y sistemas HVAC.",
     "imagen": "/productos/filtracion-industrial/manta-filtrante-lavable-g4-verde-hvac-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Manta lavable",
       "Eficiencia": "G4",
-      "Caracteristica": "Lavable",
-      "Color": "Verde"
+      "Color": "Verde",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
+      "Aplicacion": "Prefiltrado HVAC"
     },
     "stock": 9,
     "precio": 110000,
@@ -166,6 +177,7 @@
       "manta lavable",
       "g4",
       "verde",
+      "prefiltro",
       "hvac"
     ]
   },
@@ -173,22 +185,25 @@
     "id": "manta-filtrante-lavable-g2-azul",
     "codigo": "FIL-G2-LAV",
     "categoria": "filtracion-industrial",
-    "nombre": "Manta Filtrante Lavable G2 Azul",
-    "descripcion": "Manta filtrante lavable G2 para prefiltro y aplicaciones HVAC de baja restricción.",
+    "nombre": "Manta Filtrante G2 Azul-Blanco",
+    "descripcion": "Media filtrante G2 tipo coarse filter media para aplicaciones de prefiltro y ventilación general.",
     "imagen": "/productos/filtracion-industrial/manta-filtrante-lavable-g2-azul-hvac-bogota-colombia.jpeg",
     "especificaciones": {
+      "Tipo": "Media filtrante",
       "Eficiencia": "G2",
-      "Caracteristica": "Lavable",
-      "Color": "Azul"
+      "Color": "Azul-Blanco",
+      "Espesor": "Aprox. 7 mm",
+      "Presentacion": "2 x 20 m",
+      "Aplicacion": "Prefiltro HVAC"
     },
     "stock": 9,
     "precio": 89000,
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "manta lavable",
+      "manta filtrante",
       "g2",
-      "azul",
+      "azul blanco",
       "prefiltro",
       "hvac"
     ]
@@ -197,13 +212,15 @@
     "id": "filtro-plegado-carbon-activado",
     "codigo": "FIL-PL-CA",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Plegado Carbón Activado HVAC",
-    "descripcion": "Filtro plegado con carbón activado para control de olores y recirculación de aire.",
+    "nombre": "Filtro Plegado de Carbón Activado",
+    "descripcion": "Filtro plegado de carbón activado para control de olores y recirculación de aire en sistemas industriales y HVAC.",
     "imagen": "/productos/filtracion-industrial/filtro-plegado-carbon-activado-hvac-bogota-colombia.jpeg",
     "especificaciones": {
       "Tipo": "Plegado",
       "Material": "Carbón activado",
-      "Aplicacion": "HVAC"
+      "Marco": "Galvanizado",
+      "Presentaciones": "Según medida / 20x20x2\" / 24x24x2\" / 12x12x2\" / 12x24x2\" / 20x24x2\" / 12x12x3\"",
+      "Aplicacion": "HVAC e industrial"
     },
     "stock": 6,
     "precio": 175000,
@@ -212,21 +229,25 @@
     "tags": [
       "filtro plegado",
       "carbon activado",
+      "control de olores",
       "hvac",
-      "olores"
+      "industrial"
     ]
   },
   {
     "id": "filtro-lavable-fibra-poliester",
     "codigo": "FIL-LAV-POL",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Lavable Fibra Poliéster HVAC",
-    "descripcion": "Filtro lavable de fibra poliéster para sistemas de ventilación y aire acondicionado.",
+    "nombre": "Filtro Lavable Washable Pre-Filter",
+    "descripcion": "Filtro lavable para prefiltrado de aire con estructura metálica y presentaciones en diferentes medidas.",
     "imagen": "/productos/filtracion-industrial/filtro-lavable-fibra-poliester-hvac-bogota-colombia.jpeg",
     "especificaciones": {
-      "Material": "Fibra poliéster",
-      "Caracteristica": "Lavable",
-      "Aplicacion": "HVAC"
+      "Tipo": "Lavable",
+      "Eficiencia": "30-35%",
+      "Material": "Media lavable",
+      "Marco": "Galvanizado",
+      "Presentaciones": "24x12x2\" / 16x20x2\" / 20x24x2\" / 24x24x2\" / 24x24x4\" / 12x12x2\"",
+      "Aplicacion": "Prefiltro HVAC"
     },
     "stock": 7,
     "precio": 99000,
@@ -234,9 +255,10 @@
     "destacado": false,
     "tags": [
       "filtro lavable",
-      "poliester",
+      "washable pre filter",
+      "prefiltro",
       "hvac",
-      "ventilacion"
+      "marco galvanizado"
     ]
   },
   {
@@ -244,11 +266,13 @@
     "codigo": "FIL-M8-PL",
     "categoria": "filtracion-industrial",
     "nombre": "Filtro Plisado MERV 8",
-    "descripcion": "Filtro plisado para sistemas de ventilación y manejo de aire con eficiencia MERV 8.",
+    "descripcion": "Filtro plisado MERV 8 para ventilación y manejo de aire, disponible en varias medidas y marcos según aplicación.",
     "imagen": "/productos/filtracion-industrial/filtro-plisado-merv8-hvac-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "MERV 8",
       "Tipo": "Plisado",
+      "Eficiencia": "MERV 8 / 30-35%",
+      "Marco": "Cartón / Aluminio / Galvanizado",
+      "Presentaciones": "24x12x2\" / 24x24x2\" / 24x24x4\" / 16x20x2\" / 20x20x2\" / 12x12x2\"",
       "Aplicacion": "HVAC"
     },
     "stock": 10,
@@ -256,8 +280,9 @@
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "plisado",
-      "merv8",
+      "filtro plisado",
+      "merv 8",
+      "prefiltro",
       "hvac",
       "filtro aire"
     ]
@@ -266,12 +291,14 @@
     "id": "mini-pleat-merv11",
     "codigo": "FIL-MP-M11",
     "categoria": "filtracion-industrial",
-    "nombre": "Mini Pleat MERV 11",
-    "descripcion": "Filtro mini pleat MERV 11 para mejor calidad de aire en aplicaciones HVAC e industriales.",
+    "nombre": "Mini Pleat MERV 11 - F6",
+    "descripcion": "Filtro mini pleat MERV 11 - F6 para mejor calidad de aire en aplicaciones HVAC e industriales.",
     "imagen": "/productos/filtracion-industrial/mini-pleat-merv11-calidad-aire-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "MERV 11",
       "Tipo": "Mini Pleat",
+      "Eficiencia": "MERV11-F6 / 60-65%",
+      "Marco": "Cartón / Aluminio",
+      "Presentaciones": "24x12x4\" / 24x24x4\" / 20x16x4\"",
       "Aplicacion": "Calidad de aire"
     },
     "stock": 5,
@@ -281,6 +308,7 @@
     "tags": [
       "mini pleat",
       "merv11",
+      "f6",
       "calidad de aire",
       "hvac"
     ]
@@ -289,12 +317,14 @@
     "id": "mini-pleat-merv14",
     "codigo": "FIL-MP-M14",
     "categoria": "filtracion-industrial",
-    "nombre": "Mini Pleat MERV 14",
-    "descripcion": "Filtro mini pleat de alta eficiencia para sistemas de aire de mayor exigencia.",
+    "nombre": "Mini Pleat MERV 14 - F8",
+    "descripcion": "Filtro mini pleat MERV 14 - F8 para aplicaciones de filtración media y alta eficiencia en HVAC.",
     "imagen": "/productos/filtracion-industrial/mini-pleat-merv14-alta-eficiencia-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "MERV 14",
       "Tipo": "Mini Pleat",
+      "Eficiencia": "MERV14-F8 / 90-95%",
+      "Marco": "Cartón / Aluminio",
+      "Presentaciones": "24x12x4\" / 24x24x4\" / 20x16x4\"",
       "Aplicacion": "Alta eficiencia"
     },
     "stock": 5,
@@ -304,6 +334,7 @@
     "tags": [
       "mini pleat",
       "merv14",
+      "f8",
       "alta eficiencia",
       "hvac"
     ]
@@ -312,13 +343,15 @@
     "id": "mini-pleat-merv15",
     "codigo": "FIL-MP-M15",
     "categoria": "filtracion-industrial",
-    "nombre": "Mini Pleat MERV 15",
-    "descripcion": "Filtro mini pleat MERV 15 para aplicaciones que exigen filtración de alta eficiencia.",
+    "nombre": "Mini Pleat MERV 15 - F9",
+    "descripcion": "Filtro mini pleat MERV 15 - F9 para aplicaciones de filtración de alta eficiencia.",
     "imagen": "/productos/filtracion-industrial/mini-pleat-merv15-alta-eficiencia-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "MERV 15",
       "Tipo": "Mini Pleat",
-      "Aplicacion": "Alta eficiencia"
+      "Eficiencia": "MERV15-F9 / 98%",
+      "Marco": "Cartón",
+      "Presentaciones": "24x24x4\" / 24x12x4\"",
+      "Aplicacion": "Filtración avanzada"
     },
     "stock": 4,
     "precio": 280000,
@@ -327,6 +360,7 @@
     "tags": [
       "mini pleat",
       "merv15",
+      "f9",
       "alta eficiencia",
       "filtracion avanzada"
     ]
@@ -336,11 +370,13 @@
     "codigo": "FIL-PKT-F6",
     "categoria": "filtracion-industrial",
     "nombre": "Filtro Pocket F6",
-    "descripcion": "Filtro de bolsa tipo pocket F6 para sistemas HVAC y filtración de aire industrial.",
+    "descripcion": "Filtro de bolsa tipo pocket F6 para sistemas HVAC y filtración de aire industrial en varias configuraciones.",
     "imagen": "/productos/filtracion-industrial/filtro-pocket-f6-hvac-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "F6",
       "Tipo": "Pocket",
+      "Eficiencia": "F6 / 60-80%",
+      "Configuraciones": "6 Pocket / 8 Pocket",
+      "Presentaciones": "24x24x20\" / 24x24x24\" / 24x24x12\" / 24x12x12\" / 24x20x12\" / 20x20x12\"",
       "Aplicacion": "HVAC"
     },
     "stock": 8,
@@ -351,26 +387,22 @@
       "pocket",
       "f6",
       "filtro bolsa",
-      "hvac"
+      "hvac",
+      "filtracion aire"
     ]
   },
   {
     "id": "filtro-bolsa-f7-592x592",
     "codigo": "FBF7-592",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Bolsa F7 592x592",
-    "descripcion": "Filtro de bolsa para sistemas HVAC y aplicaciones de filtración industrial.",
+    "nombre": "Filtro Pocket F7",
+    "descripcion": "Filtro pocket F7 para filtración media en sistemas HVAC y aplicaciones industriales.",
     "imagen": "/productos/filtracion-industrial/filtro-pocket-f7-hvac-bogota-colombia.jpeg",
-    "gallery": [
-      "/productos/filtracion-industrial/filtro-pocket-f6-hvac-bogota-colombia.jpeg",
-      "/productos/filtracion-industrial/filtro-pocket-f7-hvac-bogota-colombia.jpeg",
-      "/productos/filtracion-industrial/filtro-pocket-f8-hvac-bogota-colombia.jpeg",
-      "/productos/filtracion-industrial/filtro-v-bank-merv14-hvac-bogota-colombia.jpeg"
-    ],
     "especificaciones": {
-      "Medida": "592x592 mm",
-      "Eficiencia": "F7",
-      "Bolsas": 6,
+      "Tipo": "Pocket",
+      "Eficiencia": "F7 / 80-90%",
+      "Configuraciones": "3 Pocket / 6 Pocket / 8 Pocket",
+      "Presentaciones": "12x24x24\" / 24x20x30\" / 23x22x14\"",
       "Aplicacion": "HVAC industrial"
     },
     "stock": 8,
@@ -378,12 +410,11 @@
     "marca": "RPM Industrial",
     "destacado": true,
     "tags": [
-      "filtro",
-      "bolsa",
+      "filtro bolsillo",
+      "pocket",
       "f7",
-      "592x592",
       "hvac",
-      "filtracion"
+      "filtracion media"
     ]
   },
   {
@@ -391,11 +422,13 @@
     "codigo": "FIL-PKT-F8",
     "categoria": "filtracion-industrial",
     "nombre": "Filtro Pocket F8",
-    "descripcion": "Filtro pocket F8 para aplicaciones de aire con exigencia superior de eficiencia.",
+    "descripcion": "Filtro pocket F8 para aplicaciones de aire con alta eficiencia de filtración.",
     "imagen": "/productos/filtracion-industrial/filtro-pocket-f8-hvac-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "F8",
       "Tipo": "Pocket",
+      "Eficiencia": "F8 / 90-95%",
+      "Configuraciones": "6 Pocket / 8 Pocket",
+      "Presentaciones": "24x24x24\" / 24x20x20\" / 24x12x22\" / 24x24x12\" / 12x24x12\" / 20x20x12\"",
       "Aplicacion": "HVAC"
     },
     "stock": 6,
@@ -405,20 +438,23 @@
     "tags": [
       "pocket",
       "f8",
+      "filtro bolsa",
       "hvac",
-      "filtro bolsa"
+      "alta eficiencia"
     ]
   },
   {
     "id": "filtro-v-bank-merv14",
     "codigo": "FIL-VB-M14",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro V-Bank MERV 14",
-    "descripcion": "Filtro V-Bank de alta capacidad para calidad de aire y sistemas HVAC de alto caudal.",
+    "nombre": "Filtro V-Bank MERV 14 - F8",
+    "descripcion": "Filtro V-Bank MERV 14 - F8 para sistemas HVAC de alto caudal y mejor calidad de aire.",
     "imagen": "/productos/filtracion-industrial/filtro-v-bank-merv14-hvac-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "MERV 14",
       "Tipo": "V-Bank",
+      "Eficiencia": "MERV14-F8 / 95%",
+      "Presentaciones": "24x24x12\" (595x595x292 mm) / 12x24x12\" (295x595x292 mm)",
+      "Referencia": "@1 micra",
       "Aplicacion": "HVAC alto caudal"
     },
     "stock": 4,
@@ -428,6 +464,7 @@
     "tags": [
       "v-bank",
       "merv14",
+      "f8",
       "alta capacidad",
       "hvac"
     ]
@@ -436,11 +473,13 @@
     "id": "filtro-cartucho-colector-polvo",
     "codigo": "FIL-CCP",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Cartucho Colector de Polvo",
-    "descripcion": "Cartucho para sistemas dust collector y control de material particulado en industria.",
+    "nombre": "Filtro Cartucho para Colector de Polvo",
+    "descripcion": "Cartucho para sistemas dust collector y control de material particulado en industria, disponible en varias configuraciones.",
     "imagen": "/productos/filtracion-industrial/filtro-cartucho-colector-polvo-bogota-colombia.jpeg",
     "especificaciones": {
       "Tipo": "Cartucho",
+      "Configuraciones": "Sin malla externa / con cono / aro-poliol",
+      "Presentaciones": "55-32-21 / 66-32-21 / 16-32-21 / 81-32-21 / 41.2-23-13.5",
       "Uso": "Control de polvo",
       "Aplicacion": "Dust collector"
     },
@@ -452,20 +491,22 @@
       "cartucho",
       "colector de polvo",
       "dust collector",
-      "industrial"
+      "industrial",
+      "filtracion particulas"
     ]
   },
   {
     "id": "mini-pleat-hepa-h13",
     "codigo": "FIL-HEPA-H13-MP",
     "categoria": "filtracion-industrial",
-    "nombre": "Mini Pleat HEPA H13",
-    "descripcion": "Filtro HEPA H13 tipo mini pleat para aplicaciones de alta pureza y control fino de partículas.",
+    "nombre": "Mini Pleat HEPA 99,99%",
+    "descripcion": "Filtro mini pleat HEPA de alta eficiencia para control fino de partículas en aplicaciones críticas de aire limpio.",
     "imagen": "/productos/filtracion-industrial/mini-pleat-hepa-h13-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "H13",
       "Tipo": "Mini Pleat HEPA",
-      "Aplicacion": "Alta eficiencia"
+      "Eficiencia": "99,99%",
+      "Presentaciones": "12x24x4\" / 12x24x3\" / 24x24x4\" / 24x24x6\" / 24x24x3\"",
+      "Aplicacion": "Alta eficiencia y aire limpio"
     },
     "stock": 4,
     "precio": 390000,
@@ -473,44 +514,49 @@
     "destacado": true,
     "tags": [
       "hepa",
-      "h13",
       "mini pleat",
-      "alta eficiencia"
+      "99.99",
+      "alta eficiencia",
+      "aire limpio"
     ]
   },
   {
     "id": "filtro-hepa-box-header-h13",
     "codigo": "FIL-HEPA-BH13",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro HEPA Box Header H13",
-    "descripcion": "Filtro HEPA box header para aplicaciones críticas de aire limpio y alta eficiencia.",
+    "nombre": "HEPA Box Ducto Unidad Terminal 48x24\"",
+    "descripcion": "Unidad terminal tipo HEPA Box para ducto de 12 pulgadas, diseñada para aplicaciones de aire limpio y filtración terminal.",
     "imagen": "/productos/filtracion-industrial/filtro-hepa-box-header-h13-bogota-colombia.jpeg",
     "especificaciones": {
-      "Eficiencia": "H13",
-      "Tipo": "Box Header",
-      "Aplicacion": "Aire limpio"
+      "Tipo": "HEPA Box ducto",
+      "Conexion": "12 pulgadas",
+      "Medida": "1220 x 610 x 220 mm",
+      "Equivalencia": "48 x 24\"",
+      "Aplicacion": "Unidad terminal de aire limpio"
     },
     "stock": 3,
     "precio": 450000,
     "marca": "RPM Industrial",
     "destacado": true,
     "tags": [
-      "hepa",
-      "box header",
-      "h13",
-      "aire limpio"
+      "hepa box",
+      "unidad terminal",
+      "ducto",
+      "aire limpio",
+      "filtracion terminal"
     ]
   },
   {
     "id": "filtro-andreae-azul",
     "codigo": "FIL-AND-AZ",
     "categoria": "filtracion-industrial",
-    "nombre": "Filtro Andreae Azul para Cabina de Pintura",
-    "descripcion": "Filtro Andreae azul de alta eficiencia para retención de partículas de pintura en cabinas.",
+    "nombre": "Honeycomb Medio Filtrante 1 x 10 m",
+    "descripcion": "Medio filtrante tipo honeycomb para cabinas de pintura y procesos de retención de partículas en extracción de aire.",
     "imagen": "/productos/filtracion-industrial/filtro-andreae-azul-cabina-pintura-bogota-colombia.jpeg",
     "especificaciones": {
-      "Tipo": "Andreae",
-      "Color": "Azul",
+      "Tipo": "Honeycomb",
+      "Presentacion": "1 x 10 m",
+      "Configuracion": "5 layer",
       "Aplicacion": "Cabina de pintura"
     },
     "stock": 5,
@@ -518,12 +564,14 @@
     "marca": "RPM Industrial",
     "destacado": false,
     "tags": [
-      "andreae",
+      "honeycomb",
+      "medio filtrante",
       "cabina de pintura",
-      "filtro azul",
+      "extraccion",
       "pintura"
     ]
   },
+
   {
     "id": "extractor-axial-plastico-6p",
     "codigo": "EAP-6",
