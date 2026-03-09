@@ -2,7 +2,6 @@
   "name": "allcomercial-pro",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,22 +9,18 @@
     "lint": "next lint",
     "validar:productos": "node scripts/validar-productos-json.mjs"
   },
-
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
     "framer-motion": "^12.35.0",
     "fuse.js": "^7.1.0",
     "lucide-react": "^0.487.0",
-
-    "next": "15.2.4",
-
+    "next": "15.2.8",
     "openai": "^4.91.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-type-animation": "^3.2.0",
     "sharp": "^0.34.5"
   },
-
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
