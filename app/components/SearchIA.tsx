@@ -1,9 +1,18 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { productos } from '@/data/productos'
 import { getCategoriaBySlug } from '@/lib/catalogo'
+
+type ProductoIndexado = {
+  id: string
+  categoria: string
+  categoriaNombre: string
+  nombre: string
+  descripcion?: string
+  searchable: string
+}
 
 function normalizarTexto(texto: string): string {
   return texto
@@ -15,6 +24,7 @@ function normalizarTexto(texto: string): string {
 }
 
 function expandirBusqueda(texto: string): string {
+
   let t = normalizarTexto(texto)
 
   t = t
@@ -32,109 +42,124 @@ function expandirBusqueda(texto: string): string {
 }
 
 export function SearchIA() {
+
   const router = useRouter()
+
   const [query, setQuery] = useState('')
   const [focused, setFocused] = useState(false)
+  const [debouncedQuery, setDebouncedQuery] = useState('')
+
+  useEffect(() => {
+
+    const t = setTimeout(() => setDebouncedQuery(query), 150)
+
+    return () => clearTimeout(t)
+
+  }, [query])
+
+  const index = useMemo<ProductoIndexado[]>(() => {
+
+    return productos.map((item) => {
+
+      const categoriaNombre =
+        getCategoriaBySlug(item.categoria)?.title || item.categoria
+
+      const specs = item.especificaciones
+        ? Object.entries(item.especificaciones)
+            .map(([k, v]) => `${k} ${v}`)
+            .join(' ')
+        : ''
+
+      const searchable = expandirBusqueda(
+        `${item.nombre} ${item.descripcion || ''} ${item.codigo || ''} ${categoriaNombre} ${specs}`
+      )
+
+      return {
+        id: item.id,
+        categoria: item.categoria,
+        categoriaNombre,
+        nombre: item.nombre,
+        descripcion: item.descripcion,
+        searchable,
+      }
+
+    })
+
+  }, [])
 
   const resultados = useMemo(() => {
-    const q = expandirBusqueda(query)
+
+    const q = expandirBusqueda(debouncedQuery)
+
     if (!q) return []
 
-    return productos
+    const palabras = q.split(' ').filter(Boolean)
+
+    return index
       .map((item) => {
-        const categoriaNombre =
-          getCategoriaBySlug(item.categoria)?.title || item.categoria
-
-        const nombre = expandirBusqueda(item.nombre || '')
-        const descripcion = expandirBusqueda(item.descripcion || '')
-        const categoria = expandirBusqueda(item.categoria || '')
-        const categoriaLabel = expandirBusqueda(categoriaNombre)
-        const specs = item.especificaciones
-          ? expandirBusqueda(
-              Object.entries(item.especificaciones)
-                .map(([k, v]) => `${k} ${String(v)}`)
-                .join(' ')
-            )
-          : ''
-
-        const searchable = `${nombre} ${descripcion} ${categoria} ${categoriaLabel} ${specs}`
 
         let score = 0
 
-        if (nombre.includes(q)) score += 10
-        if (categoriaLabel.includes(q)) score += 7
-        if (categoria.includes(q)) score += 5
-        if (descripcion.includes(q)) score += 4
-        if (specs.includes(q)) score += 6
+        if (item.searchable.includes(q)) score += 15
 
-        const palabras = q.split(' ').filter(Boolean)
-        const coincidencias = palabras.filter((palabra) => searchable.includes(palabra)).length
+        const coincidencias = palabras.filter((palabra) =>
+          item.searchable.includes(palabra)
+        ).length
 
-        score += coincidencias * 2
+        score += coincidencias * 3
 
-        if (palabras.length > 0 && coincidencias === palabras.length) {
-          score += 8
-        }
-
-        if (q.includes('extractor') && nombre.includes('extractor')) score += 5
-        if (q.includes('turbina') && nombre.includes('turbina')) score += 5
-        if (q.includes('compresor') && nombre.includes('compresor')) score += 5
-        if (q.includes('secador') && nombre.includes('secador')) score += 5
-        if (q.includes('cabina') && nombre.includes('cabina')) score += 5
-        if (q.includes('lavadora') && nombre.includes('lavadora')) score += 5
-        if (q.includes('banco') && nombre.includes('banco')) score += 5
-        if (q.includes('lampara') && nombre.includes('lampara')) score += 5
-        if (q.includes('pistola') && nombre.includes('pistola')) score += 5
-        if (q.includes('filtro') && nombre.includes('filtro')) score += 5
+        if (coincidencias === palabras.length) score += 6
 
         return {
           ...item,
-          categoriaNombre,
           score,
         }
+
       })
-      .filter((item) => item.score > 0)
+      .filter((x) => x.score > 0)
       .sort((a, b) => b.score - a.score || a.nombre.localeCompare(b.nombre))
       .slice(0, 8)
-  }, [query])
 
-  function goToProduct(categoria: string, id: string) {
+  }, [debouncedQuery, index])
+
+  const goToProduct = useCallback((categoria: string, id: string) => {
+
     setQuery('')
     setFocused(false)
+
     router.push(`/catalogo/${categoria}/${id}`)
-  }
+
+  }, [router])
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+
     e.preventDefault()
 
-    const q = query.trim()
-    if (!q) return
+    if (!query.trim()) return
 
     if (resultados.length === 1) {
+
       goToProduct(resultados[0].categoria, resultados[0].id)
       return
+
     }
 
-    if (resultados.length > 1) {
-      router.push(`/catalogo/${resultados[0].categoria}`)
-      return
-    }
+    router.push(`/buscar?q=${encodeURIComponent(query)}`)
 
-    router.push('/catalogo')
   }
 
   return (
+
     <div className="relative w-full max-w-3xl">
+
       <form onSubmit={onSubmit} className="relative">
+
         <input
-          type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
-          onBlur={() => {
-            setTimeout(() => setFocused(false), 150)
-          }}
-          placeholder='Busca por producto, referencia, medida, HP, PSI, HVLP...'
+          onBlur={() => setTimeout(() => setFocused(false), 150)}
+          placeholder='Busca extractor, compresor, filtro G4, HVLP...'
           className="w-full rounded-2xl border border-white/20 bg-white px-5 py-4 pr-36 text-gray-900 shadow-lg outline-none transition placeholder:text-gray-400 focus:border-orange-300 focus:ring-4 focus:ring-orange-200"
         />
 
@@ -144,44 +169,63 @@ export function SearchIA() {
         >
           Buscar
         </button>
+
       </form>
 
-      {focused && query.trim().length > 0 && (
+      {focused && query.trim() && (
+
         <div className="absolute z-50 mt-3 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
+
           {resultados.length > 0 ? (
+
             <div className="max-h-[420px] overflow-y-auto py-2">
+
               {resultados.map((item) => (
+
                 <button
                   key={item.id}
-                  type="button"
                   onMouseDown={() => goToProduct(item.categoria, item.id)}
-                  className="flex w-full items-start gap-3 px-4 py-3 text-left transition hover:bg-gray-50"
+                  className="flex w-full items-start gap-3 px-4 py-3 text-left hover:bg-gray-50"
                 >
+
                   <div className="mt-1 h-2.5 w-2.5 rounded-full bg-orange-500" />
 
                   <div className="min-w-0 flex-1">
+
                     <div className="truncate font-semibold text-gray-900">
                       {item.nombre}
                     </div>
 
                     <div className="mt-1 text-sm text-gray-500">
-                      {item.descripcion || 'Producto industrial disponible para cotización'}
+                      {item.descripcion || 'Producto industrial disponible'}
                     </div>
 
                     <div className="mt-2 text-xs font-medium text-orange-600">
                       {item.categoriaNombre}
                     </div>
+
                   </div>
+
                 </button>
+
               ))}
+
             </div>
+
           ) : (
+
             <div className="px-4 py-5 text-sm text-gray-500">
-              No encontré coincidencias. Intenta con otra referencia o especificación.
+              No encontré coincidencias.
             </div>
+
           )}
+
         </div>
+
       )}
+
     </div>
+
   )
+
 }

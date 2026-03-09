@@ -1,17 +1,29 @@
-import { productos } from '@/data/productos'
-import { NextResponse } from 'next/server'
+import { NextResponse } from "next/server";
+import { productos } from "@/data/productos";
 
-export async function GET() {
-  return NextResponse.json({
-    total: productos.length,
-    porCategoria: {
-      filtracion: productos.filter(p => p.categoria === 'filtracion-industrial').length,
-      ventilacion: productos.filter(p => p.categoria === 'ventilacion-industrial').length,
-      aire: productos.filter(p => p.categoria === 'sistemas-de-aire-comprimido').length,
-      cabinas: productos.filter(p => p.categoria === 'cabinas-de-pintura').length,
-      otros: productos.length - productos.filter(p => 
-        ['filtracion-industrial', 'ventilacion-industrial', 'sistemas-de-aire-comprimido', 'cabinas-de-pintura']
-        .includes(p.categoria)).length
-    }
-  })
+export async function GET(req: Request) {
+
+  const { searchParams } = new URL(req.url);
+  const q = (searchParams.get("q") || "").toLowerCase().trim();
+
+  if (!q) {
+    return NextResponse.json([]);
+  }
+
+  const resultados = productos.filter((p) => {
+
+    const texto = `
+      ${p.nombre}
+      ${p.descripcion || ""}
+      ${p.codigo || ""}
+      ${p.marca || ""}
+      ${p.categoria || ""}
+    `.toLowerCase();
+
+    return texto.includes(q);
+
+  }).slice(0, 20);
+
+  return NextResponse.json(resultados);
+
 }
