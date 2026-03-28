@@ -2,7 +2,13 @@ import type { Metadata, Viewport } from "next";
 import Image from "next/image";
 import "./globals.css";
 
-import { SITE, getSiteUrl, getWhatsappUrl } from "@/lib/site";
+import {
+  SITE,
+  getSiteUrl,
+  getWhatsappUrl,
+  getEmailUrl,
+  getPhoneUrl,
+} from "@/lib/site";
 
 import Footer from "@/components/layout/Footer";
 import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
@@ -80,11 +86,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   const WA = SITE.whatsapp.phoneE164;
 
   const waDefault = getWhatsappUrl(SITE.whatsapp.defaultMessage);
-
   const waSales = getWhatsappUrl(SITE.whatsapp.salesMessage);
 
   const organizationJsonLd = {
@@ -102,6 +106,7 @@ export default function RootLayout({
         contactType: "customer service",
         areaServed: "CO",
         availableLanguage: ["Spanish"],
+        email: SITE.company.email,
       },
     ],
     address: {
@@ -126,11 +131,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-
       <body className="min-h-screen bg-zinc-950 text-white">
-
-        {/* JSON-LD SEO */}
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -145,43 +146,49 @@ export default function RootLayout({
           }}
         />
 
-        {/* BRAND COLOR */}
-
         <style>{`
           :root {
             --brand: ${SITE.branding.primaryColor};
           }
         `}</style>
 
-        {/* HEADER */}
-
         <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/90 backdrop-blur">
+          {/* FRANJA SUPERIOR DE CONTACTO */}
+          <div className="hidden border-b border-white/10 bg-black/30 md:block">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs text-zinc-300">
+              <div className="flex items-center gap-4">
+                <a href={getPhoneUrl()} className="hover:text-orange-400">
+                  Tel: {SITE.company.phoneDisplay}
+                </a>
 
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
+                <a href={getEmailUrl()} className="hover:text-orange-400">
+                  {SITE.company.email}
+                </a>
+              </div>
 
+              <div className="text-zinc-400">
+                Bogotá, Colombia
+              </div>
+            </div>
+          </div>
+
+          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
             {/* LOGO */}
-
             <a href="/" className="flex items-center gap-3">
-
-              <div className="relative h-12 w-[200px] sm:h-14 sm:w-[250px]">
-
+              <div className="relative h-12 w-[150px] sm:h-14 sm:w-[220px]">
                 <Image
                   src={SITE.branding.logoPath}
                   alt={SITE.name}
                   fill
                   priority
-                  sizes="240px"
+                  sizes="(max-width: 640px) 150px, 220px"
                   className="object-contain object-left"
                 />
-
               </div>
-
             </a>
 
-            {/* MENU */}
-
+            {/* MENU DESKTOP */}
             <nav className="hidden items-center gap-2 text-sm md:flex">
-
               <a
                 href="/catalogo"
                 className="rounded-xl px-3 py-2 text-zinc-200 hover:bg-white/10"
@@ -197,13 +204,10 @@ export default function RootLayout({
               >
                 Asesoría
               </a>
-
             </nav>
 
             {/* BOTONES */}
-
             <div className="flex items-center gap-2">
-
               <a
                 href="/catalogo"
                 className="hidden items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 sm:inline-flex"
@@ -220,38 +224,33 @@ export default function RootLayout({
               >
                 WhatsApp
               </a>
-
             </div>
+          </div>
 
+          {/* CONTACTO MOVIL */}
+          <div className="border-t border-white/10 bg-black/30 md:hidden">
+            <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 text-xs text-zinc-300">
+              <a href={getPhoneUrl()} className="hover:text-orange-400">
+                Tel: {SITE.company.phoneDisplay}
+              </a>
+
+              <a href={getEmailUrl()} className="break-all hover:text-orange-400">
+                {SITE.company.email}
+              </a>
+            </div>
           </div>
 
           {/* BUSCADOR */}
-
           <div className="border-t border-white/10 bg-black/40">
-
-            <div className="mx-auto max-w-6xl px-6 py-4">
-
+            <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
               <BuscadorProductos />
-
             </div>
-
           </div>
-
         </header>
 
-        {/* CONTENIDO */}
-
-        <main className="min-h-[60vh]">
-
-          {children}
-
-        </main>
-
-        {/* FOOTER */}
+        <main className="min-h-[60vh]">{children}</main>
 
         <Footer />
-
-        {/* BOTON WHATSAPP */}
 
         <a
           href={waDefault}
@@ -259,7 +258,6 @@ export default function RootLayout({
           rel="noreferrer"
           className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/60 px-4 py-3 shadow-lg backdrop-blur hover:bg-black/80"
         >
-
           <span
             className="grid h-10 w-10 place-items-center rounded-full font-black text-black"
             style={{ background: "var(--brand)" }}
@@ -268,21 +266,11 @@ export default function RootLayout({
           </span>
 
           <div className="leading-tight">
-
-            <div className="text-sm font-semibold">
-              WhatsApp
-            </div>
-
-            <div className="text-xs text-zinc-300">
-              Cotiza en 1 minuto
-            </div>
-
+            <div className="text-sm font-semibold">WhatsApp</div>
+            <div className="text-xs text-zinc-300">Cotiza en 1 minuto</div>
           </div>
-
         </a>
-
       </body>
-
     </html>
   );
 }

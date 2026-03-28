@@ -1,8 +1,9 @@
 export const SITE = {
   name: 'Comercializadora Airenet Industrial',
   shortName: 'Airenet',
-  url: 'https://allcomercial-pro.vercel.app',
-  domain: 'allcomercial-pro.vercel.app',
+
+  url: 'https://www.allcomercialonline.com',
+  domain: 'www.allcomercialonline.com',
 
   titleDefault: 'Comercializadora Airenet Industrial | Soluciones Industriales',
   description:
@@ -31,6 +32,9 @@ export const SITE = {
     legalName: 'Comercializadora Airenet Industrial',
     city: 'Bogotá',
     country: 'Colombia',
+    email: 'comercial.airenet@gmail.com',
+    phoneDisplay: '319 299 0918',
+    phoneRaw: '3192990918',
   },
 
   whatsapp: {
@@ -51,6 +55,7 @@ export const SITE = {
 
   social: {
     whatsapp: 'https://wa.me/573053644307',
+    email: 'mailto:comercial.airenet@gmail.com',
   },
 } as const
 
@@ -65,4 +70,12 @@ export function getWhatsappBaseUrl() {
 export function getWhatsappUrl(message?: string) {
   const text = encodeURIComponent(message || SITE.whatsapp.defaultMessage)
   return `${getWhatsappBaseUrl()}?text=${text}`
+}
+
+export function getEmailUrl() {
+  return `mailto:${SITE.company.email}`
+}
+
+export function getPhoneUrl() {
+  return `tel:${SITE.company.phoneRaw}`
 }
