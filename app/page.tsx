@@ -10,6 +10,7 @@ export default function Home() {
 
   const waDefault = getWhatsappUrl(SITE.whatsapp.defaultMessage)
   const waSales = getWhatsappUrl(SITE.whatsapp.salesMessage)
+  const waCatalog = getWhatsappUrl(SITE.whatsapp.catalogMessage)
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
@@ -161,13 +162,22 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-8 md:hidden">
+        <div className="mt-8 flex flex-wrap gap-3 md:hidden">
           <Link
             href="/catalogo"
             className="inline-flex rounded-2xl border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
           >
             Ver todo el catálogo
           </Link>
+
+          <a
+            href={waCatalog}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex rounded-2xl border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
+          >
+            Pedir info por WhatsApp
+          </a>
         </div>
       </section>
 
