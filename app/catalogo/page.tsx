@@ -1,10 +1,34 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CategoriesGrid } from '@/app/components/categories/CategoriesGrid'
+import { SITE, getSiteUrl, getWhatsappUrl } from '@/lib/site'
 
-const WA_LINK =
-  'https://wa.me/573053644307?text=Hola,%20quiero%20asesor%C3%ADa%20sobre%20el%20cat%C3%A1logo%20industrial.'
+const siteUrl = getSiteUrl()
+
+export const metadata: Metadata = {
+  title: 'Catálogo industrial',
+  description:
+    'Explora nuestro catálogo industrial de ventilación, filtración, aire comprimido, pintura, lavaderos y soluciones técnicas especializadas.',
+  alternates: {
+    canonical: `${siteUrl}/catalogo`,
+  },
+  openGraph: {
+    title: `Catálogo industrial | ${SITE.name}`,
+    description:
+      'Explora nuestro catálogo industrial de ventilación, filtración, aire comprimido, pintura, lavaderos y soluciones técnicas especializadas.',
+    url: `${siteUrl}/catalogo`,
+  },
+  twitter: {
+    title: `Catálogo industrial | ${SITE.name}`,
+    description:
+      'Explora nuestro catálogo industrial de ventilación, filtración, aire comprimido, pintura, lavaderos y soluciones técnicas especializadas.',
+  },
+}
 
 export default function CatalogoPage() {
+  const waCatalog = getWhatsappUrl(SITE.whatsapp.catalogMessage)
+  const waSales = getWhatsappUrl(SITE.whatsapp.salesMessage)
+
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <section className="relative overflow-hidden border-b border-white/10">
@@ -29,7 +53,7 @@ export default function CatalogoPage() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href={WA_LINK}
+                href={waSales}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
@@ -91,7 +115,7 @@ export default function CatalogoPage() {
           </div>
 
           <a
-            href={WA_LINK}
+            href={waCatalog}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center rounded-2xl border border-neutral-700 bg-neutral-900 px-5 py-3 text-sm font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
@@ -123,7 +147,7 @@ export default function CatalogoPage() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href={WA_LINK}
+                  href={waSales}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"

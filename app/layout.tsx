@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 import {
@@ -153,7 +154,6 @@ export default function RootLayout({
         `}</style>
 
         <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/90 backdrop-blur">
-          {/* FRANJA SUPERIOR DE CONTACTO */}
           <div className="hidden border-b border-white/10 bg-black/30 md:block">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs text-zinc-300">
               <div className="flex items-center gap-4">
@@ -166,15 +166,12 @@ export default function RootLayout({
                 </a>
               </div>
 
-              <div className="text-zinc-400">
-                Bogotá, Colombia
-              </div>
+              <div className="text-zinc-400">Bogotá, Colombia</div>
             </div>
           </div>
 
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-            {/* LOGO */}
-            <a href="/" className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
               <div className="relative h-12 w-[150px] sm:h-14 sm:w-[220px]">
                 <Image
                   src={SITE.branding.logoPath}
@@ -185,35 +182,31 @@ export default function RootLayout({
                   className="object-contain object-left"
                 />
               </div>
-            </a>
+            </Link>
 
-            {/* MENU DESKTOP */}
             <nav className="hidden items-center gap-2 text-sm md:flex">
-              <a
+              <Link
                 href="/catalogo"
                 className="rounded-xl px-3 py-2 text-zinc-200 hover:bg-white/10"
               >
                 Catálogo
-              </a>
+              </Link>
 
-              <a
-                href={waSales}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/asesoria"
                 className="rounded-xl px-3 py-2 text-zinc-200 hover:bg-white/10"
               >
                 Asesoría
-              </a>
+              </Link>
             </nav>
 
-            {/* BOTONES */}
             <div className="flex items-center gap-2">
-              <a
+              <Link
                 href="/catalogo"
                 className="hidden items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm hover:bg-white/10 sm:inline-flex"
               >
                 Ver catálogo
-              </a>
+              </Link>
 
               <a
                 href={waDefault}
@@ -227,7 +220,6 @@ export default function RootLayout({
             </div>
           </div>
 
-          {/* CONTACTO MOVIL */}
           <div className="border-t border-white/10 bg-black/30 md:hidden">
             <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 text-xs text-zinc-300">
               <a href={getPhoneUrl()} className="hover:text-orange-400">
@@ -240,7 +232,6 @@ export default function RootLayout({
             </div>
           </div>
 
-          {/* BUSCADOR */}
           <div className="border-t border-white/10 bg-black/40">
             <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
               <BuscadorProductos />
