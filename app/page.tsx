@@ -2,13 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CATEGORIES } from '@/lib/catalogo'
 import { getProductosDestacados } from '@/data/productos'
-
-const WA_LINK =
-  'https://wa.me/573053644307?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos.'
+import { SITE, getWhatsappUrl, getEmailUrl, getPhoneUrl } from '@/lib/site'
 
 export default function Home() {
   const destacadas = CATEGORIES.slice(0, 3)
   const productosDestacados = getProductosDestacados().slice(0, 6)
+
+  const waDefault = getWhatsappUrl(SITE.whatsapp.defaultMessage)
+  const waSales = getWhatsappUrl(SITE.whatsapp.salesMessage)
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
@@ -32,6 +33,16 @@ export default function Home() {
               técnica y cotización directa.
             </p>
 
+            <div className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
+              <a href={getPhoneUrl()} className="hover:text-orange-400">
+                📞 {SITE.company.phoneDisplay}
+              </a>
+
+              <a href={getEmailUrl()} className="break-all hover:text-orange-400">
+                ✉ {SITE.company.email}
+              </a>
+            </div>
+
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/catalogo"
@@ -41,7 +52,7 @@ export default function Home() {
               </Link>
 
               <a
-                href={WA_LINK}
+                href={waDefault}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-neutral-700 bg-neutral-900 px-6 py-3 font-medium text-white transition hover:border-neutral-500 hover:bg-neutral-800"
@@ -255,9 +266,19 @@ export default function Home() {
                 Escríbenos y recibe atención comercial rápida.
               </p>
 
+              <div className="mt-6 flex flex-wrap gap-4 text-sm text-neutral-400">
+                <a href={getPhoneUrl()} className="hover:text-orange-400">
+                  📞 {SITE.company.phoneDisplay}
+                </a>
+
+                <a href={getEmailUrl()} className="break-all hover:text-orange-400">
+                  ✉ {SITE.company.email}
+                </a>
+              </div>
+
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
-                  href={WA_LINK}
+                  href={waSales}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-2xl bg-orange-500 px-6 py-3 font-semibold text-white transition hover:bg-orange-600"
