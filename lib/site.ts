@@ -40,7 +40,7 @@ export const SITE = {
   whatsapp: {
     phoneE164: '573053644307',
     phoneDisplay: '+57 305 364 4307',
-    defaultMessage: 'Hola, quiero una cotización. ¿Me apoyas por favor?',
+    defaultMessage: 'Hola, quiero cotizar equipos industriales. ¿Me apoyas por favor?',
     salesMessage: 'Hola, quiero asesoría comercial sobre sus productos.',
     catalogMessage: 'Hola, quiero información sobre el catálogo industrial.',
   },
