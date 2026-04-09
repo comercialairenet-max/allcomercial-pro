@@ -37,6 +37,77 @@ const nextConfig: NextConfig = {
         destination: '/catalogo/filtracion-industrial',
         permanent: true,
       },
+
+      {
+        source: '/es',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/es/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/es/catalogo',
+        destination: '/catalogo',
+        permanent: true,
+      },
+      {
+        source: '/es/catalogo/',
+        destination: '/catalogo',
+        permanent: true,
+      },
+      {
+        source: '/es/filtracion-industrial',
+        destination: '/catalogo/filtracion-industrial',
+        permanent: true,
+      },
+      {
+        source: '/es/filtracion-industrial/',
+        destination: '/catalogo/filtracion-industrial',
+        permanent: true,
+      },
+      {
+        source: '/es/pistolas-de-gravedad',
+        destination: '/catalogo/pistolas-de-gravedad',
+        permanent: true,
+      },
+      {
+        source: '/es/pistolas-de-gravedad/',
+        destination: '/catalogo/pistolas-de-gravedad',
+        permanent: true,
+      },
+      {
+        source: '/es/sobre-nosotros',
+        destination: '/nosotros',
+        permanent: true,
+      },
+      {
+        source: '/es/sobre-nosotros/',
+        destination: '/nosotros',
+        permanent: true,
+      },
+      {
+        source: '/es/contacto-2',
+        destination: '/contacto',
+        permanent: true,
+      },
+      {
+        source: '/es/contacto-2/',
+        destination: '/contacto',
+        permanent: true,
+      },
+      {
+        source: '/es/equipos-para-lavaderos',
+        destination: '/catalogo/equipos-para-lavaderos',
+        permanent: true,
+      },
+      {
+        source: '/es/equipos-para-lavaderos/',
+        destination: '/catalogo/equipos-para-lavaderos',
+        permanent: true,
+      },
     ]
   },
 }
