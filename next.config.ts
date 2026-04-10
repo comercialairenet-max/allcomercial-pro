@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // URLs antiguas HTML
       {
         source: '/index.html',
         destination: '/',
@@ -38,6 +39,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // URLs antiguas /es/ IMPORTANTES
       {
         source: '/es',
         destination: '/',
@@ -79,6 +81,26 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/es/sistemas-de-aire-comprimido',
+        destination: '/catalogo/sistemas-de-aire-comprimido',
+        permanent: true,
+      },
+      {
+        source: '/es/sistemas-de-aire-comprimido/',
+        destination: '/catalogo/sistemas-de-aire-comprimido',
+        permanent: true,
+      },
+      {
+        source: '/es/equipos-para-lavaderos',
+        destination: '/catalogo/equipos-para-lavaderos',
+        permanent: true,
+      },
+      {
+        source: '/es/equipos-para-lavaderos/',
+        destination: '/catalogo/equipos-para-lavaderos',
+        permanent: true,
+      },
+      {
         source: '/es/sobre-nosotros',
         destination: '/nosotros',
         permanent: true,
@@ -98,14 +120,42 @@ const nextConfig: NextConfig = {
         destination: '/contacto',
         permanent: true,
       },
+
+      // Solo deja estas dos si de verdad existe /aviso-legal
       {
-        source: '/es/equipos-para-lavaderos',
-        destination: '/catalogo/equipos-para-lavaderos',
+        source: '/es/aviso-legal',
+        destination: '/aviso-legal',
         permanent: true,
       },
       {
-        source: '/es/equipos-para-lavaderos/',
-        destination: '/catalogo/equipos-para-lavaderos',
+        source: '/es/aviso-legal/',
+        destination: '/aviso-legal',
+        permanent: true,
+      },
+
+      // Feed viejo
+      {
+        source: '/es/feed',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/es/feed/',
+        destination: '/',
+        permanent: true,
+      },
+
+      // Blog / feeds / tags / categorías viejas que ya no deben existir
+      {
+        source: '/es/blog/:path*',
+        destination: '/',
+        permanent: true,
+      },
+
+      // Fallback general de /es/
+      {
+        source: '/es/:path*',
+        destination: '/',
         permanent: true,
       },
     ]
