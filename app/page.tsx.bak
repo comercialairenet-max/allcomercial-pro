@@ -1,0 +1,687 @@
+﻿// app/page.tsx
+
+import type { Metadata } from "next";
+import Link from "next/link";
+import {
+  ArrowRight,
+  BadgeCheck,
+  Building2,
+  CheckCircle2,
+  Factory,
+  Fan,
+  Filter,
+  Layers3,
+  Lightbulb,
+  MessageCircle,
+  PaintBucket,
+  Search,
+  ShieldCheck,
+  Star,
+  Wind,
+  Wrench,
+  Zap,
+} from "lucide-react";
+
+import {
+  categoriasMeta,
+  getProductosDestacados,
+  getProductosPorCategoria,
+} from "@/data/productos";
+import { SITE, getWhatsappUrl } from "@/lib/site";
+import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import TrustSignals from "@/components/sections/TrustSignals";
+
+export const metadata: Metadata = {
+  title:
+    "Allcomercial Online | Soluciones industriales para filtraciÃ³n, ventilaciÃ³n y procesos tÃ©cnicos",
+  description:
+    "Portafolio industrial con enfoque tÃ©cnico y comercial en filtraciÃ³n industrial, ventilaciÃ³n, aire comprimido, cabinas de pintura y soluciones especializadas. Solicita cotizaciÃ³n por WhatsApp.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title:
+      "Allcomercial Online | Soluciones industriales para filtraciÃ³n, ventilaciÃ³n y procesos tÃ©cnicos",
+    description:
+      "Explora soluciones industriales organizadas para ayudarte a entender mejor tu necesidad y avanzar mÃ¡s rÃ¡pido a una cotizaciÃ³n Ãºtil por WhatsApp.",
+    url: "/",
+  },
+};
+
+function formatLabel(text: string) {
+  return text
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function getNivelLabel(nivel: string) {
+  const map: Record<string, string> = {
+    entrada: "Entrada",
+    estandar: "EstÃ¡ndar",
+    "alto-desempeno": "Alto desempeÃ±o",
+    critico: "CrÃ­tico",
+    especializado: "Especializado",
+    proyecto: "Proyecto",
+  };
+
+  return map[nivel] ?? formatLabel(nivel);
+}
+
+function getCategoryIcon(slug: string) {
+  const map: Record<string, React.ComponentType<{ className?: string }>> = {
+    "filtracion-industrial": Filter,
+    "ventilacion-industrial": Fan,
+    "sistemas-de-aire-comprimido": Wind,
+    "cabinas-de-pintura": PaintBucket,
+    "equipos-para-reparacion-de-carrocerias": Wrench,
+    "lamparas-de-secado-ir": Lightbulb,
+  };
+
+  return map[slug] ?? Building2;
+}
+
+const heroBenefits = [
+  "AsesorÃ­a tÃ©cnica y comercial",
+  "Portafolio industrial organizado",
+  "AtenciÃ³n rÃ¡pida por WhatsApp",
+  "Ruta clara entre necesidad y cotizaciÃ³n",
+];
+
+const valueBlocks = [
+  {
+    title: "Enfoque tÃ©cnico y comercial",
+    text: "El sitio no solo muestra productos. EstÃ¡ organizado para ayudar a entender necesidades reales y convertirlas en una cotizaciÃ³n Ãºtil.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "CatÃ¡logo estructurado para vender",
+    text: "Las categorÃ­as, subcategorÃ­as y productos destacados estÃ¡n pensados para orientar la decisiÃ³n, no solo para listar referencias.",
+    icon: Layers3,
+  },
+  {
+    title: "MÃ¡s claridad para el cliente",
+    text: "El usuario puede entrar por categorÃ­a, por necesidad o por asesorÃ­a, sin perderse en el proceso.",
+    icon: Search,
+  },
+  {
+    title: "ConversiÃ³n directa por WhatsApp",
+    text: "Cada bloque importante del sitio estÃ¡ diseÃ±ado para llevar a una conversaciÃ³n comercial mÃ¡s rÃ¡pida.",
+    icon: MessageCircle,
+  },
+];
+
+const sectors = [
+  { label: "Hospitales y clÃ­nicas", icon: Building2 },
+  { label: "Industria farmacÃ©utica", icon: Factory },
+  { label: "Procesamiento de alimentos", icon: Building2 },
+  { label: "Automotriz", icon: Wrench },
+  { label: "Talleres y operaciÃ³n", icon: Fan },
+  { label: "Procesos industriales", icon: Factory },
+];
+
+const entryCards = [
+  {
+    title: "Necesito filtrar partÃ­culas, polvo u overspray",
+    text: "Empieza por filtraciÃ³n industrial y revisa prefiltros, intermedios, HEPA y aplicaciones especiales.",
+    href: "/catalogo/catalogo/filtracion-industrial",
+  },
+  {
+    title: "Necesito extraer, renovar o mover aire",
+    text: "Empieza por ventilaciÃ³n industrial y compara si te conviene extracciÃ³n, inyecciÃ³n o renovaciÃ³n.",
+    href: "/catalogo/ventilacion-industrial",
+  },
+  {
+    title: "No sÃ© quÃ© referencia necesito",
+    text: "Empieza por asesorÃ­a y convierte tu necesidad en una conversaciÃ³n Ãºtil por WhatsApp.",
+    href: "/asesoria",
+  },
+];
+
+const categoryCommercialContent: Record<
+  string,
+  {
+    title: string;
+    description: string;
+    bullets: string[];
+    priority?: boolean;
+  }
+> = {
+  "filtracion-industrial": {
+    title: "FiltraciÃ³n industrial",
+    description:
+      "Prefiltros, filtros intermedios, alta eficiencia, carbÃ³n activado, dust collector y soluciones especiales para HVAC, cabinas de pintura y procesos industriales.",
+    bullets: ["Prefiltros", "Pocket", "HEPA", "Aplicaciones especiales"],
+    priority: true,
+  },
+  "ventilacion-industrial": {
+    title: "VentilaciÃ³n industrial",
+    description:
+      "Soluciones para extracciÃ³n, inyecciÃ³n, renovaciÃ³n y movimiento de aire en ambientes industriales y comerciales.",
+    bullets: ["ExtracciÃ³n", "InyecciÃ³n", "RenovaciÃ³n", "Movimiento de aire"],
+  },
+  "sistemas-de-aire-comprimido": {
+    title: "Sistemas de aire comprimido",
+    description:
+      "Equipos y componentes para procesos productivos, redes de aire, almacenamiento y aplicaciones tÃ©cnicas.",
+    bullets: ["Compresores", "Tanques", "Accesorios", "Aplicaciones tÃ©cnicas"],
+  },
+  "cabinas-de-pintura": {
+    title: "Cabinas de pintura",
+    description:
+      "Soluciones para mejorar el proceso de pintura, controlar el entorno y apoyar el acabado.",
+    bullets: ["Cabinas", "Proceso", "Acabado", "Control"],
+  },
+  "lamparas-de-secado-ir": {
+    title: "LÃ¡mparas de secado IR",
+    description:
+      "TecnologÃ­a infrarroja para secado y apoyo a procesos de pintura profesional.",
+    bullets: ["Secado", "Pintura", "Productividad"],
+  },
+  "pistolas-de-gravedad": {
+    title: "Pistolas de gravedad",
+    description:
+      "Pistolas para aplicaciÃ³n de pintura y acabados con enfoque profesional.",
+    bullets: ["AplicaciÃ³n", "Acabado", "Pintura profesional"],
+  },
+};
+
+function getCategoryCardContent(slug: string) {
+  const meta = categoriasMeta[slug as keyof typeof categoriasMeta];
+  const products = getProductosPorCategoria(slug as keyof typeof categoriasMeta);
+  const featured = products.filter((p) => p.destacado);
+  const lines = Array.from(new Set(products.map((p) => p.linea).filter(Boolean)));
+  const ui = categoryCommercialContent[slug];
+  const Icon = getCategoryIcon(slug);
+
+  return {
+    slug,
+    nombre: ui?.title ?? meta?.nombre ?? formatLabel(slug),
+    descripcion:
+      ui?.description ??
+      meta?.descripcion ??
+      "CategorÃ­a industrial organizada para facilitar la bÃºsqueda y cotizaciÃ³n.",
+    bullets: ui?.bullets ?? [],
+    total: products.length,
+    destacados: featured.length,
+    lineas: lines.length,
+    priority: ui?.priority ?? false,
+    icon: Icon,
+  };
+}
+
+export default function HomePage() {
+  const categoryOrder = [
+    "filtracion-industrial",
+    "ventilacion-industrial",
+    "sistemas-de-aire-comprimido",
+    "cabinas-de-pintura",
+    "lamparas-de-secado-ir",
+    "pistolas-de-gravedad",
+  ];
+
+  const categories = categoryOrder
+    .filter((slug) => categoriasMeta[slug as keyof typeof categoriasMeta])
+    .map(getCategoryCardContent)
+    .filter((item) => item.total > 0);
+
+  const featuredProducts = getProductosDestacados().slice(0, 6);
+
+  const whatsappGeneral = getWhatsappUrl(
+    "Hola, quiero recibir asesorÃ­a y cotizar una soluciÃ³n industrial para mi proceso."
+  );
+
+  const whatsappFiltracion = getWhatsappUrl(
+    "Hola, quiero cotizar una soluciÃ³n de filtraciÃ³n industrial."
+  );
+
+  const totalProducts = categories.reduce((acc, item) => acc + item.total, 0);
+
+  return (
+    <>
+      <SiteHeader />
+
+      <main className="bg-white text-slate-900">
+        <section className="relative isolate overflow-hidden border-b border-slate-200 bg-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(29,78,216,0.10),transparent_24%),radial-gradient(circle_at_left,rgba(14,165,233,0.08),transparent_24%),radial-gradient(circle_at_bottom,rgba(249,115,22,0.08),transparent_20%)]" />
+          <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] [background-size:42px_42px]" />
+
+          <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:py-24">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-blue-900">
+                <Zap className="h-4 w-4" />
+                Allcomercial Online Â· soluciones industriales con enfoque tÃ©cnico y comercial
+              </div>
+
+              <h1 className="mt-6 max-w-5xl text-4xl font-black tracking-tight text-slate-950 md:text-5xl xl:text-6xl">
+                Soluciones industriales para filtraciÃ³n, ventilaciÃ³n y procesos tÃ©cnicos
+              </h1>
+
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+                Explora un portafolio mÃ¡s claro, mÃ¡s ordenado y mÃ¡s Ãºtil para entender tu necesidad,
+                comparar opciones y avanzar mÃ¡s rÃ¡pido a una cotizaciÃ³n por WhatsApp.
+              </p>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <a
+                  href={whatsappGeneral}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                  style={{ background: SITE.branding.primaryColor }}
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  Solicitar cotizaciÃ³n por WhatsApp
+                </a>
+
+                <Link
+                  href="/catalogo"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-slate-400 hover:bg-slate-50"
+                >
+                  Ver catÃ¡logo industrial
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+
+                <Link
+                  href="/catalogo/catalogo/filtracion-industrial"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-200 bg-blue-50 px-6 py-3 text-sm font-semibold text-blue-900 transition hover:-translate-y-0.5 hover:bg-blue-100"
+                >
+                  FiltraciÃ³n industrial
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {heroBenefits.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm"
+                  >
+                    <BadgeCheck className="h-5 w-5 flex-none text-blue-700" />
+                    <span className="text-sm font-medium text-slate-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[30px] border border-slate-200 bg-gradient-to-br from-blue-50 to-white p-6 shadow-xl shadow-slate-200/70 sm:col-span-2">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-800">
+                      LÃ­nea prioritaria
+                    </p>
+                    <h2 className="mt-2 text-2xl font-black text-slate-950 md:text-3xl">
+                      FiltraciÃ³n industrial
+                    </h2>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">
+                      Una de las lÃ­neas mÃ¡s fuertes del sitio, con prefiltros, pocket, mini pleat,
+                      HEPA, carbÃ³n activado, dust collector y soluciones para cabinas de pintura.
+                    </p>
+                  </div>
+                  <div className="rounded-2xl border border-blue-200 bg-blue-50 p-3 text-blue-800">
+                    <Filter className="h-8 w-8" />
+                  </div>
+                </div>
+
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <a
+                    href={whatsappFiltracion}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-orange-200 bg-orange-50 px-4 py-2 text-sm font-semibold text-orange-700 transition hover:bg-orange-100"
+                  >
+                    Cotizar filtraciÃ³n industrial
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+
+                  <Link
+                    href="/catalogo/filtracion-industrial"
+                    className="inline-flex items-center gap-2 rounded-xl border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-900 transition hover:bg-blue-100"
+                  >
+                    Ver landing de filtraciÃ³n
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+                <Layers3 className="h-8 w-8 text-blue-700" />
+                <h3 className="mt-4 text-xl font-bold text-slate-950">CategorÃ­as activas</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  {categories.length} lÃ­neas organizadas con lÃ³gica comercial.
+                </p>
+              </div>
+
+              <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+                <Star className="h-8 w-8 text-blue-700" />
+                <h3 className="mt-4 text-xl font-bold text-slate-950">Productos cargados</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  {totalProducts} referencias listas para bÃºsqueda, exploraciÃ³n y cotizaciÃ³n.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+          <p className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+            QuÃ© hace fuerte esta portada
+          </p>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+            Una home blanca, clara y con look de empresa industrial real
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-slate-600 md:text-lg">
+            Esta versiÃ³n prioriza confianza, estructura tÃ©cnica y claridad comercial para que el sitio se sienta mÃ¡s sÃ³lido, mÃ¡s ordenado y mÃ¡s vendedor.
+          </p>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            {valueBlocks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="inline-flex rounded-2xl border border-blue-200 bg-blue-50 p-3 text-blue-800">
+                    <Icon className="h-7 w-7" />
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold text-slate-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <TrustSignals />
+
+        <section className="border-y border-slate-200 bg-slate-950">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">
+              CategorÃ­as principales
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-white md:text-4xl">
+              Explora las lÃ­neas que mÃ¡s mueven el portafolio
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300 md:text-lg">
+              Cada categorÃ­a toma informaciÃ³n real del catÃ¡logo para mostrar volumen, prioridad comercial y tipo de soluciÃ³n.
+            </p>
+
+            <div className="mt-12 grid gap-6 lg:grid-cols-2">
+              {categories.map((category) => {
+                const href = `/catalogo/${category.slug}`;
+                const wa = getWhatsappUrl(`Hola, quiero cotizar una soluciÃ³n de ${category.nombre}.`);
+                const Icon = category.icon;
+
+                return (
+                  <div
+                    key={category.slug}
+                    className={`rounded-[30px] border p-6 transition hover:-translate-y-1 hover:shadow-2xl ${
+                      category.priority
+                        ? "border-blue-400/25 bg-gradient-to-br from-blue-700/20 to-slate-900/70 shadow-blue-950/40"
+                        : "border-white/10 bg-white/5"
+                    }`}
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      {category.priority ? (
+                        <span className="rounded-full border border-blue-400/20 bg-blue-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-200">
+                          Prioridad comercial
+                        </span>
+                      ) : null}
+
+                      <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-slate-300">
+                        {category.total} productos
+                      </span>
+
+                      {category.destacados > 0 ? (
+                        <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-slate-300">
+                          {category.destacados} destacados
+                        </span>
+                      ) : null}
+
+                      {category.lineas > 0 ? (
+                        <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-slate-300">
+                          {category.lineas} lÃ­neas
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <div className="mt-5 inline-flex rounded-2xl border border-blue-400/20 bg-blue-500/10 p-3 text-blue-300">
+                      <Icon className="h-7 w-7" />
+                    </div>
+
+                    <h3 className="mt-5 text-2xl font-black text-white">{category.nombre}</h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-300">{category.descripcion}</p>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {category.bullets.map((bullet) => (
+                        <span
+                          key={bullet}
+                          className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs text-slate-300"
+                        >
+                          {bullet}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                      <Link
+                        href={href}
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-400/20 bg-blue-500/10 px-5 py-3 text-sm font-semibold text-blue-100 transition hover:bg-blue-500/15"
+                      >
+                        Ver categorÃ­a
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+
+                      {category.slug === "filtracion-industrial" ? (
+                        <Link
+                          href="/catalogo/filtracion-industrial"
+                          className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+                        >
+                          Ver landing SEO
+                          <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      ) : null}
+
+                      <a
+                        href={wa}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                        style={{ background: SITE.branding.primaryColor }}
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        Cotizar
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {featuredProducts.length > 0 ? (
+          <section className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+              Productos destacados
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+              Referencias fuertes para empujar conversiÃ³n
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg">
+              Estos productos vienen directamente del catÃ¡logo PRO y ayudan a mostrar lo mÃ¡s fuerte del portafolio.
+            </p>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {featuredProducts.map((producto) => {
+                const href = `/catalogo/${producto.categoria}/${producto.id}`;
+                const wa = getWhatsappUrl(producto.cta.primaryMessage);
+                const categoryName =
+                  categoriasMeta[producto.categoria]?.nombre ?? formatLabel(producto.categoria);
+
+                return (
+                  <div
+                    key={producto.id}
+                    className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <div className="flex flex-wrap gap-2">
+                      <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-800">
+                        Destacado
+                      </span>
+                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600">
+                        {getNivelLabel(producto.nivelComercial)}
+                      </span>
+                    </div>
+
+                    <h3 className="mt-4 text-xl font-bold text-slate-950">{producto.nombre}</h3>
+                    <p className="mt-3 min-h-[72px] text-sm leading-6 text-slate-600">
+                      {producto.descripcion}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600">
+                        {categoryName}
+                      </span>
+
+                      {producto.linea ? (
+                        <span className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-slate-600">
+                          {producto.linea}
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <div className="mt-6 flex flex-col gap-3">
+                      <Link
+                        href={href}
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50"
+                      >
+                        Ver producto
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+
+                      <a
+                        href={wa}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                        style={{ background: SITE.branding.primaryColor }}
+                      >
+                        <MessageCircle className="h-4 w-4" />
+                        {producto.cta.primaryLabel}
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
+
+        <section className="border-y border-slate-200 bg-slate-50">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+              CÃ³mo entrar al sitio
+            </p>
+            <h2 className="text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+              Tres caminos para avanzar mÃ¡s rÃ¡pido
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600 md:text-lg">
+              Este bloque ayuda al cliente tÃ©cnico, al comprador comercial y al que todavÃ­a estÃ¡ definiendo.
+            </p>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {entryCards.map((item) => (
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <h3 className="text-xl font-bold text-slate-950">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-800">
+                    Ir ahora
+                    <ArrowRight className="h-4 w-4" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+          <p className="mb-3 text-center text-sm font-semibold uppercase tracking-[0.22em] text-blue-700">
+            Sectores
+          </p>
+          <h2 className="mx-auto max-w-3xl text-center text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
+            Soluciones para diferentes tipos de operaciÃ³n
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-slate-600 md:text-lg">
+            El portafolio puede atender necesidades en procesos industriales, ambientes tÃ©cnicos y aplicaciones especÃ­ficas.
+          </p>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+            {sectors.map((sector) => {
+              const Icon = sector.icon;
+              return (
+                <div
+                  key={sector.label}
+                  className="rounded-[24px] border border-slate-200 bg-white p-5 text-center shadow-sm"
+                >
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-200 bg-blue-50">
+                    <Icon className="h-7 w-7 text-blue-800" />
+                  </div>
+                  <p className="mt-4 text-sm font-semibold text-slate-700">{sector.label}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="border-t border-slate-200 bg-slate-950">
+          <div className="mx-auto max-w-7xl px-6 py-20 md:px-8">
+            <div className="overflow-hidden rounded-[34px] border border-blue-400/20 bg-gradient-to-r from-blue-900 via-blue-700 to-slate-800 p-8 text-white shadow-2xl shadow-blue-950/40 lg:p-12">
+              <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-200">
+                    AcciÃ³n recomendada
+                  </p>
+                  <h2 className="mt-4 text-3xl font-black tracking-tight md:text-4xl">
+                    Convierte la exploraciÃ³n en una cotizaciÃ³n Ãºtil
+                  </h2>
+                  <p className="mt-5 max-w-2xl text-base leading-7 text-slate-200 md:text-lg">
+                    Si no sabes por cuÃ¡l categorÃ­a empezar o quieres validar la mejor opciÃ³n para tu proceso,
+                    escrÃ­benos por WhatsApp y te ayudamos a avanzar mÃ¡s rÃ¡pido.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4 lg:items-end">
+                  <a
+                    href={whatsappGeneral}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
+                    style={{ background: SITE.branding.primaryColor }}
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Pedir ayuda por WhatsApp
+                  </a>
+
+                  <Link
+                    href="/asesoria"
+                    className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/15"
+                  >
+                    Ir a asesorÃ­a
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </>
+  );
+}

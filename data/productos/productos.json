@@ -1,0 +1,2037 @@
+[
+  {
+    "id": "media-filtrante-g1",
+    "codigo": "FIL-G1-MF",
+    "categoria": "filtracion-industrial",
+    "nombre": "Manta Filtrante G1 Sintética",
+    "descripcion": "Media filtrante sintética G1 para prefiltrado de aire en sistemas HVAC y procesos industriales. Disponible en rollo de 2 x 20 m y 2 x 10 m.",
+    "imagen": "/productos/filtracion-industrial/media-filtrante-g1-fibra-sintetica-prefiltro-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Manta filtrante",
+      "Eficiencia": "G1",
+      "Material": "Fibra sintética",
+      "Espesor": "Aprox. 12 mm",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
+      "Aplicacion": "Prefiltrado industrial"
+    },
+    "stock": 15,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "manta filtrante",
+      "g1",
+      "fibra sintetica",
+      "prefiltro",
+      "hvac",
+      "rollo filtrante"
+    ]
+  },
+  {
+    "id": "filtro-panel-g4-595x595",
+    "codigo": "FPG4-595",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro manta sintética G4",
+    "descripcion": "Filtro clase G4 para prefiltrado de aire en sistemas de ventilación y aplicaciones industriales.",
+    "imagen": "/productos/filtracion-industrial/manta-filtrante-g4-fibra-sintetica-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Plegado",
+      "Eficiencia": "G4",
+      "Ancho": "595 mm",
+      "Alto": "595 mm",
+      "Fondo": "46 mm",
+      "Aplicacion": "Prefiltrado industrial"
+    },
+    "stock": 12,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "filtro plegado",
+      "g4",
+      "24x24x2",
+      "595x595x46",
+      "prefiltro",
+      "hvac"
+    ]
+  },
+  {
+    "id": "filtro-paint-stop-fibra-vidrio",
+    "codigo": "FIL-PS-FV",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Paint Stop Fibra de Vidrio",
+    "descripcion": "Filtro de fibra de vidrio tipo piso para cabinas de pintura, diseñado para retención de partículas de pintura y overspray.",
+    "imagen": "/productos/filtracion-industrial/filtro-paint-stop-fibra-vidrio-cabina-pintura-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Filtro piso / Paint Stop",
+      "Material": "Fibra de vidrio",
+      "Espesor": "50 mm",
+      "Presentaciones": "0,50 x 20 m / 0,65 x 20 m / 0,75 x 20 m / 1 x 20 m / 2 x 20 m",
+      "Aplicacion": "Cabina de pintura"
+    },
+    "stock": 10,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "paint stop",
+      "fibra de vidrio",
+      "filtro piso",
+      "cabina de pintura",
+      "overspray"
+    ]
+  },
+  {
+    "id": "filtro-techo-f5-cabina-pintura",
+    "codigo": "FIL-F5-TECHO",
+    "categoria": "filtracion-industrial",
+    "nombre": "Manta Techo F5 para Cabina de Pintura",
+    "descripcion": "Manta filtrante F5 para suministro de aire en techos de cabinas de pintura y aplicaciones de aire limpio.",
+    "imagen": "/productos/filtracion-industrial/filtro-techo-f5-cabina-pintura-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Manta techo",
+      "Eficiencia": "F5",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
+      "Aplicacion": "Cabinas de pintura"
+    },
+    "stock": 8,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "manta techo",
+      "f5",
+      "cabina de pintura",
+      "suministro de aire"
+    ]
+  },
+  {
+    "id": "filtro-carbon-activado-industrial",
+    "codigo": "FIL-CA-IND",
+    "categoria": "filtracion-industrial",
+    "nombre": "Media Filtrante de Carbón Activado",
+    "descripcion": "Media filtrante de carbón activado para control de olores y compuestos volátiles en aplicaciones industriales y HVAC.",
+    "imagen": "/productos/filtracion-industrial/filtro-carbon-activado-control-olores-industrial-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Media filtrante",
+      "Material": "Carbón activado",
+      "Presentaciones": "1,20 x 30 m / 0,60 x 60 m / 1,20 x 60 m / 0,60 x 25 m / 1,20 x 12,5 m",
+      "Aplicacion": "Control de olores e industrial HVAC"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "carbon activado",
+      "control de olores",
+      "media filtrante",
+      "hvac",
+      "industrial"
+    ]
+  },
+  {
+    "id": "filtro-carton-plegado-cabina-pintura",
+    "codigo": "FIL-CP-CP",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Cardboard Tipo Andreae 1 x 10 m",
+    "descripcion": "Filtro cardboard tipo Andreae para cabina de pintura, diseñado para retención de pintura seca en procesos de extracción.",
+    "imagen": "/productos/filtracion-industrial/filtro-carton-plegado-cabina-pintura-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Cardboard tipo Andreae",
+      "Presentacion": "1 x 10 m",
+      "Retencion": "18 kg/m2 pintura seca",
+      "Aplicacion": "Cabina de pintura"
+    },
+    "stock": 10,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "cardboard",
+      "andreae",
+      "cabina pintura",
+      "filtro pintura",
+      "extraccion"
+    ]
+  },
+  {
+    "id": "manta-filtrante-lavable-g4-verde",
+    "codigo": "FIL-G4-LAV",
+    "categoria": "filtracion-industrial",
+    "nombre": "Manta Filtrante Lavable G4 Verde",
+    "descripcion": "Manta lavable G4 para prefiltrado de aire en ventilación industrial y sistemas HVAC.",
+    "imagen": "/productos/filtracion-industrial/manta-filtrante-lavable-g4-verde-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Manta lavable",
+      "Eficiencia": "G4",
+      "Color": "Verde",
+      "Presentaciones": "2 x 20 m / 2 x 10 m",
+      "Aplicacion": "Prefiltrado HVAC"
+    },
+    "stock": 9,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "manta lavable",
+      "g4",
+      "verde",
+      "prefiltro",
+      "hvac"
+    ]
+  },
+  {
+    "id": "manta-filtrante-lavable-g2-azul",
+    "codigo": "FIL-G2-LAV",
+    "categoria": "filtracion-industrial",
+    "nombre": "Manta Filtrante G2 Azul-Blanco",
+    "descripcion": "Media filtrante G2 tipo coarse filter media para aplicaciones de prefiltro y ventilación general.",
+    "imagen": "/productos/filtracion-industrial/manta-filtrante-lavable-g2-azul-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Media filtrante",
+      "Eficiencia": "G2",
+      "Color": "Azul-Blanco",
+      "Espesor": "Aprox. 7 mm",
+      "Presentacion": "2 x 20 m",
+      "Aplicacion": "Prefiltro HVAC"
+    },
+    "stock": 9,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "manta filtrante",
+      "g2",
+      "azul blanco",
+      "prefiltro",
+      "hvac"
+    ]
+  },
+  {
+    "id": "filtro-plegado-carbon-activado",
+    "codigo": "FIL-PL-CA",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Plegado de Carbón Activado",
+    "descripcion": "Filtro plegado de carbón activado para control de olores y recirculación de aire en sistemas industriales y HVAC.",
+    "imagen": "/productos/filtracion-industrial/filtro-plegado-carbon-activado-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Plegado",
+      "Material": "Carbón activado",
+      "Marco": "Galvanizado",
+      "Presentaciones": "Según medida / 20x20x2\" / 24x24x2\" / 12x12x2\" / 12x24x2\" / 20x24x2\" / 12x12x3\"",
+      "Aplicacion": "HVAC e industrial"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "filtro plegado",
+      "carbon activado",
+      "control de olores",
+      "hvac",
+      "industrial"
+    ]
+  },
+  {
+    "id": "filtro-lavable-fibra-poliester",
+    "codigo": "FIL-LAV-POL",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Lavable Washable Pre-Filter",
+    "descripcion": "Filtro lavable para prefiltrado de aire con estructura metálica y presentaciones en diferentes medidas.",
+    "imagen": "/productos/filtracion-industrial/filtro-lavable-fibra-poliester-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Lavable",
+      "Eficiencia": "30-35%",
+      "Material": "Media lavable",
+      "Marco": "Galvanizado",
+      "Presentaciones": "24x12x2\" / 16x20x2\" / 20x24x2\" / 24x24x2\" / 24x24x4\" / 12x12x2\"",
+      "Aplicacion": "Prefiltro HVAC"
+    },
+    "stock": 7,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "filtro lavable",
+      "washable pre filter",
+      "prefiltro",
+      "hvac",
+      "marco galvanizado"
+    ]
+  },
+  {
+    "id": "filtro-plisado-merv8",
+    "codigo": "FIL-M8-PL",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Plisado MERV 8",
+    "descripcion": "Filtro plisado MERV 8 para ventilación y manejo de aire, disponible en varias medidas y marcos según aplicación.",
+    "imagen": "/productos/filtracion-industrial/filtro-plisado-merv8-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Plisado",
+      "Eficiencia": "MERV 8 / 30-35%",
+      "Marco": "Cartón / Aluminio / Galvanizado",
+      "Presentaciones": "24x12x2\" / 24x24x2\" / 24x24x4\" / 16x20x2\" / 20x20x2\" / 12x12x2\"",
+      "Aplicacion": "HVAC"
+    },
+    "stock": 10,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "filtro plisado",
+      "merv 8",
+      "prefiltro",
+      "hvac",
+      "filtro aire"
+    ]
+  },
+  {
+    "id": "mini-pleat-merv11",
+    "codigo": "FIL-MP-M11",
+    "categoria": "filtracion-industrial",
+    "nombre": "Mini Pleat MERV 11 - F6",
+    "descripcion": "Filtro mini pleat MERV 11 - F6 para mejor calidad de aire en aplicaciones HVAC e industriales.",
+    "imagen": "/productos/filtracion-industrial/mini-pleat-merv11-calidad-aire-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Mini Pleat",
+      "Eficiencia": "MERV11-F6 / 60-65%",
+      "Marco": "Cartón / Aluminio",
+      "Presentaciones": "24x12x4\" / 24x24x4\" / 20x16x4\"",
+      "Aplicacion": "Calidad de aire"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "mini pleat",
+      "merv11",
+      "f6",
+      "calidad de aire",
+      "hvac"
+    ]
+  },
+  {
+    "id": "mini-pleat-merv14",
+    "codigo": "FIL-MP-M14",
+    "categoria": "filtracion-industrial",
+    "nombre": "Mini Pleat MERV 14 - F8",
+    "descripcion": "Filtro mini pleat MERV 14 - F8 para aplicaciones de filtración media y alta eficiencia en HVAC.",
+    "imagen": "/productos/filtracion-industrial/mini-pleat-merv14-alta-eficiencia-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Mini Pleat",
+      "Eficiencia": "MERV14-F8 / 90-95%",
+      "Marco": "Cartón / Aluminio",
+      "Presentaciones": "24x12x4\" / 24x24x4\" / 20x16x4\"",
+      "Aplicacion": "Alta eficiencia"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "mini pleat",
+      "merv14",
+      "f8",
+      "alta eficiencia",
+      "hvac"
+    ]
+  },
+  {
+    "id": "mini-pleat-merv15",
+    "codigo": "FIL-MP-M15",
+    "categoria": "filtracion-industrial",
+    "nombre": "Mini Pleat MERV 15 - F9",
+    "descripcion": "Filtro mini pleat MERV 15 - F9 para aplicaciones de filtración de alta eficiencia.",
+    "imagen": "/productos/filtracion-industrial/mini-pleat-merv15-alta-eficiencia-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Mini Pleat",
+      "Eficiencia": "MERV15-F9 / 98%",
+      "Marco": "Cartón",
+      "Presentaciones": "24x24x4\" / 24x12x4\"",
+      "Aplicacion": "Filtración avanzada"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "mini pleat",
+      "merv15",
+      "f9",
+      "alta eficiencia",
+      "filtracion avanzada"
+    ]
+  },
+  {
+    "id": "filtro-pocket-f6",
+    "codigo": "FIL-PKT-F6",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Pocket F6",
+    "descripcion": "Filtro de bolsa tipo pocket F6 para sistemas HVAC y filtración de aire industrial en varias configuraciones.",
+    "imagen": "/productos/filtracion-industrial/filtro-pocket-f6-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Pocket",
+      "Eficiencia": "F6 / 60-80%",
+      "Configuraciones": "6 Pocket / 8 Pocket",
+      "Presentaciones": "24x24x20\" / 24x24x24\" / 24x24x12\" / 24x12x12\" / 24x20x12\" / 20x20x12\"",
+      "Aplicacion": "HVAC"
+    },
+    "stock": 8,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "pocket",
+      "f6",
+      "filtro bolsa",
+      "hvac",
+      "filtracion aire"
+    ]
+  },
+  {
+    "id": "filtro-bolsa-f7-592x592",
+    "codigo": "FBF7-592",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Pocket F7",
+    "descripcion": "Filtro pocket F7 para filtración media en sistemas HVAC y aplicaciones industriales.",
+    "imagen": "/productos/filtracion-industrial/filtro-pocket-f7-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Pocket",
+      "Eficiencia": "F7 / 80-90%",
+      "Configuraciones": "3 Pocket / 6 Pocket / 8 Pocket",
+      "Presentaciones": "12x24x24\" / 24x20x30\" / 23x22x14\"",
+      "Aplicacion": "HVAC industrial"
+    },
+    "stock": 8,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "filtro bolsillo",
+      "pocket",
+      "f7",
+      "hvac",
+      "filtracion media"
+    ]
+  },
+  {
+    "id": "filtro-pocket-f8",
+    "codigo": "FIL-PKT-F8",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Pocket F8",
+    "descripcion": "Filtro pocket F8 para aplicaciones de aire con alta eficiencia de filtración.",
+    "imagen": "/productos/filtracion-industrial/filtro-pocket-f8-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Pocket",
+      "Eficiencia": "F8 / 90-95%",
+      "Configuraciones": "6 Pocket / 8 Pocket",
+      "Presentaciones": "24x24x24\" / 24x20x20\" / 24x12x22\" / 24x24x12\" / 12x24x12\" / 20x20x12\"",
+      "Aplicacion": "HVAC"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "pocket",
+      "f8",
+      "filtro bolsa",
+      "hvac",
+      "alta eficiencia"
+    ]
+  },
+  {
+    "id": "filtro-v-bank-merv14",
+    "codigo": "FIL-VB-M14",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro V-Bank MERV 14 - F8",
+    "descripcion": "Filtro V-Bank MERV 14 - F8 para sistemas HVAC de alto caudal y mejor calidad de aire.",
+    "imagen": "/productos/filtracion-industrial/filtro-v-bank-merv14-hvac-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "V-Bank",
+      "Eficiencia": "MERV14-F8 / 95%",
+      "Presentaciones": "24x24x12\" (595x595x292 mm) / 12x24x12\" (295x595x292 mm)",
+      "Referencia": "@1 micra",
+      "Aplicacion": "HVAC alto caudal"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "v-bank",
+      "merv14",
+      "f8",
+      "alta capacidad",
+      "hvac"
+    ]
+  },
+  {
+    "id": "filtro-cartucho-colector-polvo",
+    "codigo": "FIL-CCP",
+    "categoria": "filtracion-industrial",
+    "nombre": "Filtro Cartucho para Colector de Polvo",
+    "descripcion": "Cartucho para sistemas dust collector y control de material particulado en industria, disponible en varias configuraciones.",
+    "imagen": "/productos/filtracion-industrial/filtro-cartucho-colector-polvo-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Cartucho",
+      "Configuraciones": "Sin malla externa / con cono / aro-poliol",
+      "Presentaciones": "55-32-21 / 66-32-21 / 16-32-21 / 81-32-21 / 41.2-23-13.5",
+      "Uso": "Control de polvo",
+      "Aplicacion": "Dust collector"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "cartucho",
+      "colector de polvo",
+      "dust collector",
+      "industrial",
+      "filtracion particulas"
+    ]
+  },
+  {
+    "id": "mini-pleat-hepa-h13",
+    "codigo": "FIL-HEPA-H13-MP",
+    "categoria": "filtracion-industrial",
+    "nombre": "Mini Pleat HEPA 99,99%",
+    "descripcion": "Filtro mini pleat HEPA de alta eficiencia para control fino de partículas en aplicaciones críticas de aire limpio.",
+    "imagen": "/productos/filtracion-industrial/mini-pleat-hepa-h13-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Mini Pleat HEPA",
+      "Eficiencia": "99,99%",
+      "Presentaciones": "12x24x4\" / 12x24x3\" / 24x24x4\" / 24x24x6\" / 24x24x3\"",
+      "Aplicacion": "Alta eficiencia y aire limpio"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "hepa",
+      "mini pleat",
+      "99.99",
+      "alta eficiencia",
+      "aire limpio"
+    ]
+  },
+  {
+    "id": "filtro-hepa-box-header-h13",
+    "codigo": "FIL-HEPA-BH13",
+    "categoria": "filtracion-industrial",
+    "nombre": "HEPA Box Ducto Unidad Terminal 48x24\"",
+    "descripcion": "Unidad terminal tipo HEPA Box para ducto de 12 pulgadas, diseñada para aplicaciones de aire limpio y filtración terminal.",
+    "imagen": "/productos/filtracion-industrial/filtro-hepa-box-header-h13-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "HEPA Box ducto",
+      "Conexion": "12 pulgadas",
+      "Medida": "1220 x 610 x 220 mm",
+      "Equivalencia": "48 x 24\"",
+      "Aplicacion": "Unidad terminal de aire limpio"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "hepa box",
+      "unidad terminal",
+      "ducto",
+      "aire limpio",
+      "filtracion terminal"
+    ]
+  },
+  {
+    "id": "filtro-andreae-azul",
+    "codigo": "FIL-AND-AZ",
+    "categoria": "filtracion-industrial",
+    "nombre": "Honeycomb Medio Filtrante 1 x 10 m",
+    "descripcion": "Medio filtrante tipo honeycomb para cabinas de pintura y procesos de retención de partículas en extracción de aire.",
+    "imagen": "/productos/filtracion-industrial/filtro-andreae-azul-cabina-pintura-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Honeycomb",
+      "Presentacion": "1 x 10 m",
+      "Configuracion": "5 layer",
+      "Aplicacion": "Cabina de pintura"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "honeycomb",
+      "medio filtrante",
+      "cabina de pintura",
+      "extraccion",
+      "pintura"
+    ]
+  },
+
+  {
+    "id": "extractor-axial-plastico-6p",
+    "codigo": "EAP-6",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Plástico 6\"",
+    "descripcion": "Extractor axial plástico compacto para renovación de aire en áreas pequeñas y aplicaciones comerciales.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-plastico-6-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "6 pulgadas",
+      "Material": "Plástico",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación general"
+    },
+    "stock": 8,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "plastico",
+      "6 pulgadas",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "extractor-axial-economico-8p",
+    "codigo": "EAE-8",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Económico 8\"",
+    "descripcion": "Extractor axial económico para aplicaciones de ventilación básica con instalación sencilla.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-economico-8-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "8 pulgadas",
+      "Linea": "Económica",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación general"
+    },
+    "stock": 7,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "economico",
+      "8 pulgadas",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "extractor-axial-economico-10p",
+    "codigo": "EAE-10",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Económico 10\"",
+    "descripcion": "Extractor axial económico de mayor caudal para espacios comerciales e industriales ligeros.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-economico-10-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "10 pulgadas",
+      "Linea": "Económica",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación general"
+    },
+    "stock": 7,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "economico",
+      "10 pulgadas",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "extractor-axial-plastico-10p",
+    "codigo": "EAP-10",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Plástico 10\"",
+    "descripcion": "Extractor axial plástico de alto desempeño para ventilación y extracción de aire.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-plastico-10-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "10 pulgadas",
+      "Material": "Plástico",
+      "Tipo": "Axial",
+      "Aplicacion": "Extracción y ventilación"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "plastico",
+      "10 pulgadas",
+      "extraccion"
+    ]
+  },
+  {
+    "id": "extractor-axial-plastico-12p",
+    "codigo": "EAP-12",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Plástico 12\"",
+    "descripcion": "Extractor axial plástico para ventilación industrial con buen caudal y estructura liviana.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-plastico-12-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "12 pulgadas",
+      "Material": "Plástico",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación industrial"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "plastico",
+      "12 pulgadas",
+      "industrial"
+    ]
+  },
+  {
+    "id": "extractor-axial-plastico-14p",
+    "codigo": "EAP-14",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Plástico 14\"",
+    "descripcion": "Extractor axial plástico de mayor diámetro para procesos de ventilación y extracción continua.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-plastico-14-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "14 pulgadas",
+      "Material": "Plástico",
+      "Tipo": "Axial",
+      "Aplicacion": "Extracción continua"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "plastico",
+      "14 pulgadas",
+      "extraccion"
+    ]
+  },
+  {
+    "id": "extractor-axial-plastico-16p",
+    "codigo": "EAP-16",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Plástico 16\"",
+    "descripcion": "Extractor axial plástico de gran formato para movimiento de aire en ambientes industriales.",
+    "imagen": "/productos/ventilacion-industrial/pl148425195-extractor-axial-plastico-16-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "16 pulgadas",
+      "Material": "Plástico",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "plastico",
+      "16 pulgadas",
+      "industrial"
+    ]
+  },
+  {
+    "id": "extractor-axial-metalico-10p",
+    "codigo": "EAM-10",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Metálico 10\"",
+    "descripcion": "Extractor axial metálico para uso industrial con estructura robusta y mayor resistencia.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-metalico-10-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "10 pulgadas",
+      "Material": "Metálico",
+      "Tipo": "Axial",
+      "Aplicacion": "Industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "metalico",
+      "10 pulgadas",
+      "industrial"
+    ]
+  },
+  {
+    "id": "extractor-axial-metalico-12p",
+    "codigo": "EAM-12",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Metálico 12\"",
+    "descripcion": "Extractor axial metálico para aplicaciones industriales y comerciales exigentes.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-metalico-12-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "12 pulgadas",
+      "Material": "Metálico",
+      "Tipo": "Axial",
+      "Aplicacion": "Industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "metalico",
+      "12 pulgadas",
+      "industrial"
+    ]
+  },
+  {
+    "id": "extractor-axial-metalico-14p",
+    "codigo": "EAM-14",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Metálico 14\"",
+    "descripcion": "Extractor axial metálico con mayor capacidad de caudal para ventilación industrial.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-metalico-14-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "14 pulgadas",
+      "Material": "Metálico",
+      "Tipo": "Axial",
+      "Aplicacion": "Extracción industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "metalico",
+      "14 pulgadas",
+      "extraccion"
+    ]
+  },
+  {
+    "id": "extractor-axial-metalico-16p",
+    "codigo": "EAM-16",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Metálico 16\"",
+    "descripcion": "Extractor axial metálico de alto rendimiento para renovación de aire en espacios industriales.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-metalico-16-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "16 pulgadas",
+      "Material": "Metálico",
+      "Tipo": "Axial",
+      "Aplicacion": "Ventilación industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor axial",
+      "metalico",
+      "16 pulgadas",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "extractor-axial-18p",
+    "codigo": "EXTA-18",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Industrial 18\"",
+    "descripcion": "Equipo de ventilación para extracción de aire en procesos industriales.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-metalico-18-pulgadas-bogota-colombia.jpeg",
+    "gallery": [
+      "/productos/ventilacion-industrial/extractor-axial-metalico-14-pulgadas-bogota-colombia.jpeg",
+      "/productos/ventilacion-industrial/extractor-axial-metalico-16-pulgadas-bogota-colombia.jpeg",
+      "/productos/ventilacion-industrial/extractor-axial-metalico-18-pulgadas-bogota-colombia.jpeg"
+    ],
+    "especificaciones": {
+      "Diametro": "18 pulgadas",
+      "Voltaje": "110/220V",
+      "Aplicacion": "Extracción",
+      "Tipo": "Axial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "extractor",
+      "axial",
+      "18 pulgadas",
+      "ventilacion",
+      "industrial"
+    ]
+  },
+  {
+    "id": "extractor-axial-aspa-plastica-20p-1hp",
+    "codigo": "EAP-20-1HP",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Axial Aspa Plástica 20\" Trifásico 1 HP",
+    "descripcion": "Extractor axial de aspa plástica para mayor caudal de aire en aplicaciones industriales.",
+    "imagen": "/productos/ventilacion-industrial/extractor-axial-aspa-plastica-20-pulgadas-trifasico-1hp-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "20 pulgadas",
+      "Potencia": "1 HP",
+      "Voltaje": "Trifásico",
+      "Tipo": "Axial"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "extractor axial",
+      "20 pulgadas",
+      "trifasico",
+      "1 hp",
+      "aspa plastica"
+    ]
+  },
+  {
+    "id": "extractor-centrifugo-tipo-hongo",
+    "codigo": "ECH-1234",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Centrífugo Tipo Hongo",
+    "descripcion": "Extractor centrífugo tipo hongo para evacuación de aire en cubiertas y sistemas de techo.",
+    "imagen": "/productos/ventilacion-industrial/extractor-centrifugo-tipo-hongo-12-a-34-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Rango": "12 a 34 pulgadas",
+      "Tipo": "Centrífugo",
+      "Instalacion": "Cubierta",
+      "Aplicacion": "Extracción de aire"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "extractor centrifugo",
+      "tipo hongo",
+      "cubierta",
+      "techo"
+    ]
+  },
+  {
+    "id": "extractor-bano-oficina-6p",
+    "codigo": "EBO-6",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor para Baño u Oficina 6\"",
+    "descripcion": "Extractor compacto para ventilación de baños, oficinas y espacios cerrados pequeños.",
+    "imagen": "/productos/ventilacion-industrial/extractor-bano-oficina-6-pulgadas-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "6 pulgadas",
+      "Uso": "Baño u oficina",
+      "Tipo": "Axial compacto",
+      "Aplicacion": "Ventilación local"
+    },
+    "stock": 10,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "extractor baño",
+      "extractor oficina",
+      "6 pulgadas",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "extractor-eolico",
+    "codigo": "EEO-IND",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Eólico Industrial",
+    "descripcion": "Extractor eólico para ventilación natural en cubiertas sin consumo eléctrico.",
+    "imagen": "/productos/ventilacion-industrial/extractor-eolico-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Eólico",
+      "Consumo": "Sin energía eléctrica",
+      "Aplicacion": "Cubiertas y bodegas"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "extractor eolico",
+      "ventilacion natural",
+      "cubierta",
+      "bodega"
+    ]
+  },
+  {
+    "id": "extractor-tubo-axial-28p",
+    "codigo": "ETA-28",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Tubo Axial 28\"",
+    "descripcion": "Extractor tubo axial de gran diámetro para transporte de aire en sistemas industriales.",
+    "imagen": "/productos/ventilacion-industrial/extractor-tubo-axial-28-pulgadas-costado-rejilla-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Diametro": "28 pulgadas",
+      "Tipo": "Tubo axial",
+      "Aplicacion": "Transporte de aire",
+      "Detalle": "Costado con rejilla"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "tubo axial",
+      "28 pulgadas",
+      "extractor industrial",
+      "aire"
+    ]
+  },
+  {
+    "id": "extractor-tubo-axial-pequeno",
+    "codigo": "ETA-PQ",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Extractor Tubo Axial Pequeño",
+    "descripcion": "Extractor tubo axial compacto para aplicaciones específicas de ventilación y movimiento de aire.",
+    "imagen": "/productos/ventilacion-industrial/extractor-tubo-axial-pequeno-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Tubo axial",
+      "Formato": "Pequeño",
+      "Aplicacion": "Ventilación puntual"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "tubo axial",
+      "extractor pequeño",
+      "ventilacion"
+    ]
+  },
+  {
+    "id": "turbina-siroco-05hp",
+    "codigo": "TS-05HP",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Turbina Tipo Siroco 0.5 HP Alta Presión",
+    "descripcion": "Turbina tipo siroco para transporte de aire y presión en aplicaciones industriales.",
+    "imagen": "/productos/ventilacion-industrial/turbina-tipo-siroco-0-5hp-alta-presion-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Potencia": "0.5 HP",
+      "Tipo": "Siroco",
+      "Presion": "Alta",
+      "Aplicacion": "Transporte de aire"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "turbina siroco",
+      "0.5 hp",
+      "alta presion",
+      "industrial"
+    ]
+  },
+  {
+    "id": "turbina-centrifuga-15hp",
+    "codigo": "TURC-15HP",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Turbina Centrífuga 1.5 HP",
+    "descripcion": "Turbina para inyección y extracción en sistemas de ventilación industrial.",
+    "imagen": "/productos/ventilacion-industrial/turbina-tipo-siroco-1hp-alta-presion-bogota-colombia.jpeg",
+    "gallery": [
+      "/productos/ventilacion-industrial/turbina-tipo-siroco-0-5hp-alta-presion-bogota-colombia.jpeg",
+      "/productos/ventilacion-industrial/turbina-tipo-siroco-1hp-alta-presion-bogota-colombia.jpeg",
+      "/productos/ventilacion-industrial/urbina-2hp-presion-transporte-bogota-colombia.jpeg",
+      "/productos/ventilacion-industrial/turbina-3hp-presion-transporte-bogota-colombia.jpeg"
+    ],
+    "especificaciones": {
+      "Potencia": "1.5 HP",
+      "Material": "Acero",
+      "Uso": "Industrial",
+      "Tipo": "Centrífuga"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "turbina",
+      "centrifuga",
+      "1.5 hp",
+      "inyeccion",
+      "extraccion"
+    ]
+  },
+  {
+    "id": "turbina-2hp-presion-transporte",
+    "codigo": "TUR-2HP",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Turbina 2 HP Presión y Transporte",
+    "descripcion": "Turbina industrial de 2 HP para presión y transporte de aire en ductos y procesos.",
+    "imagen": "/productos/ventilacion-industrial/urbina-2hp-presion-transporte-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Potencia": "2 HP",
+      "Uso": "Presión y transporte",
+      "Aplicacion": "Industrial"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "turbina",
+      "2 hp",
+      "presion",
+      "transporte de aire"
+    ]
+  },
+  {
+    "id": "turbina-3hp-presion-transporte",
+    "codigo": "TUR-3HP",
+    "categoria": "ventilacion-industrial",
+    "nombre": "Turbina 3 HP Presión y Transporte",
+    "descripcion": "Turbina industrial de 3 HP para sistemas de presión y transporte de aire.",
+    "imagen": "/productos/ventilacion-industrial/turbina-3hp-presion-transporte-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Potencia": "3 HP",
+      "Uso": "Presión y transporte",
+      "Aplicacion": "Industrial"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "turbina",
+      "3 hp",
+      "presion",
+      "transporte",
+      "industrial"
+    ]
+  },
+  {
+    "id": "compresor-tornillo-10hp",
+    "codigo": "COMP-T10",
+    "categoria": "sistemas-de-aire-comprimido",
+    "nombre": "Compresor con Tanque Vertical y Cabezote Italiano 10 HP",
+    "descripcion": "Compresor industrial con tanque vertical y cabezote italiano, diseñado para suministro confiable de aire comprimido en aplicaciones técnicas e industriales.",
+    "imagen": "/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg",
+    "gallery": [
+      "/productos/sistemas-de-aire-comprimido/compresor-aire-industrial.jpeg"
+    ],
+    "especificaciones": {
+      "Potencia": "10 HP",
+      "Configuracion": "Tanque vertical",
+      "Cabezote": "Italiano",
+      "Aplicacion": "Aire comprimido industrial"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "compresor",
+      "tanque vertical",
+      "cabezote italiano",
+      "10 hp",
+      "aire comprimido"
+    ]
+  },
+  {
+    "id": "tanque-pulmon-aire-comprimido",
+    "codigo": "TPA-IND",
+    "categoria": "sistemas-de-aire-comprimido",
+    "nombre": "Tanque Pulmón de Aire Comprimido",
+    "descripcion": "Tanque pulmón para almacenamiento temporal y estabilización del sistema de aire comprimido.",
+    "imagen": "/productos/sistemas-de-aire-comprimido/tanque-pulmon-aire-comprimido.jpeg",
+    "especificaciones": {
+      "Tipo": "Tanque pulmón",
+      "Uso": "Acumulación de aire",
+      "Aplicacion": "Sistemas de aire comprimido"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "tanque pulmon",
+      "aire comprimido",
+      "acumulador",
+      "industrial"
+    ]
+  },
+  {
+    "id": "espumadora-industrial",
+    "codigo": "ESP-IND",
+    "categoria": "sistemas-de-aire-comprimido",
+    "nombre": "Espumadora Industrial",
+    "descripcion": "Equipo espumador para procesos de lavado, limpieza técnica y aplicaciones industriales.",
+    "imagen": "/productos/sistemas-de-aire-comprimido/espumadora-industrial.jpeg",
+    "especificaciones": {
+      "Tipo": "Espumadora",
+      "Uso": "Lavado y limpieza",
+      "Aplicacion": "Industrial"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "espumadora",
+      "industrial",
+      "lavado",
+      "limpieza"
+    ]
+  },
+  {
+    "id": "tolva-sandblasting-movil",
+    "codigo": "TSM-IND",
+    "categoria": "sistemas-de-aire-comprimido",
+    "nombre": "Tolva Sandblasting Móvil",
+    "descripcion": "Tolva móvil para trabajos de sandblasting y preparación de superficies con abrasivo.",
+    "imagen": "/productos/sistemas-de-aire-comprimido/tolva-sandblasting-movil.jpeg",
+    "especificaciones": {
+      "Tipo": "Tolva móvil",
+      "Uso": "Sandblasting",
+      "Aplicacion": "Preparación de superficies"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "sandblasting",
+      "tolva movil",
+      "abrasivo",
+      "industrial"
+    ]
+  },
+  {
+    "id": "cabina-pintura-semiindustrial",
+    "codigo": "CAB-SEMIPRO",
+    "categoria": "cabinas-de-pintura",
+    "nombre": "Cabina de Pintura Semiindustrial",
+    "descripcion": "Cabina diseñada para acabados profesionales con control de flujo de aire.",
+    "imagen": "/productos/cabinas-de-pintura/cabina-pintura-automotriz-paneles-bogota-colombia.jpeg",
+    "gallery": [
+      "/productos/cabinas-de-pintura/cabina-pintura-automotriz-paneles-bogota-colombia.jpeg",
+      "/productos/cabinas-de-pintura/cabina-pintura-cortinas-poliuretano-bogota-colombia.jpeg",
+      "/productos/cabinas-de-pintura/interior-cabina-pintura-iluminacion-extraccion-bogota-colombia.jpeg",
+      "/productos/cabinas-de-pintura/cabina-pintura-automotriz-vehiculo-bogota-colombia.jpeg"
+    ],
+    "especificaciones": {
+      "Tipo": "Semiindustrial",
+      "Iluminacion": "LED",
+      "Flujo": "Horizontal",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 1,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "cabina",
+      "pintura",
+      "semiindustrial",
+      "automotriz",
+      "flujo horizontal"
+    ]
+  },
+  {
+    "id": "cabina-pintura-cortinas-poliuretano",
+    "codigo": "CAB-CPU",
+    "categoria": "cabinas-de-pintura",
+    "nombre": "Cabina de Pintura con Cortinas de Poliuretano",
+    "descripcion": "Cabina de pintura con sistema de cortinas de poliuretano para control de flujo y contención del proceso.",
+    "imagen": "/productos/cabinas-de-pintura/cabina-pintura-cortinas-poliuretano-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Cabina de pintura",
+      "Material": "Cortinas de poliuretano",
+      "Aplicacion": "Pintura automotriz e industrial"
+    },
+    "stock": 1,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "cabina pintura",
+      "cortinas poliuretano",
+      "automotriz",
+      "industrial"
+    ]
+  },
+  {
+    "id": "interior-cabina-pintura-iluminacion-extraccion",
+    "codigo": "CAB-INT",
+    "categoria": "cabinas-de-pintura",
+    "nombre": "Interior de Cabina de Pintura con Iluminación y Extracción",
+    "descripcion": "Configuración interior de cabina con iluminación técnica y sistema de extracción para acabados de alta calidad.",
+    "imagen": "/productos/cabinas-de-pintura/interior-cabina-pintura-iluminacion-extraccion-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Interior de cabina",
+      "Iluminacion": "Técnica",
+      "Sistema": "Extracción de aire",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 1,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "interior cabina",
+      "iluminacion",
+      "extraccion",
+      "pintura"
+    ]
+  },
+  {
+    "id": "cabina-pintura-automotriz-vehiculo",
+    "codigo": "CAB-AUTO",
+    "categoria": "cabinas-de-pintura",
+    "nombre": "Cabina de Pintura Automotriz para Vehículo",
+    "descripcion": "Cabina de pintura automotriz orientada al trabajo sobre vehículo completo con flujo controlado.",
+    "imagen": "/productos/cabinas-de-pintura/cabina-pintura-automotriz-vehiculo-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Cabina automotriz",
+      "Uso": "Vehículo completo",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 1,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "cabina automotriz",
+      "vehiculo",
+      "pintura",
+      "acabado"
+    ]
+  },
+  {
+    "id": "elevador-hidraulico-un-poste-pro",
+    "codigo": "EUP-PRO",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Elevador Hidráulico Un Poste PRO",
+    "descripcion": "Elevador hidráulico de un poste para lavado automotriz, detailing y servicio rápido.",
+    "imagen": "/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-carro-bogota-colombia.jpeg",
+    "gallery": [
+      "/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-carro-bogota-colombia.jpeg",
+      "/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-vehiculo-elevado-bogota-colombia.jpeg",
+      "/productos/equipos-para-lavaderos/brazos-elevador-hidraulico-un-poste-bogota-colombia.jpeg",
+      "/productos/equipos-para-lavaderos/brazos-abiertos-elevador-hidraulico-un-poste-bogota-colombia.jpeg"
+    ],
+    "especificaciones": {
+      "Tipo": "Elevador hidráulico",
+      "Configuracion": "Un poste",
+      "Aplicacion": "Lavaderos y detailing"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "elevador hidraulico",
+      "un poste",
+      "lavadero",
+      "detailing"
+    ]
+  },
+  {
+    "id": "elevador-hidraulico-un-poste-vehiculo-elevado",
+    "codigo": "EUP-VE",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Elevador Hidráulico Un Poste con Vehículo Elevado",
+    "descripcion": "Configuración de elevador un poste para operación de lavado y mantenimiento de vehículo liviano.",
+    "imagen": "/productos/equipos-para-lavaderos/elevador-hidraulico-un-poste-vehiculo-elevado-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Elevador hidráulico",
+      "Configuracion": "Un poste",
+      "Uso": "Lavado y servicio"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "elevador un poste",
+      "vehiculo elevado",
+      "lavadero"
+    ]
+  },
+  {
+    "id": "brazos-elevador-hidraulico-un-poste",
+    "codigo": "BRA-EUP",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Brazos para Elevador Hidráulico Un Poste",
+    "descripcion": "Juego de brazos para elevador hidráulico un poste con soporte para operación segura.",
+    "imagen": "/productos/equipos-para-lavaderos/brazos-elevador-hidraulico-un-poste-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Accesorio",
+      "Aplicacion": "Elevador hidráulico un poste"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "brazos elevador",
+      "un poste",
+      "accesorio"
+    ]
+  },
+  {
+    "id": "brazos-abiertos-elevador-hidraulico-un-poste",
+    "codigo": "BRA-EUP-A",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Brazos Abiertos para Elevador Hidráulico Un Poste",
+    "descripcion": "Configuración abierta de brazos para elevador un poste, ideal para posicionamiento de vehículo.",
+    "imagen": "/productos/equipos-para-lavaderos/brazos-abiertos-elevador-hidraulico-un-poste-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Accesorio",
+      "Estado": "Brazos abiertos",
+      "Aplicacion": "Elevador hidráulico"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "brazos abiertos",
+      "elevador hidraulico",
+      "un poste"
+    ]
+  },
+  {
+    "id": "plataforma-elevadora-para-moto",
+    "codigo": "PEM-STD",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Plataforma Elevadora para Moto",
+    "descripcion": "Plataforma elevadora para lavado, mantenimiento y detailing de motocicletas.",
+    "imagen": "/productos/equipos-para-lavaderos/plataforma-elevadora-para-moto-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Plataforma elevadora",
+      "Aplicacion": "Motocicletas",
+      "Uso": "Lavado y servicio"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "plataforma moto",
+      "elevadora",
+      "motocicletas",
+      "lavadero"
+    ]
+  },
+  {
+    "id": "plataforma-elevadora-moto-en-uso",
+    "codigo": "PEM-USO",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Plataforma Elevadora para Moto en Uso",
+    "descripcion": "Plataforma para motocicleta en operación real de lavado y servicio técnico.",
+    "imagen": "/productos/equipos-para-lavaderos/plataforma-elevadora-moto-en-uso-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Plataforma elevadora",
+      "Uso": "Motocicletas",
+      "Aplicacion": "Taller y lavadero"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "plataforma moto",
+      "en uso",
+      "lavadero",
+      "taller"
+    ]
+  },
+  {
+    "id": "bomba-hidraulica-elevador-automotriz-naranja",
+    "codigo": "BHE-NAR",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Bomba Hidráulica para Elevador Automotriz Naranja",
+    "descripcion": "Unidad hidráulica para elevador automotriz con configuración compacta y alto desempeño.",
+    "imagen": "/productos/equipos-para-lavaderos/bomba-hidraulica-elevador-automotriz-naranja-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Bomba hidráulica",
+      "Aplicacion": "Elevador automotriz",
+      "Color": "Naranja"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "bomba hidraulica",
+      "elevador automotriz",
+      "naranja"
+    ]
+  },
+  {
+    "id": "bomba-hidraulica-elevador-automotriz-verde",
+    "codigo": "BHE-VER",
+    "categoria": "equipos-para-lavaderos",
+    "nombre": "Bomba Hidráulica para Elevador Automotriz Verde",
+    "descripcion": "Sistema hidráulico para elevador automotriz con estructura robusta y fácil integración.",
+    "imagen": "/productos/equipos-para-lavaderos/bomba-hidraulica-elevador-automotriz-verde-bogota-colombia.jpeg",
+    "especificaciones": {
+      "Tipo": "Bomba hidráulica",
+      "Aplicacion": "Elevador automotriz",
+      "Color": "Verde"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "bomba hidraulica",
+      "elevador automotriz",
+      "verde"
+    ]
+  },
+  {
+    "id": "maquina-desabolladora-spotter-fy6000",
+    "codigo": "FY-6000",
+    "categoria": "equipos-para-reparacion-de-carrocerias",
+    "nombre": "Máquina Desabolladora Spotter FY-6000",
+    "descripcion": "Equipo spotter para reparación de carrocerías y desabollado automotriz con desempeño profesional.",
+    "imagen": "/productos/equipos-para-reparacion-de-carrocerias/maquina-desabolladora-spotter-fy-6000-bogota-colombia.jpg",
+    "gallery": [
+      "/productos/equipos-para-reparacion-de-carrocerias/maquina-desabolladora-spotter-fy-6000-bogota-colombia.jpg",
+      "/productos/equipos-para-reparacion-de-carrocerias/soldadora-por-puntos-automotriz-220v-bogota-colombia.jpg"
+    ],
+    "especificaciones": {
+      "Modelo": "FY-6000",
+      "Tipo": "Spotter / desabolladora",
+      "Aplicacion": "Reparación de carrocerías"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "spotter",
+      "desabolladora",
+      "fy-6000",
+      "carroceria"
+    ]
+  },
+  {
+    "id": "soldadora-por-puntos-automotriz-220v",
+    "codigo": "SPA-220V",
+    "categoria": "equipos-para-reparacion-de-carrocerias",
+    "nombre": "Soldadora por Puntos Automotriz 220V",
+    "descripcion": "Soldadora por puntos para trabajos de reparación de carrocería en talleres automotrices.",
+    "imagen": "/productos/equipos-para-reparacion-de-carrocerias/soldadora-por-puntos-automotriz-220v-bogota-colombia.jpg",
+    "especificaciones": {
+      "Voltaje": "220V",
+      "Tipo": "Soldadora por puntos",
+      "Aplicacion": "Carrocería automotriz"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "soldadora por puntos",
+      "220v",
+      "automotriz",
+      "carroceria"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-ir-1w",
+    "codigo": "LIR-1W",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja IR 1W",
+    "descripcion": "Lámpara infrarroja compacta para secado de pintura y trabajos puntuales de reparación automotriz.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-ir-1w-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "IR 1W",
+      "Tecnologia": "Infrarroja",
+      "Uso": "Secado puntual",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "lampara infrarroja",
+      "ir 1w",
+      "secado",
+      "pintura"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-1-panel",
+    "codigo": "LIR-1P",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja de Secado 1 Panel",
+    "descripcion": "Lámpara infrarroja de un panel para secado localizado en piezas, guardafangos y reparaciones rápidas.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-1-panel-bogota-colombia.jpg",
+    "especificaciones": {
+      "Paneles": 1,
+      "Tecnologia": "Infrarroja",
+      "Uso": "Secado localizado",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "lampara infrarroja",
+      "1 panel",
+      "secado",
+      "automotriz"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-2-paneles",
+    "codigo": "LIR-2P",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara IR de 2 Paneles",
+    "descripcion": "Lámpara infrarroja para secado rápido de pintura automotriz.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-bogota-colombia.jpg",
+    "gallery": [
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-ir-1w-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-1-panel-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-onda-corta-2-paneles-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-telescopica-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-3-paneles-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-6-paneles-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-3wh-bogota-colombia.jpg",
+      "/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-6dh-bogota-colombia.jpg"
+    ],
+    "especificaciones": {
+      "Paneles": 2,
+      "Tecnologia": "Infrarroja",
+      "Uso": "Secado",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 7,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "lampara",
+      "ir",
+      "infrarroja",
+      "2 paneles",
+      "secado"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-onda-corta-2-paneles",
+    "codigo": "LIR-2W",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja Onda Corta 2 Paneles",
+    "descripcion": "Lámpara infrarroja de onda corta para acelerar tiempos de secado en taller de pintura.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-onda-corta-2-paneles-bogota-colombia.jpg",
+    "especificaciones": {
+      "Paneles": 2,
+      "Tecnologia": "Onda corta",
+      "Uso": "Secado rápido",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "lampara infrarroja",
+      "onda corta",
+      "2 paneles",
+      "secado rapido"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-2-paneles-telescopica",
+    "codigo": "LIR-2AT",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja 2 Paneles Telescópica",
+    "descripcion": "Lámpara infrarroja ajustable con estructura telescópica para mayor alcance de trabajo.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-2-paneles-telescopica-bogota-colombia.jpg",
+    "especificaciones": {
+      "Paneles": 2,
+      "Estructura": "Telescópica",
+      "Tecnologia": "Infrarroja",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": false,
+    "tags": [
+      "lampara infrarroja",
+      "2 paneles",
+      "telescopica",
+      "secado"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-3-paneles",
+    "codigo": "LIR-3P",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja de Secado 3 Paneles",
+    "descripcion": "Lámpara de tres paneles para secado de áreas más amplias en procesos automotrices.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-3-paneles-bogota-colombia.jpg",
+    "especificaciones": {
+      "Paneles": 3,
+      "Tecnologia": "Infrarroja",
+      "Uso": "Secado de áreas amplias",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "lampara infrarroja",
+      "3 paneles",
+      "secado",
+      "automotriz"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-6-paneles",
+    "codigo": "LIR-6P",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja de Secado 6 Paneles",
+    "descripcion": "Lámpara de gran cobertura para secado rápido de piezas amplias y procesos de pintura exigentes.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-secado-6-paneles-bogota-colombia.jpg",
+    "especificaciones": {
+      "Paneles": 6,
+      "Tecnologia": "Infrarroja",
+      "Uso": "Alta cobertura",
+      "Aplicacion": "Pintura automotriz"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "lampara infrarroja",
+      "6 paneles",
+      "alta cobertura",
+      "secado"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-fy-3wh",
+    "codigo": "FY-3WH",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja FY-3WH",
+    "descripcion": "Lámpara infrarroja modelo FY-3WH para secado profesional en talleres de pintura.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-3wh-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "FY-3WH",
+      "Tecnologia": "Infrarroja",
+      "Uso": "Secado profesional",
+      "Aplicacion": "Taller automotriz"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "lampara infrarroja",
+      "fy-3wh",
+      "secado profesional",
+      "automotriz"
+    ]
+  },
+  {
+    "id": "lampara-infrarroja-fy-6dh",
+    "codigo": "FY-6DH",
+    "categoria": "lamparas-de-secado-ir",
+    "nombre": "Lámpara Infrarroja FY-6DH",
+    "descripcion": "Lámpara infrarroja modelo FY-6DH para alto rendimiento y gran área de secado.",
+    "imagen": "/productos/lamparas-de-secado-ir/lampara-infrarroja-fy-6dh-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "FY-6DH",
+      "Tecnologia": "Infrarroja",
+      "Uso": "Alto rendimiento",
+      "Aplicacion": "Secado automotriz"
+    },
+    "stock": 2,
+    "precio": "Consultar por Whatsapp",
+    "marca": "RPM Industrial",
+    "destacado": true,
+    "tags": [
+      "lampara infrarroja",
+      "fy-6dh",
+      "alto rendimiento",
+      "secado"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r21x",
+    "codigo": "R-21X",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-21X Prona",
+    "descripcion": "Pistola de gravedad profesional para acabados finos y aplicación uniforme de pintura.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-21x-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-21X",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Acabado fino"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": true,
+    "tags": [
+      "pistola gravedad",
+      "r-21x",
+      "prona",
+      "pintura"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r71",
+    "codigo": "R-71",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-71 Prona",
+    "descripcion": "Pistola de gravedad de propósito general para trabajos de pintura industrial y automotriz.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-71-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-71",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Propósito general"
+    },
+    "stock": 6,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-71",
+      "prona",
+      "proposito general"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r77",
+    "codigo": "R-77",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-77 Prona",
+    "descripcion": "Pistola de gravedad para aplicación uniforme en procesos de pintura y acabado.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-77-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-77",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Pintura general"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-77",
+      "prona",
+      "pintura"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r310",
+    "codigo": "R-310",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-310 Prona",
+    "descripcion": "Pistola de gravedad para talleres y aplicaciones industriales con buen control de abanico.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-310-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-310",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Acabado industrial"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-310",
+      "prona",
+      "acabado industrial"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r400",
+    "codigo": "R-400",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-400 Prona",
+    "descripcion": "Pistola de gravedad de propósito general para aplicación de pintura con excelente rendimiento.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-400-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-400",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Propósito general"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-400",
+      "prona",
+      "proposito general"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r410",
+    "codigo": "R-410",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-410 Prona",
+    "descripcion": "Pistola de gravedad para acabados uniformes en aplicaciones profesionales de pintura.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-410-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-410",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Acabado profesional"
+    },
+    "stock": 5,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-410",
+      "prona",
+      "acabado"
+    ]
+  },
+  {
+    "id": "pistola-presurizada-r410ip",
+    "codigo": "R-410-IP",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola Presurizada R-410-IP Prona",
+    "descripcion": "Pistola presurizada para procesos que requieren alimentación continua y control de aplicación.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-presurizada-r-410-ip-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-410-IP",
+      "Marca": "Prona",
+      "Tipo": "Presurizada",
+      "Aplicacion": "Aplicación continua"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": true,
+    "tags": [
+      "pistola presurizada",
+      "r-410-ip",
+      "prona",
+      "pintura"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r413",
+    "codigo": "R-413",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-413 Prona",
+    "descripcion": "Pistola de gravedad para uso profesional con excelente control de aplicación.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-413-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-413",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Uso profesional"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-413",
+      "prona",
+      "profesional"
+    ]
+  },
+  {
+    "id": "pistola-agitadora-r413b",
+    "codigo": "R-413-B",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola Agitadora R-413-B Prona",
+    "descripcion": "Pistola agitadora diseñada para materiales especiales y aplicaciones industriales específicas.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-agitadora-r-413-b-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-413-B",
+      "Marca": "Prona",
+      "Tipo": "Agitadora",
+      "Aplicacion": "Materiales especiales"
+    },
+    "stock": 3,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola agitadora",
+      "r-413-b",
+      "prona",
+      "industrial"
+    ]
+  },
+  {
+    "id": "pistola-gravedad-r715",
+    "codigo": "R-715",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola de Gravedad R-715 Prona",
+    "descripcion": "Pistola de gravedad para propósito general y trabajos continuos de acabado.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-gravedad-r-715-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-715",
+      "Marca": "Prona",
+      "Tipo": "Gravedad",
+      "Aplicacion": "Propósito general"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": false,
+    "tags": [
+      "pistola gravedad",
+      "r-715",
+      "prona",
+      "acabado"
+    ]
+  },
+  {
+    "id": "pistola-baja-presion-r4303",
+    "codigo": "R-4303",
+    "categoria": "pistolas-de-gravedad",
+    "nombre": "Pistola Baja Presión R-4303 Prona",
+    "descripcion": "Pistola de baja presión orientada a reparación automotriz y control de pulverización.",
+    "imagen": "/productos/pistolas-de-gravedad/pistola-baja-presion-r-4303-prona-bogota-colombia.jpg",
+    "especificaciones": {
+      "Modelo": "R-4303",
+      "Marca": "Prona",
+      "Tipo": "Baja presión",
+      "Aplicacion": "Reparación automotriz"
+    },
+    "stock": 4,
+    "precio": "Consultar por Whatsapp",
+    "marca": "Prona",
+    "destacado": true,
+    "tags": [
+      "pistola baja presion",
+      "r-4303",
+      "prona",
+      "reparacion automotriz"
+    ]
+  }
+]

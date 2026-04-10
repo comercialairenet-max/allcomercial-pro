@@ -1,0 +1,148 @@
+﻿REPORTE DE AUDITORÍA - 04/01/2026 22:29:24
+Proyecto: C:\PROYECTOS\allcomercial-vercel
+
+==================================================
+PATRÓN: @/app/components
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: app/components
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: CatalogoToolbarClient
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\_CatalogoToolbarClient.old.tsx:10: export default function CatalogoToolbarClient({
+
+==================================================
+PATRÓN: Navbar
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\_CatalogoToolbarClient.old.tsx:29: // Scroll suave + offset por navbar sticky (si tienes)
+
+==================================================
+PATRÓN: Footer
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\asesoria\page.tsx:27: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\asesoria\page.tsx:690: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:5: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:41: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\[id]\page.tsx:30: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\[id]\page.tsx:903: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:32: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:663: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:680: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\contacto\page.tsx:23: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\contacto\page.tsx:494: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\page.tsx:18: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\page.tsx:401: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\not-found.tsx:7: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\not-found.tsx:156: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:684: <SiteFooter />
+C:\PROYECTOS\allcomercial-vercel\components\layout\Footer.tsx:5: export default function Footer() {
+C:\PROYECTOS\allcomercial-vercel\components\layout\Footer.tsx:9: <footer className="border-t border-neutral-800 bg-neutral-950 text-neutral-300">
+C:\PROYECTOS\allcomercial-vercel\components\layout\Footer.tsx:167: </footer>
+C:\PROYECTOS\allcomercial-vercel\components\site-chrome.tsx:414: export function SiteFooter() {
+C:\PROYECTOS\allcomercial-vercel\components\site-chrome.tsx:425: <footer className="border-t border-slate-200 bg-white">
+C:\PROYECTOS\allcomercial-vercel\components\site-chrome.tsx:552: </footer>
+
+==================================================
+PATRÓN: Hero
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\[id]\page.tsx:280: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:252: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:213: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\carbon-activado\page.tsx:132: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\filtros-hepa\page.tsx:131: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\prefiltros\page.tsx:131: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\ventilacion-industrial\page.tsx:60: const heroTrust = [
+C:\PROYECTOS\allcomercial-vercel\app\ventilacion-industrial\page.tsx:310: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\app\ventilacion-industrial\page.tsx:343: {heroTrust.map((item) => (
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:83: const heroBenefits = [
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:294: {heroBenefits.map((item) => (
+C:\PROYECTOS\allcomercial-vercel\components\buscar\BuscarPageClient.tsx:134: {/* HERO */}
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:17: heroImage: string
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:38: heroImage: getFirstImage('filtracion-industrial'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:45: heroImage: getFirstImage('ventilacion-industrial'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:52: heroImage: getFirstImage('sistemas-de-aire-comprimido'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:59: heroImage: getFirstImage('cabinas-de-pintura'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:66: heroImage: getFirstImage('equipos-para-lavaderos'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:73: heroImage: getFirstImage('equipos-para-reparacion-de-carrocerias'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:80: heroImage: getFirstImage('lamparas-de-secado-ir'),
+C:\PROYECTOS\allcomercial-vercel\data\catalog.ts:87: heroImage: getFirstImage('pistolas-de-gravedad'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:17: heroImage: string
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:43: heroImage: getFirstImage('filtracion-industrial'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:51: heroImage: getFirstImage('ventilacion-industrial'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:59: heroImage: getFirstImage('sistemas-de-aire-comprimido'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:67: heroImage: getFirstImage('cabinas-de-pintura'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:75: heroImage: getFirstImage('equipos-para-lavaderos'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:83: heroImage: getFirstImage('equipos-para-reparacion-de-carrocerias'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:91: heroImage: getFirstImage('lamparas-de-secado-ir'),
+C:\PROYECTOS\allcomercial-vercel\lib\catalogo.ts:99: heroImage: getFirstImage('pistolas-de-gravedad'),
+
+==================================================
+PATRÓN: SearchBar
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: WhatsAppButton
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: WhatsAppQuote
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: ProductRecommendations
+==================================================
+SIN COINCIDENCIAS
+
+==================================================
+PATRÓN: @/components
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\asesoria\page.tsx:27: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:5: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:6: import BuscarPageClient from "@/components/buscar/BuscarPageClient";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\[id]\page.tsx:30: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:32: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:33: import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:32: import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
+C:\PROYECTOS\allcomercial-vercel\app\contacto\page.tsx:23: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\page.tsx:18: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\layout.tsx:8: import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
+C:\PROYECTOS\allcomercial-vercel\app\layout.tsx:9: import MobileStickyCTA from "@/components/ui/MobileStickyCTA";
+C:\PROYECTOS\allcomercial-vercel\app\not-found.tsx:7: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:32: import TrustSignals from "@/components/sections/TrustSignals";
+
+==================================================
+PATRÓN: from "@/components
+==================================================
+C:\PROYECTOS\allcomercial-vercel\app\asesoria\page.tsx:27: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:5: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\buscar\page.tsx:6: import BuscarPageClient from "@/components/buscar/BuscarPageClient";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\[id]\page.tsx:30: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:32: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\[slug]\page.tsx:33: import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\catalogo\page.tsx:32: import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
+C:\PROYECTOS\allcomercial-vercel\app\contacto\page.tsx:23: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\filtracion-industrial\page.tsx:18: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\layout.tsx:8: import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
+C:\PROYECTOS\allcomercial-vercel\app\layout.tsx:9: import MobileStickyCTA from "@/components/ui/MobileStickyCTA";
+C:\PROYECTOS\allcomercial-vercel\app\not-found.tsx:7: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:31: import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+C:\PROYECTOS\allcomercial-vercel\app\page.tsx:32: import TrustSignals from "@/components/sections/TrustSignals";
+
+==================================================
+PATRÓN: from "@/app/components
+==================================================
+SIN COINCIDENCIAS
+
