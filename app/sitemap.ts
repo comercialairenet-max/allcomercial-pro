@@ -1,76 +1,69 @@
 // app/sitemap.ts
-
 import type { MetadataRoute } from "next";
-
+import { SITE } from "@/lib/site";
 import {
-  categoriasMeta,
+  getCategoriasConProductos,
   getProductosPorCategoria,
 } from "@/data/productos";
-import { getSiteUrl } from "@/lib/site";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = getSiteUrl();
+  const baseUrl = SITE.url.replace(/\/+$/, "");
   const now = new Date();
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: `${siteUrl}/`,
+      url: `${baseUrl}/`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${siteUrl}/catalogo`,
+      url: `${baseUrl}/catalogo`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${siteUrl}/buscar`,
+      url: `${baseUrl}/soluciones`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/filtracion-industrial`,
-      lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${siteUrl}/asesoria`,
+      url: `${baseUrl}/asesoria`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${siteUrl}/contacto`,
+      url: `${baseUrl}/contacto`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
   ];
 
-  const categoryRoutes: MetadataRoute.Sitemap = Object.keys(categoriasMeta).map(
-    (slug) => ({
-      url: `${siteUrl}/catalogo/${slug}`,
+  const categoriasData = getCategoriasConProductos();
+
+  const categorias = categoriasData.map((categoria) => ({
+    url: `${baseUrl}/catalogo/${categoria.slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
+  const productos = categoriasData.flatMap((categoria) =>
+    getProductosPorCategoria(
+      categoria.slug as Parameters<typeof getProductosPorCategoria>[0]
+    ).map((producto) => ({
+      url: `${baseUrl}/catalogo/${producto.categoria}/${producto.slug}`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.85,
-    })
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    }))
   );
 
-  const productRoutes: MetadataRoute.Sitemap = Object.keys(categoriasMeta).flatMap(
-    (slug) =>
-      getProductosPorCategoria(slug as keyof typeof categoriasMeta).map(
-        (producto) => ({
-          url: `${siteUrl}/catalogo/${slug}/${producto.id}`,
-          lastModified: now,
-          changeFrequency: "monthly" as const,
-          priority: producto.destacado ? 0.85 : 0.75,
-        })
-      )
-  );
-
-  return [...staticRoutes, ...categoryRoutes, ...productRoutes];
+  return [...staticRoutes, ...categorias, ...productos];
 }

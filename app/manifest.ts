@@ -1,38 +1,27 @@
 // app/manifest.ts
-
 import type { MetadataRoute } from "next";
-import { SITE, getSiteUrl } from "@/lib/site";
+
+export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
-  const siteUrl = getSiteUrl();
-
   return {
-    name: SITE.name,
-    short_name: SITE.shortName,
-    description: SITE.description,
+    name: "AllComercial Online",
+    short_name: "AllComercial",
+    description: "Catálogo técnico industrial de ventilación, filtración y soluciones industriales.",
     start_url: "/",
-    scope: "/",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#ffffff",
+    theme_color: "#093A7A",
     icons: [
       {
-        src: SITE.branding.favicon,
-        sizes: "48x48",
-        type: "image/x-icon",
-      },
-      {
-        src: "/apple-touch-icon.png",
-        sizes: "180x180",
+        src: "/icon-192x192.png",
+        sizes: "192x192",
         type: "image/png",
       },
-    ],
-    screenshots: [
       {
-        src: `${siteUrl}${SITE.branding.ogImage}`,
-        sizes: "1200x630",
+        src: "/icon-512x512.png",
+        sizes: "512x512",
         type: "image/png",
-        form_factor: "wide",
       },
     ],
   };

@@ -1,7 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  output: 'export',
+
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -12,12 +15,10 @@ const nextConfig: NextConfig = {
   },
 
   reactStrictMode: true,
-
   poweredByHeader: false,
 
   async redirects() {
     return [
-      // URLs antiguas HTML
       {
         source: '/index.html',
         destination: '/',
@@ -38,8 +39,6 @@ const nextConfig: NextConfig = {
         destination: '/catalogo/filtracion-industrial',
         permanent: true,
       },
-
-      // URLs antiguas /es/ IMPORTANTES
       {
         source: '/es',
         destination: '/',
@@ -120,20 +119,6 @@ const nextConfig: NextConfig = {
         destination: '/contacto',
         permanent: true,
       },
-
-      // Solo deja estas dos si de verdad existe /aviso-legal
-      {
-        source: '/es/aviso-legal',
-        destination: '/aviso-legal',
-        permanent: true,
-      },
-      {
-        source: '/es/aviso-legal/',
-        destination: '/aviso-legal',
-        permanent: true,
-      },
-
-      // Feed viejo
       {
         source: '/es/feed',
         destination: '/',
@@ -144,15 +129,11 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
-
-      // Blog / feeds / tags / categorías viejas que ya no deben existir
       {
         source: '/es/blog/:path*',
         destination: '/',
         permanent: true,
       },
-
-      // Fallback general de /es/
       {
         source: '/es/:path*',
         destination: '/',
