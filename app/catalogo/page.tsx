@@ -1,5 +1,3 @@
-// app/catalogo/page.tsx
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
@@ -11,6 +9,9 @@ import {
   ShieldCheck,
   Wrench,
   CheckCircle2,
+  Factory,
+  Search,
+  Boxes,
 } from "lucide-react";
 
 import {
@@ -22,18 +23,41 @@ import { SITE, getWhatsappUrl } from "@/lib/site";
 import BuscadorProductos from "@/components/catalogo/BuscadorProductos";
 
 export const metadata: Metadata = {
-  title: `Catálogo técnico industrial | ${SITE.name}`,
+  title:
+    "Catálogo industrial | Equipos de ventilación, filtración, aire comprimido y pintura",
   description:
-    "Biblioteca técnica del portafolio industrial. Consulta categorías, productos destacados y encuentra referencias por nombre, código o aplicación.",
+    "Catálogo técnico industrial con categorías, productos destacados y buscador por nombre, código o aplicación. Consulta equipos de ventilación, filtración, aire comprimido y pintura en Colombia.",
   alternates: {
     canonical: "/catalogo",
   },
   openGraph: {
-    title: `Catálogo técnico industrial | ${SITE.name}`,
+    title:
+      "Catálogo industrial | Equipos de ventilación, filtración, aire comprimido y pintura",
     description:
-      "Catálogo técnico industrial con categorías, referencias destacadas y buscador centralizado.",
+      "Consulta el catálogo técnico industrial con categorías, referencias y productos destacados para aplicaciones de ventilación, filtración, aire comprimido y pintura.",
     url: "/catalogo",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Catálogo industrial | Equipos de ventilación, filtración, aire comprimido y pintura",
+    description:
+      "Biblioteca técnica del portafolio industrial con categorías, referencias y buscador centralizado.",
+  },
+  keywords: [
+    "catálogo industrial",
+    "equipos industriales",
+    "ventilación industrial",
+    "filtración industrial",
+    "aire comprimido",
+    "pintura industrial",
+    "extractores industriales",
+    "compresores industriales",
+    "cabinas de pintura",
+    "pistolas de gravedad",
+    "catálogo técnico industrial Colombia",
+  ],
 };
 
 export default function CatalogoPage() {
@@ -79,6 +103,37 @@ export default function CatalogoPage() {
     },
   ];
 
+  const categoriasSeo = [
+    {
+      titulo: "Ventilación industrial",
+      descripcion:
+        "Extractores, ventiladores y soluciones para renovación y extracción de aire en procesos industriales.",
+      href: "/catalogo/ventilacion-industrial",
+      icon: Factory,
+    },
+    {
+      titulo: "Filtración industrial",
+      descripcion:
+        "Sistemas y componentes para mejorar calidad del aire, retención de partículas y procesos de filtración técnica.",
+      href: "/catalogo/filtracion-industrial",
+      icon: Layers3,
+    },
+    {
+      titulo: "Aire comprimido",
+      descripcion:
+        "Líneas y equipos para aplicaciones industriales que requieren presión constante y rendimiento operativo.",
+      href: "/catalogo/sistemas-de-aire-comprimido",
+      icon: Boxes,
+    },
+    {
+      titulo: "Pintura industrial",
+      descripcion:
+        "Equipos y referencias para cabinas de pintura, acabados técnicos y aplicación industrial.",
+      href: "/catalogo/pistolas-de-gravedad",
+      icon: Wrench,
+    },
+  ];
+
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
@@ -97,14 +152,14 @@ export default function CatalogoPage() {
               </div>
 
               <h1 className="mt-6 text-4xl font-black tracking-tight text-slate-950 md:text-5xl xl:text-6xl">
-                Biblioteca técnica del portafolio industrial
+                Catálogo industrial con categorías, referencias y productos destacados
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-                Esta sección reúne las categorías y referencias del portafolio en
-                una lógica más técnica. Si ya conoces la línea, el código o la
-                categoría, aquí puedes avanzar más rápido hacia la información o
-                la cotización.
+                Esta sección reúne las categorías y referencias del portafolio
+                industrial en una lógica más técnica. Si ya conoces la línea, el
+                código o la categoría, aquí puedes avanzar más rápido hacia la
+                información, la validación técnica o la cotización.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -285,6 +340,74 @@ export default function CatalogoPage() {
                 <p className="mt-1 text-sm font-bold text-slate-950">
                   Técnico · Preciso · Navegable
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BLOQUE SEO SUPERIOR */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <span className="inline-flex rounded-full bg-[#EAF6FE] px-4 py-2 text-sm font-semibold text-[#0E56B5]">
+                Portafolio técnico industrial
+              </span>
+
+              <h2 className="mt-5 text-3xl font-extrabold text-slate-950 md:text-4xl">
+                Consulta categorías y referencias para ventilación, filtración, aire comprimido y pintura
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                Este catálogo técnico industrial está organizado para facilitar
+                la búsqueda de productos por categoría, nombre, referencia o
+                código. Es un punto de apoyo para clientes que ya identificaron
+                una línea o requieren validar una opción concreta.
+              </p>
+
+              <p className="mt-4 text-base leading-8 text-slate-600">
+                Aquí puedes explorar referencias para aplicaciones de
+                <strong> ventilación industrial</strong>,
+                <strong> filtración industrial</strong>,
+                <strong> aire comprimido</strong> y
+                <strong> pintura industrial</strong>, con una estructura más
+                clara para consulta comercial y técnica.
+              </p>
+            </div>
+
+            <div className="rounded-[30px] border border-slate-200 bg-[#F8FAFC] p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0E56B5]">
+                Categorías estratégicas
+              </p>
+
+              <div className="mt-5 space-y-4">
+                {categoriasSeo.map((item) => {
+                  const Icon = item.icon;
+
+                  return (
+                    <Link
+                      key={item.titulo}
+                      href={item.href}
+                      className="block rounded-[22px] border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-[#BFE8FB] hover:shadow-md"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="inline-flex rounded-2xl border border-[#BFE8FB] bg-[#EAF6FE] p-3 text-[#0E56B5]">
+                          <Icon className="h-5 w-5" />
+                        </div>
+
+                        <div>
+                          <h3 className="text-lg font-bold text-slate-950">
+                            {item.titulo}
+                          </h3>
+                          <p className="mt-2 text-sm leading-7 text-slate-600">
+                            {item.descripcion}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -494,6 +617,46 @@ export default function CatalogoPage() {
                   Ir a soluciones
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BLOQUE SEO ADICIONAL */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="rounded-[30px] border border-slate-200 bg-[#F8FAFC] p-8 shadow-sm">
+            <h2 className="text-3xl font-extrabold text-slate-950 md:text-4xl">
+              Un catálogo industrial pensado para consulta, comparación y avance comercial
+            </h2>
+
+            <div className="mt-6 grid gap-8 lg:grid-cols-2">
+              <div className="space-y-4 text-base leading-8 text-slate-600">
+                <p>
+                  Este catálogo técnico está diseñado para facilitar la
+                  navegación de clientes que ya conocen una categoría,
+                  una aplicación, una referencia o una línea de producto.
+                </p>
+                <p>
+                  Aquí puedes revisar equipos relacionados con ventilación
+                  industrial, filtración de aire, sistemas de aire comprimido,
+                  pintura industrial y otras líneas que forman parte del
+                  portafolio técnico.
+                </p>
+              </div>
+
+              <div className="space-y-4 text-base leading-8 text-slate-600">
+                <p>
+                  El objetivo es hacer más clara la transición entre la necesidad,
+                  la categoría y el producto, para que la consulta sea más útil y
+                  el paso hacia la cotización sea más rápido.
+                </p>
+                <p>
+                  Si todavía no tienes claro qué línea necesitas, puedes empezar
+                  por la sección de soluciones y luego volver al catálogo para
+                  profundizar en categorías y referencias específicas.
+                </p>
               </div>
             </div>
           </div>
