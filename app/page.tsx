@@ -1,5 +1,3 @@
-// app/page.tsx
-
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
@@ -21,16 +19,38 @@ import { getProductosDestacados } from "@/data/productos";
 import { SITE, getWhatsappUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: SITE.titleDefault,
-  description: SITE.description,
+  title:
+    "AllComercial | Soluciones industriales en ventilación, filtración y aire comprimido",
+  description:
+    "Venta de equipos industriales en Colombia: ventilación industrial, filtración industrial, aire comprimido, cabinas de pintura y soluciones técnicas con asesoría especializada.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: SITE.titleDefault,
-    description: SITE.description,
+    title:
+      "AllComercial | Soluciones industriales en ventilación, filtración y aire comprimido",
+    description:
+      "Venta de equipos industriales en Colombia: ventilación industrial, filtración industrial, aire comprimido, cabinas de pintura y soluciones técnicas con asesoría especializada.",
     url: "/",
+    type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "AllComercial | Soluciones industriales en ventilación, filtración y aire comprimido",
+    description:
+      "Equipos y soluciones industriales para ventilación, filtración, aire comprimido y pintura.",
+  },
+  keywords: [
+    "ventilación industrial",
+    "filtración industrial",
+    "aire comprimido",
+    "extractores industriales",
+    "cabinas de pintura",
+    "pistolas de gravedad",
+    "equipos industriales Colombia",
+    "soluciones industriales Bogotá",
+  ],
 };
 
 function getIcon(icono: string) {
@@ -92,6 +112,33 @@ export default function HomePage() {
     },
   ];
 
+  const categoriasPrincipales = [
+    {
+      titulo: "Ventilación industrial",
+      descripcion:
+        "Soluciones para extracción de aire, renovación de ambientes y control térmico en procesos industriales.",
+      href: "/catalogo/ventilacion-industrial",
+    },
+    {
+      titulo: "Filtración industrial",
+      descripcion:
+        "Sistemas y componentes para mejorar la calidad del aire y proteger procesos productivos.",
+      href: "/catalogo/filtracion-industrial",
+    },
+    {
+      titulo: "Aire comprimido",
+      descripcion:
+        "Equipos y soluciones para aplicaciones industriales que requieren presión constante y eficiencia.",
+      href: "/catalogo/sistemas-de-aire-comprimido",
+    },
+    {
+      titulo: "Pintura industrial",
+      descripcion:
+        "Equipos para cabinas, aplicación de pintura y acabados técnicos en entornos industriales.",
+      href: "/catalogo/pistolas-de-gravedad",
+    },
+  ];
+
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
@@ -110,14 +157,15 @@ export default function HomePage() {
               </div>
 
               <h1 className="mt-6 text-4xl font-black tracking-tight text-slate-950 md:text-5xl xl:text-6xl">
-                Soluciones industriales organizadas para consultar mejor y cotizar con más claridad
+                Soluciones industriales en ventilación, filtración, aire comprimido y pintura
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
                 Ayudamos a identificar la solución adecuada según la necesidad:
-                cabinas de pintura, HVAC, aire limpio, control de olores y
-                control de polvo. Después, conectamos esa necesidad con el
-                producto o la referencia correcta del catálogo.
+                cabinas de pintura, HVAC, aire limpio, control de olores,
+                control de polvo y aplicaciones industriales específicas. Luego
+                conectamos esa necesidad con el producto, la categoría o la
+                referencia correcta del catálogo.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -291,6 +339,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SEO INTRO */}
+      <section className="bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+            <div>
+              <span className="inline-flex rounded-full bg-[#EAF6FE] px-4 py-2 text-sm font-semibold text-[#0E56B5]">
+                Soluciones industriales en Colombia
+              </span>
+
+              <h2 className="mt-5 text-3xl font-extrabold text-slate-950 md:text-4xl">
+                Equipos industriales para ventilación, filtración, aire comprimido y pintura
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-slate-600">
+                En <strong>AllComercial</strong> ofrecemos soluciones
+                industriales para aplicaciones que requieren extracción de aire,
+                control de partículas, aire comprimido, cabinas de pintura y
+                equipos técnicos para procesos productivos.
+              </p>
+
+              <p className="mt-4 text-base leading-8 text-slate-600">
+                Nuestro enfoque combina <strong>asesoría técnica</strong>,
+                organización comercial del portafolio y acceso rápido al
+                <strong> catálogo técnico</strong> para ayudar a empresas,
+                talleres e industria a identificar la opción más adecuada según
+                su necesidad.
+              </p>
+            </div>
+
+            <div className="rounded-[30px] border border-slate-200 bg-[#F8FAFC] p-6 shadow-sm">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0E56B5]">
+                Categorías principales
+              </p>
+
+              <div className="mt-5 space-y-4">
+                {categoriasPrincipales.map((item) => (
+                  <Link
+                    key={item.titulo}
+                    href={item.href}
+                    className="block rounded-[22px] border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-[#BFE8FB] hover:shadow-md"
+                  >
+                    <h3 className="text-lg font-bold text-slate-950">
+                      {item.titulo}
+                    </h3>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">
+                      {item.descripcion}
+                    </p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SOLUCIONES */}
       <section className="bg-[#F4F7FB] py-20">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
@@ -407,8 +510,54 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      {/* PROCESO */}
+      {/* BENEFICIOS SEO / COMERCIALES */}
       <section className="bg-[#F4F7FB] py-20">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="inline-flex rounded-2xl border border-[#BFE8FB] bg-[#EAF6FE] p-3 text-[#0E56B5]">
+                <Factory className="h-6 w-6" />
+              </div>
+              <h3 className="mt-5 text-xl font-bold text-slate-950">
+                Soluciones por aplicación industrial
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                Organizamos el portafolio por necesidad real: ventilación,
+                filtración, cabinas de pintura, aire limpio, control de olores y polvo.
+              </p>
+            </div>
+
+            <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="inline-flex rounded-2xl border border-[#BFE8FB] bg-[#EAF6FE] p-3 text-[#0E56B5]">
+                <FolderKanban className="h-6 w-6" />
+              </div>
+              <h3 className="mt-5 text-xl font-bold text-slate-950">
+                Catálogo técnico como respaldo
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                El cliente puede pasar de la aplicación a la categoría técnica,
+                y de ahí a productos concretos para información o cotización.
+              </p>
+            </div>
+
+            <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="inline-flex rounded-2xl border border-[#BFE8FB] bg-[#EAF6FE] p-3 text-[#0E56B5]">
+                <MessageCircle className="h-6 w-6" />
+              </div>
+              <h3 className="mt-5 text-xl font-bold text-slate-950">
+                Asesoría comercial y técnica
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                Si aún no tienes la referencia exacta, podemos ayudarte a
+                identificar una categoría, una línea o una solución adecuada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESO */}
+      <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-6 md:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
@@ -487,6 +636,47 @@ export default function HomePage() {
                   Ver catálogo
                   <FolderKanban className="ml-2 h-4 w-4" />
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEXTO SEO ADICIONAL */}
+      <section className="bg-[#F4F7FB] py-20">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm">
+            <h2 className="text-3xl font-extrabold text-slate-950 md:text-4xl">
+              Equipos industriales para proyectos, mantenimiento y operación
+            </h2>
+
+            <div className="mt-6 grid gap-8 lg:grid-cols-2">
+              <div className="space-y-4 text-base leading-8 text-slate-600">
+                <p>
+                  Nuestro portafolio integra soluciones para empresas que buscan
+                  mejorar procesos de ventilación industrial, filtración de aire,
+                  aire comprimido y aplicación de pintura en diferentes entornos.
+                </p>
+                <p>
+                  Atendemos necesidades en talleres, cabinas de pintura, procesos
+                  automotrices, industria metalmecánica y aplicaciones técnicas
+                  donde la confiabilidad del equipo es clave.
+                </p>
+              </div>
+
+              <div className="space-y-4 text-base leading-8 text-slate-600">
+                <p>
+                  En <strong>AllComercial</strong> trabajamos para que la consulta
+                  sea más clara desde el inicio: necesidad, aplicación, solución
+                  y producto. Así facilitamos la conversación comercial y
+                  aceleramos el paso hacia información técnica o cotización.
+                </p>
+                <p>
+                  Si buscas extractores industriales, sistemas de filtración,
+                  compresores, equipos para cabinas de pintura o líneas técnicas
+                  asociadas, puedes empezar por nuestras soluciones o por el
+                  catálogo técnico.
+                </p>
               </div>
             </div>
           </div>
